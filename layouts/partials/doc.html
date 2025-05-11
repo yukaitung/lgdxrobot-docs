@@ -1,0 +1,19 @@
+<div class="page-wrapper">
+  <div class="container">
+    <div class="m-5">
+      <!-- Header -->
+      <div class="page-header">
+        <div class="row align-items-center mw-100">
+          <div class="col">
+            <div class="mb-1">
+              {{ partial "breadcrumbs.html" . }}
+            </div>
+            <h1>{{ .Title }}</h1>
+          </div>
+        </div>
+      </div>
+      <!-- Content -->
+      {{ .Content }}
+    </div>
+  </div>
+</div>    

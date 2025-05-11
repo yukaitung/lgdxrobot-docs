@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $currentPage := . }}
-{{ with .Parent.Parent }}
+{{ with .Parent }}
   {{ partial "navbar.html" (dict "currentSection" . "currentPage" $currentPage) }}
 {{ end }}
 {{ partial "doc.html" . }}

@@ -34,6 +34,14 @@ body {
   z-index: 999;
 }
 
+a.nav-link.dropdown-toggle.show::after {
+  transform: rotate(-45deg);
+}
+
+a.nav-link.dropdown-toggle::after {
+  transform: rotate(-135deg) translateY(-2px);
+}
+
 #page, .page-wrapper {
   padding-top: 56px;
 }
