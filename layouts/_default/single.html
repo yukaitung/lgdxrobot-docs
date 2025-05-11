@@ -1,8 +1,9 @@
 {{ define "main" }}
 <div class="container">
   <div class="row">
+    {{ $currentPage := . }}
     {{ with .Parent.Parent }}
-      {{ partial "sidebar.html" . }}
+      {{ partial "sidebar.html" (dict "currentSection" . "currentPage" $currentPage) }}
     {{ end }}
     <div class="col">
       <div class="m-5">
