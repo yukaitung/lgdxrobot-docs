@@ -1,0 +1,59 @@
+<!-- Header for desktop -->
+<header class="navbar navbar-expand-md d-print-none d-none d-md-block">
+  <div class="container-xl">
+    <div class="navbar-brand navbar-expand-md" style="height: 48px">
+      <a href="{{ relLangURL "" }}"><img src="/img/logo/logo.png" class="img-fluid" alt="LGDXRobot Logo" style="height: 32px"/></a>
+    </div>
+    <ul class="navbar-nav collapse navbar-collapse justify-content-end" id="navbar-menu">
+      <li class="nav-item">
+        <a class="nav-link" href="/"><span class="nav-link-title">Home</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://lgdxrobot.bristolgram.uk/"><span class="nav-link-title">LGDXRobot Website</span></a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<aside class="navbar navbar-vertical navbar-expand-md position-absolute{{ if $.currentPage.IsHome }} d-md-none{{end }}">
+  <div class="container-fluid">
+    <!-- Header for mobile -->
+    <button class="navbar-toggler{{ if $.currentPage.IsHome }} invisible{{ end }}" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-brand d-md-none" style="height: 48px">
+      <a href="{{ relLangURL "" }}"><img src="/img/logo/logo.png" class="img-fluid" alt="LGDXRobot Logo" style="height: 32px"/></a>
+    </div>
+    <a href="https://lgdxrobot.bristolgram.uk/" class="btn d-md-none" style="padding: 7px;">
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="m-0 icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+    </a>
+    <!-- Sidebar, dont run in homepage -->
+    {{ if not $.currentPage.IsHome }}
+      <div class="collapse navbar-collapse" id="sidebar-menu">
+        <!-- Section Documentation -->
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a href="{{ .currentSection.RelPermalink }}" class="nav-link"><span class="nav-link-title">Home</span></a>
+          </li>
+          {{ range .currentSection.Sections }}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button">
+                <span class="nav-link-Title">{{ .Title }}</span>
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropdown-menu-columns">
+                  <div class="dropdown-menu-column">
+                    {{ range .Pages }}
+                      {{ $isActive := eq .Permalink $.currentPage.Permalink }}
+                        <a class="dropdown-item {{ if $isActive }} active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                      {{ end }}
+                  </div>
+                </div>
+              </div>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </div>
+</aside>

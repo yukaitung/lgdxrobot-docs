@@ -34,6 +34,13 @@ body {
   z-index: 999;
 }
 
-main {
+#page, .page-wrapper {
   padding-top: 56px;
+}
+
+@media (min-width: 768px) {
+   .navbar-vertical.navbar-expand-md {
+    top: 56px;
+    overflow-y: hidden;
+  }
 }
