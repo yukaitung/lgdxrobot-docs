@@ -1,7 +1,7 @@
 <div class="col-3 border-end">
   <div class="py-5">
     <!-- Section Title -->
-    <h3>{{ .currentSection.Title }} Documentation</h3>
+    <h2>{{ .currentSection.Title }}</h2>
     <ul class="nav flex-column nav-pills">
       {{ $isActive := eq .currentSection.Permalink $.currentPage.Permalink }}
       <li class="nav-item">
@@ -10,7 +10,7 @@
     </ul>
     <!-- Section Documentation -->
     {{ range .currentSection.Sections }}
-      <h3 class="mt-4">{{ .Title }}</h3>
+      <h4 class="mt-4">{{ .Title }}</h4>
       <ul class="nav flex-column nav-pills">
         {{ range .Pages }}
           {{ $isActive := eq .Permalink $.currentPage.Permalink }}

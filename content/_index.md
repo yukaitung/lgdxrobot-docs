@@ -1,4 +1,5 @@
-# Welcome to LGDXRobot Documentation
+---
+title: Home
+---
 
-* [LGDXRobot2](/lgdxrobot2)
-* [LGDXRobot Cloud](/cloud)
+# Welcome to LGDXRobot Documentation
