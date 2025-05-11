@@ -1,0 +1,17 @@
+<div class="col-3 border-end">
+  <div class="py-4">
+    {{ range .Sections }}
+      <h3>{{ .Title }}</h3>
+      <ul>
+        {{ range .Pages }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        {{ range .Sections }}
+          <li>
+            {{ partial "section-tree.html" . }}
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+</div>
