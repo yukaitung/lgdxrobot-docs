@@ -5,9 +5,9 @@
   <div class="container">
     <div class="px-5 py-5">
       {{ .Content }}
-      <div class="row row-deck mt-4">
+      <div class="row row-deck">
         {{ range .Sections }}
-          <div class="col-6">
+          <div class="col-md-6 mt-3">
             <div class="card h-100">
               <div class="card-body d-flex flex-column">
                 <h3 class="card-title">{{ .Title }}</h3>
