@@ -1,0 +1,9 @@
+baseURL: https://lgdxrobot.bristolgram.uk/
+languageCode: en-gb
+title: LGDXRobot Documentation
+disableKinds: ["taxonomy"]
+languages:
+  en:
+    languageName: English
+    languageCode: en-GB
+    weight: 1

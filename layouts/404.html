@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ .Site.Title }}</title>
+    {{ $favicon := resources.Get "favicon.png" }}
+    <link rel="icon" type="image/x-icon" href="{{ $favicon.Permalink }}">
+    {{ $tablerCss := resources.Get "css/tabler.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $tablerCss.Permalink }}" media="screen">
+    {{ $siteCss := resources.Get "css/site.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $siteCss.Permalink }}" media="screen">
+  </head>
+  <body>
+    <div class="h-100 d-flex">
+      <div class="m-auto text-center">
+        <div class="container">
+          <img src="/img/logo/logo.png" class="img-fluid mb-4" alt="LGDXRobot Logo" style="height: 48px;" />
+          <h1>{{ i18n "notFound" }}</h1>
+          {{ $home := "/" }}
+          <a href="{{ relLangURL $home }}" class="btn btn-primary btn-lg mt-5 px-5">
+            {{ i18n "notFoundButton" }}
+          </a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
