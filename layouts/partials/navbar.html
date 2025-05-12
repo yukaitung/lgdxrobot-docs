@@ -30,6 +30,7 @@
     <!-- Sidebar, dont run in homepage -->
     {{ if not $.currentPage.IsHome }}
       <div class="collapse navbar-collapse" id="sidebar-menu">
+        <h2 class="ms-3 mt-3">{{ $.currentSection.Title }}</h2>
         <!-- Section Documentation -->
         <ul class="navbar-nav">
           <li class="nav-item{{ if eq .currentSection.Permalink .currentPage.Permalink }} active{{ end }}">
