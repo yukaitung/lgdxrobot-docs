@@ -2,6 +2,11 @@ baseURL: https://docs.lgdxrobot.bristolgram.uk/
 languageCode: en-gb
 title: LGDXRobot Documentation
 disableKinds: ["taxonomy"]
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
 languages:
   en:
     languageName: English
