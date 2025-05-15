@@ -46,7 +46,7 @@ p {
 }
 
 .dropdown-item.active {
-  background: none !important;
+  background-color: var(--tblr-dropdown-link-active-bg) !important;
 }
 a.dropdown-item.active {
   color: var(--tblr-primary) !important;
