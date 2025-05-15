@@ -10,6 +10,16 @@
   --tblr-secondary-rgb: 98, 99, 108;
 }
 
+/**
+Selection
+ */
+pre span::-moz-selection {
+  background-color: color-mix(in srgb, var(--tblr-primary) 60%, transparent);
+}
+pre span::selection {
+  background-color: color-mix(in srgb, var(--tblr-primary) 60%, transparent);
+}
+
 /* Font size */
 html {
   font-size: 16px;
@@ -45,12 +55,7 @@ p {
   }
 }
 
-.dropdown-item.active {
-  background-color: var(--tblr-dropdown-link-active-bg) !important;
-}
-a.dropdown-item.active {
-  color: var(--tblr-primary) !important;
-}
+
 
 /* Remove balance for scroll bar */
 * {
@@ -91,4 +96,11 @@ a.nav-link.dropdown-toggle::after {
     top: 56px;
     overflow-y: hidden;
   }
+}
+
+.dropdown-item.active {
+  background-color: var(--tblr-dropdown-link-active-bg) !important;
+}
+a.dropdown-item.active {
+  color: var(--tblr-primary) !important;
 }
