@@ -13,10 +13,7 @@
 /**
 Selection
  */
-pre span::-moz-selection {
-  background-color: color-mix(in srgb, var(--tblr-primary) 60%, transparent);
-}
-pre span::selection {
+pre span::selection, pre span::-moz-selection, pre code::selection, pre code::-moz-selection {
   background-color: color-mix(in srgb, var(--tblr-primary) 60%, transparent);
 }
 
