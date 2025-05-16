@@ -39,7 +39,7 @@ weight: 3
 | Resistor R1          | 100Ω  | 1        |
 | Resistor R2          | 4.7KΩ | 1        |
 | Resistor R3          | 4.7KΩ | 1        |
-| Switch               |       | 2        |
+| Switch               |       | 1        |
 | Emergency stop button|       | 1        |
 {.table}
 
