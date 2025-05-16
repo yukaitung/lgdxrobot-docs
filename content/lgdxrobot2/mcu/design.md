@@ -3,24 +3,27 @@ title: Design
 weight: 2
 ---
 
-LGDXRobot2 MCU relies on modular design, making the components are replacinable. Also, it has an emergency stop button for basic safety measure.
+**LGDXRobot2 MCU** follows a modular design, allowing individual components to be replaced when necessary. For basic safety precautions, it includes an emergency stop button.
 
 ## Control Board
 
-The control Board features BlackPill (STM32F411CEU6) for MCU, which has enough GPIO in a reasonable price. 2 TB6612FNG modules for controllnig motors and 2 INA219 modules for measuring voltage of batteries (Does not measuing current).
+![LGDXRobot2 Control Board](../img/control-board.jpg)
+[Download the PDF](/files/board.pdf)
 
-For power source, LGDXRobot2 is designed for using two 12V batteries, one for motors and one for computer. It is a simple solution to prevent damange from voltage fluctuation. You are free to add a protection board for batteries or using powerful battery.
+The control board features the **BlackPill (STM32F411CEU6)** microcontroller, which provides a sufficient number of GPIO pins at a reasonable cost. It is equipped with **two TB6612FNG** motor driver modules to control the four motors, and **two INA219** modules are included to monitor the battery voltage. Please note that current sensing is not implemented.
 
-## Hardware (Mechanic)
+**LGDXRobot2** is designed to operate using **two 12V batteries**: one dedicated to powering the motors and the other for the onboard computer. This separation provides a simple and effective way to prevent damage caused by voltage fluctuations. Users are welcome to integrate a battery protection board or choose a higher-capacity battery according to their requirements.
 
-LGDXRobot2 is designed for any size of mecanum wheel chassis, so you can select any size of chassis and mecanum wheels, you will need to modifiy the source code (It is a constants) to fit the configuration.
+## Hardware (Mechanical)
 
-The motors using in LGDXRobot2 are GM37-520 12V with 1:90 gear ratio, it is recommend to select motor with at least 1:90 to ensure enough torque for the robot.
+**LGDXRobot2** is compatible with Mecanum wheel chassis of various sizes. Users may select any chassis and wheel dimensions they prefer; however, they must modify the source code — specifically a set of constants — to reflect the chosen configuration.
 
-## Hardware (Logic)
+The recommended motor for this platform is the **GM37-520 12V with a 1:90 gear ratio**. It is advisable to use motors with at least a 1:90 ratio to ensure that the robot has sufficient torque for reliable operation.
 
-Any computer supports Ubuntu 24.04 can be used, however only x86 PC (Intel NUC) is being tested. Intel realsense can used for sensor.
+## Hardware (Computing)
+
+Any computer that supports **Ubuntu 24.04** can be used with **LGDXRobot2**. However, only **x86-based PCs**, such as **Intel NUC** devices, have been tested. An **Intel RealSense** camera can be used for sensing purposes.
 
 ## Assembly
 
-The assembly is simple by connected everything spefifed in schematic, there is no PCB board needed to print.
+The assembly process is straightforward. All components should be connected as specified in the provided schematic. There is no need to fabricate a printed circuit board (**PCB**), making the construction accessible and convenient.

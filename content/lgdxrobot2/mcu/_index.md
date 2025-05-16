@@ -4,4 +4,6 @@ layout: sub-section
 weight: 1
 ---
 
-LGDXRobot2 MCU is a STM32 controller board for LGDXRobot2. It designed to support 4 wheels chassis configure with simple design. Although the design and source code is provided, the firmware need to be complied and uploded to the device.
+LGDXRobot2 MCU is an STM32-based controller board designed specifically for the LGDXRobot2 platform. It supports a four-wheeled Mecanum chassis configuration with a straightforward, minimalistic design. While both the hardware design and source code are provided, the firmware must be compiled and uploaded manually to the device.
+
+![Image of LGDXRobot2](img/lgdxrobot2.png)

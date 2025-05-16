@@ -3,11 +3,11 @@ title: NAV2 Integration
 weight: 5
 ---
 
-The launch files for NAV2 Integration are stored in `lgdxrobot2_bringup` package.
+The NAV2 integration launch files are located in the `lgdxrobot2_bringup` package. These files support various simulation and real-world navigation setups, including SLAM, localisation, and exploration.
 
 ## Examples
 
-Run SLAM in simulation
+Run SLAM in Simulation
 
 ```bash
 cd lgdx_ws
@@ -15,7 +15,7 @@ cd lgdx_ws
 ros2 launch lgdxrobot2_bringup sim_nav.launch.py slam:=True
 ```
 
-Run SLAM with auto exploration in simulation
+Run SLAM with Auto Exploration in Simulation
 
 ```bash
 cd lgdx_ws
@@ -23,7 +23,7 @@ cd lgdx_ws
 ros2 launch lgdxrobot2_bringup sim_nav.launch.py slam:=True use_explore_lite:=True
 ```
 
-Run localication in simulation
+Run Localisation in Simulation
 
 ```bash
 cd lgdx_ws
@@ -31,7 +31,7 @@ cd lgdx_ws
 ros2 launch lgdxrobot2_bringup sim_nav.launch.py profile:='sim-loc'
 ```
 
-Run NAV2 with actural hardware
+Run NAV2 with Actual Hardware
 
 ```bash
 cd lgdx_ws

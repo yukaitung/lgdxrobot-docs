@@ -1,14 +1,15 @@
 ---
-title: LGDXRobot2
-description: Highly configurable low-cost DIY Mecanum wheel chassis for hobbyists.
-homepage: https://lgdxrobot.bristolgram.uk/lgdxrobot2/
-weight: 1
+title: LGDXRobot2  
+description: A highly configurable, low-cost DIY Mecanum wheel chassis for hobbyists.  
+homepage: https://lgdxrobot.bristolgram.uk/lgdxrobot2/  
+weight: 1  
 ---
 
-Create ROS2 robot with low cost hardware with freedom to customise hardware specifications.
+Build a ROS 2 robot using affordable hardware with the freedom to customise specifications to your needs.
 
-To get started:
+* [MCU / Hardware](mcu)  
+* [ChassisTuner](chassistuner)  
 
-Testing the hardware:
+Set up ROS 2 for the LGDXRobot2, or explore the robot in simulation.
 
-Installing ROS2 or running simulation:
+* [ROS 2](ros2)

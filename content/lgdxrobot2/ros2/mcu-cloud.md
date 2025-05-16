@@ -3,38 +3,38 @@ title: MCU / Cloud Integration
 weight: 4
 ---
 
-`lgdxrobot2_daemon` is the core application for integrating MCU to the cloud and ROS2.
+`lgdxrobot2_daemon` is the core application responsible for integrating the LGDXRobot2 MCU with ROS2 and the cloud.
 
 ## Parameters
 
 ### LGDXRobot2 Cloud Parameters
 
-| Parameter           | Type   | Description                                                 |
-|---------------------|--------|-------------------------------------------------------------|
-| cloud_enable        | bool   | Enable LGDXRobot2 Cloud.                                    |
-| cloud_address       | string | Address of LGDXRobot2 Cloud.                                |
-| cloud_root_cert     | string | Path to server root certificate, required in LGDXRobot2 Cloud. |
-| cloud_client_key    | string | Path to client key, required in LGDXRobot2 Cloud.           |
-| cloud_client_cert   | string | Path to client certificate, required in LGDXRobot2 Cloud.   |
+| Parameter           | Type   | Description                                                       |
+|---------------------|--------|-------------------------------------------------------------------|
+| cloud_enable        | bool   | Enables connection to the LGDXRobot2 Cloud.                       |
+| cloud_address       | string | Address of the LGDXRobot2 Cloud service.                          |
+| cloud_root_cert     | string | Path to the server's root certificate (required by the cloud).    |
+| cloud_client_key    | string | Path to the client’s key file (required by the cloud).            |
+| cloud_client_cert   | string | Path to the client’s certificate file (required by the cloud).    |
 {.table}
 
 ### Serial Port Parameters
 
-| Parameter                    | Type   | Description                                                                             |
-|------------------------------|--------|-----------------------------------------------------------------------------------------|
-| serial_port_enable           | bool   | Default serial port name or (Linux only) perform automated search if this is unspecified. |
-| serial_port_name             | string | Serial port name.                                                                        |
-| serial_port_reset_transform  | bool   | Reset robot transform on start up.                                                      |
-| serial_port_control_mode     | string | Robot control mode, using joy for joystick or cmd_vel for ROS nav stack.                |
-| serial_port_publish_odom     | bool   | Publishing odometry information from the robot.                                         |
-| serial_port_publish_tf       | bool   | Publishing tf information from the robot.                                               |
-| serial_port_base_link_name   | string | Custom base_link name.                                                                   |
-| serial_port_use_external_imu | bool   | Using external IMU for odometry calculation.                                            |
+| Parameter                    | Type   | Description                                                                                  |
+|------------------------------|--------|----------------------------------------------------------------------------------------------|
+| serial_port_enable           | bool   | Enables the serial connection. If unspecified (Linux only), an automatic search is performed. |
+| serial_port_name             | string | The name of the serial port device.                                                          |
+| serial_port_reset_transform  | bool   | Resets the robot’s transform on initialisation.                                              |
+| serial_port_control_mode     | string | Control mode, e.g., `joy` for joystick or `cmd_vel` for ROS navigation stack.               |
+| serial_port_publish_odom     | bool   | Enables publishing of odometry information.                                                  |
+| serial_port_publish_tf       | bool   | Enables publishing of `tf` transformation frames.                                            |
+| serial_port_base_link_name   | string | Custom name for the `base_link` frame.                                                       |
+| serial_port_use_external_imu | bool   | Enables the use of an external IMU for odometry calculations.                                |
 {.table}
 
 ## Examples
 
-Connecting LGDXRobot2 to joy
+To connect LGDXRobot2 using a joystick:
 
 ```bash
 cd lgdx_ws
