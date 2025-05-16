@@ -7,9 +7,7 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     
     <!-- SEO -->
-    <meta name="description" content="{{ .Description }}">
     <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
-    <meta property="og:description" content="{{ .Description }}" />
     <meta property="og:image" content="{{ absURL "/img/logo/seo-logo.png" }}" />
     <meta property="og:image:secure_url" content="{{ absURL "/img/logo/seo-logo.png" }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
