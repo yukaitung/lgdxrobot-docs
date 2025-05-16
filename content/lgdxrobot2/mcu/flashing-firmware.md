@@ -19,7 +19,7 @@ The following software is required to build and flash the firmware:
 
 Clone the [project repository](https://gitlab.com/yukaitung/lgdxrobot2-mcu), then open it with STM32CubeMX and generate the project accordingly. Next, launch your IDE and open the file `Inc/motor.h`. Modify the source code as needed to match your robot's specifications.
 
-| Variable Name   | Value in Code                           | Description                                                           |
+| Variable Name   | Example Value                           | Description                                                           |
 |-----------------|---------------------------------------|-----------------------------------------------------------------------|
 | CHASSIS_LX      | 0.237                                 | Size of the chassis in metres (m), X axis representing left to right |
 | CHASSIS_LY      | 0.287                                 | Size of the chassis in metres (m), Y axis facing forward             |

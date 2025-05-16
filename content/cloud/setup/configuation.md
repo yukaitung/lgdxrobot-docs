@@ -3,25 +3,31 @@ title: Configuation
 weight: 3
 ---
 
-Below are the configurations for the API, the UI, and the Worker. Most of the configuations are setting the connection to other services, so you need the creditials of the services below.
+Below are the configurations for the API, the UI, and the Worker. Most of the configurations involve setting up connections to external services, so you will need the credentials for the following services:
 
-* PostgreSQL
-* RabbitMQ
-* SFTP
+- PostgreSQL
+- RabbitMQ
+- SFTP
 
-For the screts, refer to the [Official Documentation](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets) on how to create the secrets.
+For managing secrets securely, please refer to the [Official Documentation](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets) on how to create and handle secrets in your environment.
 
-To obtain the Thumbprint
+## Useful Commands
+
+Obtain the Certificate Thumbprint:
 
 ```bash
 openssl x509 -in /path/to/certificate.crt -noout -fingerprint -sha1 | sed 's/://g'
 ```
 
-To obtain the serial number
+This will output the SHA-1 fingerprint (thumbprint) of the certificate, with colons removed.
+
+Obtain the Certificate Serial Number:
 
 ```bash
 openssl x509 -in /path/to/certificate.crt -noout -serial
 ```
+
+This outputs the serial number of the certificate.
 
 ## 1. LGDXRobotCloud.API
 
@@ -55,7 +61,15 @@ openssl x509 -in /path/to/certificate.crt -noout -serial
 }
 ```
 
-There are 3 endpoints for the API, `gRPC` for robots, `Internal` for internal UI, and `Https` for external web services. The port number for `gRPC` must be lowest and `Https` must be highest. Copy `grpc.pfx` to base of `LGDXRobotCloud.API` project.
+There are three endpoints for the API:
+
+- **gRPC** for robots
+- **Internal** for internal UI
+- **HTTPS** for external web services
+
+The port number for **gRPC** must be the lowest, and **HTTPS** must be the highest.
+
+Make sure to copy the `grpc.pfx` certificate file to the base directory of the `LGDXRobotCloud.API` project.
 
 #### `LGDXRobotCloud` Subkeys
 
@@ -72,7 +86,7 @@ There are 3 endpoints for the API, `gRPC` for robots, `Internal` for internal UI
 
 ```json
 {
-  "PGSQLConnectionString": "Host=localhost;Username=admin;Password=secret;Database=LGDX", 
+  "PGSQLConnectionString": "Host=localhost;Username=admin;Password=mysecretpassword;Database=LGDXRobotCloud", 
   "RabbitMq": {
     "Host": "localhost",
     "VirtualHost": "/",
@@ -117,7 +131,7 @@ There are 3 endpoints for the API, `gRPC` for robots, `Internal` for internal UI
 | RobotClientsJwtSecret  | The secret of the JWT token for the robot clients (min 32 chars) |
 {.table}
 
----
+
 
 ## 2 LGDXRobotCloud.Data
 
@@ -125,7 +139,7 @@ There are 3 endpoints for the API, `gRPC` for robots, `Internal` for internal UI
 
 ```json
 {
-  "PGSQLConnectionString": "Host=localhost;Username=admin;Password=secret;Database=LGDXRobotCloud" 
+  "PGSQLConnectionString": "Host=localhost;Username=admin;Password=mysecretpassword;Database=LGDXRobotCloud" 
 }
 ```
 
@@ -136,7 +150,7 @@ There are 3 endpoints for the API, `gRPC` for robots, `Internal` for internal UI
 | PGSQLConnectionString  | The connection string to the PostgreSQL database     |
 {.table}
 
----
+
 
 ## 3 LGDXRobotCloud.UI
 
@@ -180,7 +194,7 @@ There are 3 endpoints for the API, `gRPC` for robots, `Internal` for internal UI
 | Password    | The password for the RabbitMQ server                   |
 {.table}
 
----
+
 
 ## 4 LGDXRobotCloud.Worker
 
@@ -205,7 +219,7 @@ There are 3 endpoints for the API, `gRPC` for robots, `Internal` for internal UI
 
 ```json
 {
-  "PGSQLConnectionString": "Host=localhost;Username=admin;Password=secret;Database=LGDXRobotCloud", 
+  "PGSQLConnectionString": "Host=localhost;Username=admin;Password=mysecretpassword;Database=LGDXRobotCloud", 
   "RabbitMq": {
     "Host": "localhost", 
     "VirtualHost": "/",

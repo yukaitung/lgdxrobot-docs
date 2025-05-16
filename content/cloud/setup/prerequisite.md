@@ -1,47 +1,50 @@
 ---
-title: Prerequest
+title: Prerequisites
 weight: 2
 ---
 
-## Software
+To run LGDXRobot Cloud, you'll need the following software:
 
-Install .Net
+- [.NET SDK](https://dotnet.microsoft.com/en-us/download)
+- PostgreSQL
+- RabbitMQ
+- SMTP server (for sending emails)
 
-This application requires PostgreSQL, RabbitMQ and a SMTP server, you can install them using Docker. 
+PostgreSQL and RabbitMQ, can be easily set up using Docker.
 
-For the PostgreSQL, you can create it with a table called `LGDXRobotCloud` using the following command:
+### PostgreSQL
+
+You can start a PostgreSQL container with a database named `LGDXRobotCloud` using:
 
 ```bash
 docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_USER=admin -e POSTGRES_DB=LGDXRobotCloud -v postgres-data:/var/lib/postgresql/data -p 5432:5432 -d postgres
 ```
 
-For RabbitMQ, you can use the following command:
+To run RabbitMQ with the management interface:
 
 ```bash
 docker run --name rabbitmq -p 5672:5672 -p 15672:15672 -d rabbitmq:4.0-management
 ```
 
-You will need a SMTP server to sending emails. You can either use a free email service that have SMTP support, or you can build a SMTP server.
+An SMTP server is required for email functionality. You can either:
+
+* Use an existing SMTP service that supports TLS (e.g., Gmail, Outlook) (Recommend)
+* Host your own SMTP server using Docker or other tools
 
 ## Certificate
 
-There are some certificates require in the setup.
+TLS certificates are required for secure communication between the cloud, robots, and UI.
 
 ### Root Certificate
 
-Creating the private key for the root certificate:
+Create the root certificate:
 
 ```bash
 openssl genrsa -out rootCA.key 4096
-```
-
-Creating the certificate:
-
-```bash
 openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 3650 -out rootCA.crt
 ```
 
-Convert the certificate to a pfx file, then add the certificate to trust certificate for the operating system.
+Convert it to .pfx format and add it to your system's trusted certificates:
 
 ```bash
 openssl pkcs12 -export -out rootCA.pfx -inkey rootCA.key -in rootCA.crt
@@ -49,9 +52,7 @@ openssl pkcs12 -export -out rootCA.pfx -inkey rootCA.key -in rootCA.crt
 
 ### Certificate For Robots Connection (gRPC)
 
-The connection for robots requires certificate, so we need to create a certificate for grpc.
-
-Create a config file `grpc.conf`, you can change the 192.168.1.123 to suitable IP address.
+Create a config file named `grpc.conf`. Replace `192.168.1.123` with your actual server IP:
 
 ```
 [req]
@@ -76,35 +77,25 @@ IP.2 = 192.168.1.123
 DNS.1 = localhost
 ```
 
-Create a private key
+Generate the private key and CSR:
 
 ```bash
 openssl genrsa -out grpc.key 2048
-```
-
-Create a Certificate Signing Request file Using the Config
-
-```bash
 openssl req -new -key grpc.key -out grpc.csr -config grpc.conf
 ```
 
-Then create a certificate using the CSR
+Create and export the certificate:
 
 ```bash
 openssl x509 -req -in grpc.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out grpc.crt -days 365 -sha256 -extfile grpc.conf -extensions req_ext
-```
-
-Convert it to .pfx, it is required for the configation
-
-```bash
 openssl pkcs12 -export -out grpc.pfx -inkey grpc.key -in grpc.crt -certfile rootCA.crt
 ```
 
 ### Certificate For UI (Optional)
 
-Certificate can be used for internal connection between UI and API, however it is optional in development environment.
+This certificate is optional and only required for internal HTTPS between the UI and API.
 
-Create a config file `ui.conf`, you can change the ui.local to suitable name.
+Create a file called `ui.conf`:
 
 ```
 [req]
@@ -122,26 +113,18 @@ basicConstraints=CA:FALSE
 keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
 ```
 
-Create a private key
+Generate the private key and CSR:
 
 ```bash
 openssl genrsa -out ui.key 2048
-```
-
-create a Certificate Signing Request file using the config
-
-```bash
 openssl req -new -key ui.key -out ui.csr -config ui.onf
 ```
 
-Then create a certificate using the CSR
+Create and export the certificate:
 
 ```bash
 openssl x509 -req -in ui.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out ui.crt -days 365 -sha256 -extfile ui.conf -extensions req_ext
-```
-
-Then convert it to .pfx, and add the certificate to trust certificate
-
-```bash
 openssl pkcs12 -export -out ui.pfx -inkey ui.key -in ui.crt -certfile rootCA.crt
 ```
+
+Add `ui.pfx` to your system’s trusted certificate store if needed.

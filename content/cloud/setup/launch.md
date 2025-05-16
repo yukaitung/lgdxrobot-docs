@@ -10,7 +10,7 @@ You need to create the database and a first user.
 ```bash
 cd LGDXRobotCloud.Data
 dotnet ef database update
-dotnet run --initialiseData "true"  --email "email@example.com" --fullName "Full Name" --userName "admin" --password "password"
+dotnet run --initialiseData "true" --email "email@example.com" --fullName "Full Name" --userName "admin" --password "password"
 ```
 
 | Parameter        | Example Value       | Description                 |
@@ -24,8 +24,10 @@ dotnet run --initialiseData "true"  --email "email@example.com" --fullName "Full
 
 ## Run
 
-You can run the application using `dotnet run` in below projects:
+You can run the application using `dotnet run` in the following projects:
 
 * LGDXRobotCloud.API
 * LGDXRobotCloud.UI
 * LGDXRobotCloud.Worker
+
+Alternatively, you can open the project with Visual Studio Code, switch to the **Run and Debug** tab, where you can choose to run all projects or run a single project individually.
