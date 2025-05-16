@@ -100,6 +100,11 @@ a.nav-link.dropdown-toggle.show::after {
 a.nav-link.dropdown-toggle::after {
   transform: rotate(-135deg) translateY(-2px);
 }
+a.dropdown-item {
+  white-space: normal; 
+  word-wrap: break-word; 
+  word-break: break-word;
+}
 #page, .page-wrapper {
   padding-top: 56px;
 }
