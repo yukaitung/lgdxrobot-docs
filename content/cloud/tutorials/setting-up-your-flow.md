@@ -3,16 +3,20 @@ title: Setting Up Your Flow
 weight: 3
 ---
 
-A flow is a sequence of steps for completing tasks. Each flow can be customised to fit specific operational requirements.
+A **flow** is a sequence of steps for completing tasks. Each flow can be customised to suit specific operational requirements.
 
-## Create a flow
+## Create a Flow
 
-Navigate ro "Automation" -> "Flows", then select "Create Flow"
+Navigate to **Automation -> Flows**, then select **Create Flow**.
 
-In the Flow Detail, you can specific the flow name and detail. Search "Moving" for Progress Name and press Create
+In the **Flow Detail** section, you can specify the flow name and details. Search for **Moving** under **Progress Name**, then press **Create**.
 
-`Progress Name` is every step in the flow, you can define your operation for the process in ROS2 (exclude `PreMoving` and `Moving`). The `Moving` is the operation for the robot to navigating and it should be included in the flow. `PreMoving` tells the robot to move to first waypoint, it allows the robot perform other operation like loading.
+![](../img/flow1.png)
 
-`Proceed Condition` is the compoment that command the robot to continue to next step, the component will obtains a token to progress the flow. For the `API`, an external API call is required so a `Trigger` is required.
+**Progress Name** defines each step in the flow. You can customise the robot's behaviour in ROS2 for each step (excluding `PreMoving` and `Moving`).  
+- `Moving` is required and handles robot navigation.  
+- `PreMoving` instructs the robot to move to the first waypoint and allows for preparatory actions, such as loading.
 
-`Trigger` is an external API call which trigerred at the begining of `Progress`
+**Proceed Condition** determines how the robot advances to the next step. The component responsible for this obtains a token to progress the flow. For example, if you select **API**, the robot waits for an external API call to continue — in this case, a **Trigger** is needed.
+
+**Trigger** is the external API call that initiates the specified **Progress** step. It is triggered at the beginning of the step.

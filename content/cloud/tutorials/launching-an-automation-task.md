@@ -3,28 +3,33 @@ title: Launching an Automation Task
 weight: 5
 ---
 
-Finally the system to ready to start the first automation task.
+Finally, the system is ready to start the first automation task. In another terminal window, launch NAV2 Localisation in Simulation
+
+```bash
+cd lgdx_ws
+. install/setup.bash
+ros2 launch lgdxrobot2_bringup sim_nav.launch.py profile:='sim-loc'
+```
 
 ## Create A Task
 
-Navigate to "Automation" -> "Tasks" and press "Create Task"
+Navigate to **Automation -> Tasks** and press **Create Task**.  
 
-Select Your newly created flow
+Select your newly created flow. Then, select waypoint **A** and press **Add Waypoint**. Next, select waypoint **B**. Press **Create**.
 
-Select waypoint, then press Add Waypoint
+![](../img/task1.png)
 
-Press "Create"
-
-`Piroirty` is the improteness of task, higher value means higher priority
-
-`Assign Robot` can specifice a robot to run the task
-
-`Create as Template Task` allow the task create quickly
-
-You can specific X, Y or Rotation to set a custom waypoint or override pre-defined waypoint
+- **Priority** indicates the importance of the task; a higher value means higher priority.
+- **Assign Robot** allows you to specify which robot will run the task.
+- **Create as Template Task** enables you to save the task as a template for quicker creation in the future.
+- You can specify custom X, Y, or Rotation values to override the predefined waypoint coordinates.
 
 ## View The Task
 
-You will be redirected to task list, the page seems empty, so you can select "Running" on the top right.
+You will be redirected to the task list page, which may appear empty initially. Select **Running** at the top right to filter active tasks.
 
-You can navigate to "Map" to see the progress of the task
+![](../img/task2.png)
+
+Navigate to **Map** to see the real-time progress of the task.
+
+![](../img/task3.png)
