@@ -111,7 +111,7 @@ a.dropdown-item {
 @media (min-width: 768px) {
    .navbar-vertical.navbar-expand-md {
     top: 56px;
-    overflow-y: hidden;
+    scrollbar-color: color-mix(in srgb,var(--tblr-scrollbar-color,var(--tblr-body-color)) 20%,transparent) transparent;
   }
 }
 
