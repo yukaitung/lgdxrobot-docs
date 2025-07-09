@@ -3,73 +3,17 @@ title: Configuation
 weight: 3
 ---
 
-Below are the configurations for the API, the UI, and the Worker. Most of the configurations involve setting up connections to external services, so you will need the credentials for the following services:
-
-- PostgreSQL
-- RabbitMQ
-- SFTP
+Below are the configurations for LGDXRobot Cloud. Update the corresponding `appsettings.json`.
 
 For managing secrets securely, please refer to the [Official Documentation](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets) on how to create and handle secrets in your environment.
 
-## Useful Commands
-
-Obtain the Certificate Thumbprint:
-
-```bash
-openssl x509 -in /path/to/certificate.crt -noout -fingerprint -sha1 | sed 's/://g'
-```
-
-This will output the SHA-1 fingerprint (thumbprint) of the certificate, with colons removed.
-
-Obtain the Certificate Serial Number:
-
-```bash
-openssl x509 -in /path/to/certificate.crt -noout -serial
-```
-
-This outputs the serial number of the certificate.
+Example configurations are provided in the `/docker-compose` folder.
 
 ## 1. LGDXRobotCloud.API
 
-### 1.1 appsettings.json
+### Settings
 
-```json
-"Kestrel": {
-  "Endpoints": {
-    "gRPC": {
-      "Url": "https://*:5162",
-      "Protocols": "Http2",
-      "Certificate": {
-        "Path": "grpc.pfx"
-      }
-    },
-    "Internal": {
-      "Url": "https://*:5163",
-      "Protocols": "Http1AndHttp2"
-    },
-    "Https": {
-      "Url": "https://*:5164",
-      "Protocols": "Http1AndHttp2"
-    }
-  }
-},
-"LGDXRobotCloud": {
-  "InternalCertificateThumbprint": "",
-  "RootCertificateSN": "",
-  "RobotCertificateValidDay": 365,
-  "ApiMaxPageSize": 100
-}
-```
-
-There are three endpoints for the API:
-
-- **gRPC** for robots
-- **Internal** for internal UI
-- **HTTPS** for external web services
-
-The port number for **gRPC** must be the lowest, and **HTTPS** must be the highest.
-
-Make sure to copy the `grpc.pfx` certificate file to the base directory of the `LGDXRobotCloud.API` project.
+When setting endpoints, the port number for **gRPC** must be the lowest, and **HTTPS** must be the highest.
 
 #### `LGDXRobotCloud` Subkeys
 
@@ -81,34 +25,34 @@ Make sure to copy the `grpc.pfx` certificate file to the base directory of the `
 | ApiMaxPageSize               | The maximum number of items that can be returned in a page |
 {.table}
 
+To find `InternalCertificateThumbprint`, run the following command:
 
-### 1.2 Secrets
-
-```json
-{
-  "PGSQLConnectionString": "Host=localhost;Username=admin;Password=mysecretpassword;Database=LGDXRobotCloud", 
-  "RabbitMq": {
-    "Host": "localhost",
-    "VirtualHost": "/",
-    "Username": "username",
-    "Password": "secret"
-  },
-  "LGDXRobotCloudSecret": {
-    "LgdxUserJwtIssuer": "LGDXRobotCloudUsers",
-    "LgdxUserJwtSecret": "secret with at least 32 characters", 
-    "RobotClientsJwtIssuer": "LGDXRobotCloudobotClients", 
-    "RobotClientsJwtSecret": "secret with at least 32 characters"
-  }
-}
+```bash
+openssl x509 -in ui.crt -noout -fingerprint -sha1 | sed 's/://g'
 ```
 
-#### Top-Level Keys
+To find `RootCertificateSN`, run the following command:
 
-| Key                    | Description                                           |
-|------------------------|-------------------------------------------------------|
-| PGSQLConnectionString  | The connection string to the PostgreSQL database     |
-| RabbitMq               | Settings for the RabbitMQ server                     |
-| LGDXRobotCloudSecret   | JWT settings for users and robot clients             |
+```bash
+openssl x509 -in rootCA.crt -noout -serial
+```
+
+### Secrets
+
+#### `ConnectionStrings` Subkeys
+
+| Key         | Description                                             |
+|-------------|---------------------------------------------------------|
+| Default     | The connection strings to default PostgreSQL database  |
+| Activity    | The connection strings to activity logs PostgreSQL database |
+{.table}
+
+#### `RabbitMq` Subkeys (Optional)
+
+| Key         | Description                                             |
+|-------------|---------------------------------------------------------|
+| Default     | The virtual host of the RabbitMQ server                |
+| Activity    | The virtual host of the RabbitMQ server                |
 {.table}
 
 #### `RabbitMq` Subkeys
@@ -131,58 +75,37 @@ Make sure to copy the `grpc.pfx` certificate file to the base directory of the `
 | RobotClientsJwtSecret  | The secret of the JWT token for the robot clients (min 32 chars) |
 {.table}
 
+## 2. LGDXRobotCloud.Data
 
+### Secrets
 
-## 2 LGDXRobotCloud.Data
+#### `ConnectionStrings` Subkeys
 
-### 2.1 Secrets
-
-```json
-{
-  "PGSQLConnectionString": "Host=localhost;Username=admin;Password=mysecretpassword;Database=LGDXRobotCloud" 
-}
-```
-
-#### Top-Level Keys
-
-| Key                    | Description                                           |
-|------------------------|-------------------------------------------------------|
-| PGSQLConnectionString  | The connection string to the PostgreSQL database     |
+| Key         | Description                                             |
+|-------------|---------------------------------------------------------|
+| Default     | The connection strings to default PostgreSQL database  |
+| Activity    | The connection strings to activity logs PostgreSQL database |
 {.table}
 
+## 3. LGDXRobotCloud.UI
 
+### Settings
 
-## 3 LGDXRobotCloud.UI
-
-### 3.1 appsettings.json
-
-```json
-{
-  "LGDXRobotCloudApiUrl": "https://localhost:5163", 
-  "LGDXRobotCloudAPICertificateSN": ""
-}
-```
-
-#### Top-Level Keys
+#### `LGDXRobotCloudAPI` Subkeys
 
 | Key                          | Description                               |
 |------------------------------|-------------------------------------------|
-| LGDXRobotCloudApiUrl         | The URL of the LGDXRobotCloud API         |
-| LGDXRobotCloudAPICertificateSN | The serial number of the API certificate |
+| Url                          | The URL of the LGDXRobotCloud API         |
+| CertificateSN                | The serial number of the API certificate |
 {.table}
 
-### 3.2 secrets
+To find `CertificateSN`, run the following command:
 
-```json
-{
-  "RabbitMq": {
-    "Host": "localhost",
-    "VirtualHost": "/", 
-    "Username": "username",
-    "Password": "secret" 
-  }
-}
+```bash
+openssl x509 -in ui.crt -noout -serial
 ```
+
+### Secrets
 
 #### `RabbitMq` Subkeys
 
@@ -194,18 +117,9 @@ Make sure to copy the `grpc.pfx` certificate file to the base directory of the `
 | Password    | The password for the RabbitMQ server                   |
 {.table}
 
+## 4. LGDXRobotCloud.Worker
 
-
-## 4 LGDXRobotCloud.Worker
-
-### 4.1 appsettings.json
-
-```json
-"EmailLinks": { 
-  "AccessUrl": "https://localhost:5103/",
-  "PasswordResetPath": "ResetPassword" 
-}
-```
+### Settings
 
 #### `EmailLinks` Configuration
 
@@ -215,33 +129,14 @@ Make sure to copy the `grpc.pfx` certificate file to the base directory of the `
 | PasswordResetPath | The path to the password reset page in the LGDXRobotCloud UI |
 {.table}
 
-### 4.2 secrets
+### Secrets
 
-```json
-{
-  "PGSQLConnectionString": "Host=localhost;Username=admin;Password=mysecretpassword;Database=LGDXRobotCloud", 
-  "RabbitMq": {
-    "Host": "localhost", 
-    "VirtualHost": "/",
-    "Username": "username", 
-    "Password": "secret" 
-  },
-  "Email": {
-    "FromName": "From name", 
-    "FromAddress": "email address", 
-    "Host": "SFTP server",
-    "Port": 587, 
-    "Username": "SFTP username",
-    "Password": "SFTP password", 
-  }
-}
-```
+#### `ConnectionStrings` Subkeys
 
-#### Top-Level Configuration
-
-| Key                   | Description                                   |
-|-----------------------|-----------------------------------------------|
-| PGSQLConnectionString | The connection string to the PostgreSQL database |
+| Key         | Description                                             |
+|-------------|---------------------------------------------------------|
+| Default     | The connection strings to default PostgreSQL database  |
+| Activity    | The connection strings to activity logs PostgreSQL database |
 {.table}
 
 #### `RabbitMq` Subkeys
@@ -260,8 +155,9 @@ Make sure to copy the `grpc.pfx` certificate file to the base directory of the `
 |-------------|--------------------------------------------------|
 | FromName    | The name of the sender                           |
 | FromAddress | The email address of the sender                  |
-| Host        | The host name or IP address of the SFTP server  |
-| Port        | The port number of the SFTP server               |
-| Username    | The username for the SFTP server                  |
-| Password    | The password for the SFTP server                  |
+| Host        | The host name or IP address of the SMTP server  |
+| Port        | The port number of the SMTP server               |
+| Username    | The username for the SMTP server                  |
+| Password    | The password for the SMTP server                  |
+|SecureSocketOptions|[Secure connect setting for the SMTP server](https://mimekit.net/docs/html/T_MailKit_Security_SecureSocketOptions.htm) |
 {.table}

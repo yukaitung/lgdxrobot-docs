@@ -67,8 +67,6 @@ p {
   }
 }
 
-
-
 /* Remove balance for scroll bar */
 * {
   scrollbar-color: auto;
@@ -120,4 +118,8 @@ a.dropdown-item {
 }
 a.dropdown-item.active {
   color: var(--tblr-primary) !important;
+}
+
+.page-link:hover .page-item-title {
+  color:color-mix(in srgb,transparent,var(--tblr-link-hover-color) var(--tblr-link-opacity,100%));
 }

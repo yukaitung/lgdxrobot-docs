@@ -3,13 +3,12 @@ title: Launch
 weight: 4
 ---
 
-## Create Database
+## Create First User
 
-You need to create the database and a first user.
+`LGDXRobotCloud.Data` completes the database migration and creates the first user.
 
 ```bash
 cd LGDXRobotCloud.Data
-dotnet ef database update
 dotnet run --initialiseData "true" --email "email@example.com" --fullName "Full Name" --userName "admin" --password "password"
 ```
 
