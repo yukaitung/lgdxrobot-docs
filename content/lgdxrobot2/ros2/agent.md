@@ -23,7 +23,7 @@ weight: 4
 | Parameter              | Type   | Description                                                                                   |
 |------------------------|--------|-----------------------------------------------------------------------------------------------|
 | mcu_enable             | bool   | Enables the serial connection. If unspecified (Linux only), an automatic search is performed. |
-| mcu__port_name         | string | The name of the serial port device.                                                           |
+| mcu_port_name         | string | The name of the serial port device.                                                           |
 | mcu_reset_transform    | bool   | Resets the robot’s transform on initialisation.                                               |
 | mcu_control_mode       | string | Control mode, e.g., `joy` for joystick or `cmd_vel` for ROS navigation stack.                |
 | mcu_publish_odom       | bool   | Enables publishing of odometry information.                                                   |
