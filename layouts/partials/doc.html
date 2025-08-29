@@ -14,26 +14,7 @@
       </div>
       <!-- Content -->
       {{ .Content }}
-      <!-- Pagination -->
-      <ul class="pagination">
-        <li class="page-item page-prev">
-          {{ $pages := .CurrentSection.Pages.ByWeight }}
-          {{ with $pages.Next . }}
-            <a class="page-link" href="{{ .RelPermalink }}">
-              <div class="page-item-subtitle">Previous</div>
-              <div class="page-item-title">{{ .Title }}</div>
-            </a>
-          {{ end }}
-        </li>
-        <li class="page-item page-next">
-          {{ with $pages.Prev . }}
-            <a class="page-link" href="{{ .RelPermalink }}">
-              <div class="page-item-subtitle">Next</div>
-              <div class="page-item-title">{{ .Title }}</div>
-            </a>
-          {{ end }}
-        </li>
-      </ul>
+      {{ partial "prev-next.html" . }}
     </div>
   </div>
 </div>    
