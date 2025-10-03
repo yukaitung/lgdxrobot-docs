@@ -42,7 +42,10 @@ ros2 run lgdxrobot2_agent lgdxrobot2_agent_node --ros-args \
 
 If you are using a physical robot, remove `-p cloud_slam_enable:=true` and add `-p mcu_enable:=true`.
 
-Also, if you are hosting the cloud on a different computer, replace host.docker.internal with the IP address of that computer. Update the paths for `cloud_root_cert`, `cloud_client_key`, and `cloud_client_cert` to point to the certificates you downloaded.
+Also, if you are hosting the cloud on a different computer, replace `host.docker.internal` with the IP address of that computer. Update the paths for `cloud_root_cert`, `cloud_client_key`, and `cloud_client_cert` to point to the certificates you downloaded.
+
+If you encounter any errors, it is likely that the [alt_names] section in the certificate configuration does not include the IP address of the computer hosting the cloud.
+{.alert .alert-info}
 
 ### Step 3: Complete the Exploration
 

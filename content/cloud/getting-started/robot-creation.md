@@ -22,7 +22,7 @@ Enter a robot name and press **Next**.
 Select **LGDXRobot2** as the robot type. Enter `0` for the remaining fields, then press **Next**.
 
 The chassis information does not affect system behaviour.
-{.alert .alert-warning}
+{.alert .alert-info}
 
 ![](../img/robot2.png)
 
