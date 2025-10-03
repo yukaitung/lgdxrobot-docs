@@ -3,10 +3,6 @@ title: Dependencies
 weight: 3
 ---
 
-## Software Dependencies
-
-The commands below install dependencies using Docker.
-
 ### PostgreSQL
 
 ```bash

@@ -1,9 +1,7 @@
 ---
-title: Prerequisites
+title: Certificates
 weight: 2
 ---
-
-## Certificate
 
 TLS certificates are required for machine-to-machine communication. A few certificates are necessary for the system to work properly, including:
 
@@ -13,7 +11,7 @@ TLS certificates are required for machine-to-machine communication. A few certif
 * UI certificate (optional)
 * HTTPS certificate (optional)
 
-The commands below require a `.conf` file for certificate generation, which can be found in the `/docker-compose/certs` folder. The certificates is for testing purposes only. So you can change the configurations, validiation period, and passwords according to your needs.
+The commands below require a `.conf` file for certificate generation, which can be found in the `/docker-compose/certs` folder. The certificates are for testing purposes only, so you can adjust the configurations, validity period, and passwords according to your needs.
 
 ### Root Certificate
 
