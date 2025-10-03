@@ -34,3 +34,5 @@ You can run the application using `dotnet run` in the following projects:
 * LGDXRobotCloud.Worker
 
 Alternatively, you can open the project with Visual Studio Code, switch to the **Run and Debug** tab, where you can choose to run all projects or run a single project individually.
+
+To access the frontend, visit [https://localhost:5103/Login](https://localhost:5103/Login). For the backend Scalar (an alternative to Swagger UI), visit [https://localhost:5163/scalar/](https://localhost:5163/scalar/). If the backend requests a certificate, choose **Not** to send the certificate.
