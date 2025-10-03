@@ -3,19 +3,13 @@ title: Launching an Automation Task
 weight: 5
 ---
 
-Finally, the system is ready to start the first automation task. In another terminal window, launch NAV2 Localisation in Simulation
+Finally, the system is ready to start the first automation task.
 
-```bash
-cd lgdx_ws
-. install/setup.bash
-ros2 launch lgdxrobot2_bringup sim_nav.launch.py profile:='sim-loc'
-```
+## Step 1: Create A Task
 
-## Create A Task
+Expand the **Automation**, select **Tasks** and press **Create Task** in the top-right corner.
 
-Navigate to **Automation -> Tasks** and press **Create Task**.  
-
-Select your newly created flow. Then, select waypoint **A** and press **Add Waypoint**. Next, select waypoint **B**. Press **Create**.
+Enter the name of your newly created flow. Then, select waypoint **A** and press **Add Waypoint**. Next, select waypoint **B**. Press **Create**.
 
 ![](../img/task1.png)
 
@@ -24,12 +18,12 @@ Select your newly created flow. Then, select waypoint **A** and press **Add Wayp
 - **Create as Template Task** enables you to save the task as a template for quicker creation in the future.
 - You can specify custom X, Y, or Rotation values to override the predefined waypoint coordinates.
 
-## View The Task
+## Step 2: View The Task
 
 You will be redirected to the task list page, which may appear empty initially. Select **Running** at the top right to filter active tasks.
 
 ![](../img/task2.png)
 
-Navigate to **Map** to see the real-time progress of the task.
+Click **Home** then click **Map** on the top menu bar to view the real-time progress of the task. Press the robot pin to expand its information and planned path.
 
 ![](../img/task3.png)

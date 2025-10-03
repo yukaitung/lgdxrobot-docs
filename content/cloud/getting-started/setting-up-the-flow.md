@@ -1,13 +1,15 @@
 ---
-title: Setting Up Your Flow
-weight: 3
+title: Setting Up The Flow
+weight: 4
 ---
 
 A **flow** is a sequence of steps for completing tasks. Each flow can be customised to suit specific operational requirements.
 
-## Create a Flow
+## Step 1: Navigate to The Flows Creation Page
 
-Navigate to **Automation -> Flows**, then select **Create Flow**.
+Expand the **Automation**, select **Flows** and press **Create Flow** in the top-right corner.
+
+## Step 2: Create a Flow
 
 In the **Flow Detail** section, you can specify the flow name and details. Search for **Moving** under **Progress Name**, then press **Create**.
 
