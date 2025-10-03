@@ -126,7 +126,7 @@ To find `CertificateSN`, run the following command:
 openssl x509 -in redis_client.crt -noout -serial
 ```
 
-### Secrets
+### 3.2 Secrets
 
 #### `RabbitMq` Subkeys
 
@@ -140,7 +140,7 @@ openssl x509 -in redis_client.crt -noout -serial
 
 ## 4. LGDXRobotCloud.Worker
 
-### Settings
+### 4.1 Settings
 
 #### `EmailLinks` Configuration
 
@@ -150,7 +150,7 @@ openssl x509 -in redis_client.crt -noout -serial
 | PasswordResetPath | The path to the password reset page in the LGDXRobotCloud UI |
 {.table}
 
-### Secrets
+### 4.2 Secrets
 
 #### `ConnectionStrings` Subkeys
 
