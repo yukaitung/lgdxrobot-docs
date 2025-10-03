@@ -1,5 +1,5 @@
 ---
-title: Tutorials
+title: Getting Started
 layout: sub-section
 weight: 2
 ---

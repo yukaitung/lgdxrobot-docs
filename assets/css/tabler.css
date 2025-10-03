@@ -14339,7 +14339,7 @@ Navbar
   }
   .navbar-expand-md.navbar-vertical ~ .navbar,
   .navbar-expand-md.navbar-vertical ~ .page-wrapper {
-    margin-left: 15rem;
+    margin-left: 20rem;
   }
   .navbar-expand-md.navbar-vertical.navbar-right ~ .navbar,
   .navbar-expand-md.navbar-vertical.navbar-right ~ .page-wrapper {
@@ -14977,7 +14977,7 @@ Navbar vertical
 }
 @media (min-width: 768px) {
   .navbar-vertical.navbar-expand-md {
-    width: 15rem;
+    width: 20rem;
     position: fixed;
     top: 0;
     left: 0;
