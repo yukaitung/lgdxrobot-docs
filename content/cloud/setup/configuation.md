@@ -1,6 +1,6 @@
 ---
 title: Configuation
-weight: 3
+weight: 4
 ---
 
 Below are the configurations for LGDXRobot Cloud. Update the corresponding `appsettings.json`.
@@ -11,18 +11,18 @@ Example configurations are provided in the `/docker-compose` folder.
 
 ## 1. LGDXRobotCloud.API
 
-### Settings
+### 1.1 Settings
 
 When setting endpoints, the port number for **gRPC** must be the lowest, and **HTTPS** must be the highest.
 
 #### `LGDXRobotCloud` Subkeys
 
-| Key                         | Description                                              |
-|----------------------------|----------------------------------------------------------|
-| InternalCertificateThumbprint | The thumbprint of the internal UI certificate             |
-| RootCertificateSN             | The serial number of the root certificate                |
-| RobotCertificateValidDay     | The number of days that a robot certificate is valid     |
-| ApiMaxPageSize               | The maximum number of items that can be returned in a page |
+| Key                           | Description                                                |
+|-------------------------------|------------------------------------------------------------|
+| InternalCertificateThumbprint | The thumbprint of the internal UI certificate              |
+| RootCertificateSN             | The serial number of the root certificate                  |
+| RobotCertificateValidDay      | The number of days that a robot certificate is valid       |
+| ApiMaxPageSize                | The maximum number of items that can be returned in a page |
 {.table}
 
 To find `InternalCertificateThumbprint`, run the following command:
@@ -37,32 +37,14 @@ To find `RootCertificateSN`, run the following command:
 openssl x509 -in rootCA.crt -noout -serial
 ```
 
-### Secrets
+### 1.2 Secrets
 
 #### `ConnectionStrings` Subkeys
 
-| Key         | Description                                             |
-|-------------|---------------------------------------------------------|
-| Default     | The connection strings to default PostgreSQL database  |
+| Key         | Description                                                 |
+|-------------|-------------------------------------------------------------|
+| Default     | The connection strings to default PostgreSQL database       |
 | Activity    | The connection strings to activity logs PostgreSQL database |
-{.table}
-
-#### `RabbitMq` Subkeys (Optional)
-
-| Key         | Description                                             |
-|-------------|---------------------------------------------------------|
-| Default     | The virtual host of the RabbitMQ server                |
-| Activity    | The virtual host of the RabbitMQ server                |
-{.table}
-
-#### `RabbitMq` Subkeys
-
-| Key         | Description                                             |
-|-------------|---------------------------------------------------------|
-| Host        | The host name or IP address of the RabbitMQ server     |
-| VirtualHost | The virtual host of the RabbitMQ server                |
-| Username    | The username for the RabbitMQ server                   |
-| Password    | The password for the RabbitMQ server                   |
 {.table}
 
 #### `LGDXRobotCloudSecret` Subkeys
@@ -75,9 +57,34 @@ openssl x509 -in rootCA.crt -noout -serial
 | RobotClientsJwtSecret  | The secret of the JWT token for the robot clients (min 32 chars) |
 {.table}
 
+#### `RabbitMq` Subkeys
+
+| Key         | Description                                             |
+|-------------|---------------------------------------------------------|
+| Host        | The host name or IP address of the RabbitMQ server      |
+| VirtualHost | The virtual host of the RabbitMQ server                 |
+| Username    | The username for the RabbitMQ server                    |
+| Password    | The password for the RabbitMQ server                    |
+| Port        | The port number of the RabbitMQ server                  |
+{.table}
+
+#### `Redis` Subkeys
+
+| Key              | Description                                                        |
+|------------------|--------------------------------------------------------------------|
+| ConnectionString | The host name or IP address of the Redis server (With port number) |
+| CertificateSN    | The serial number of the Redis certificate                         |
+{.table}
+
+To find `CertificateSN`, run the following command:
+
+```bash
+openssl x509 -in redis_client.crt -noout -serial
+```
+
 ## 2. LGDXRobotCloud.Data
 
-### Secrets
+### 2.1 Secrets
 
 #### `ConnectionStrings` Subkeys
 
@@ -89,7 +96,7 @@ openssl x509 -in rootCA.crt -noout -serial
 
 ## 3. LGDXRobotCloud.UI
 
-### Settings
+### 3.1 Settings
 
 #### `LGDXRobotCloudAPI` Subkeys
 
@@ -103,6 +110,20 @@ To find `CertificateSN`, run the following command:
 
 ```bash
 openssl x509 -in ui.crt -noout -serial
+```
+
+#### `Redis` Subkeys
+
+| Key              | Description                                                        |
+|------------------|--------------------------------------------------------------------|
+| ConnectionString | The host name or IP address of the Redis server (With port number) |
+| CertificateSN    | The serial number of the Redis certificate                         |
+{.table}
+
+To find `CertificateSN`, run the following command:
+
+```bash
+openssl x509 -in redis_client.crt -noout -serial
 ```
 
 ### Secrets

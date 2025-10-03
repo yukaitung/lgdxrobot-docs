@@ -5,9 +5,15 @@ weight: 2
 
 ## Certificate
 
-TLS certificates are required for machine-to-machine communication. A few certificates are necessary for the system to work properly, including: root certificate, gRPC certificate, UI certificate (optional), and HTTPS certificate (optional).
+TLS certificates are required for machine-to-machine communication. A few certificates are necessary for the system to work properly, including:
 
-The commands below require a `.conf` file for certificate generation, which can be found in the `/docker-compose/certs` folder.
+* Root certificate
+* gRPC certificate
+* Redis certificate (Both server and client)
+* UI certificate (optional)
+* HTTPS certificate (optional)
+
+The commands below require a `.conf` file for certificate generation, which can be found in the `/docker-compose/certs` folder. The certificates is for testing purposes only. So you can change the configurations, validiation period, and passwords according to your needs.
 
 ### Root Certificate
 
@@ -19,7 +25,7 @@ openssl x509 -req -days 9999 -extfile rootCA.conf -extensions v3_ca -in rootCA.c
 openssl pkcs12 -export -out rootCA.pfx -inkey rootCA.key -in rootCA.crt -passout pass:""
 ```
 
-Next, trust the root certificate in the operating system.
+Next, install the root certificate in the operating system then trust the root certificate.
 
 ### gRPC Certificate
 
@@ -33,6 +39,26 @@ openssl pkcs12 -export -out grpc.pfx -inkey grpc.key -in grpc.crt -certfile root
 
 Next, copy the `grpc.pfx` to the base directory of the `LGDXRobotCloud.API` project.
 
+### Redis Certificate
+
+Generate a certificate for the Redis server.
+
+```bash
+openssl req -newkey rsa:4096 -keyout redis_server.key -out redis_server.csr -config redis_server.conf -nodes 
+openssl x509 -req -in redis_server.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out redis_server.crt -days 9999 -sha256 -extfile redis_server.conf -extensions req_ext
+openssl pkcs12 -export -out redis_server.pfx -inkey redis_server.key -in redis_server.crt -certfile rootCA.crt -passout pass:""
+```
+
+Generate a certificate for the clients that connect to the Redis server.
+
+```bash
+openssl req -newkey rsa:4096 -keyout redis_client.key -out redis_client.csr -config redis_client.conf -nodes 
+openssl x509 -req -in redis_client.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out redis_client.crt -days 9999 -sha256 -extfile redis_client.conf -extensions req_ext
+openssl pkcs12 -export -out redis_client.pfx -inkey redis_client.key -in redis_client.crt -certfile rootCA.crt -passout pass:""
+```
+
+Next, install the certificates in the operating system.
+
 ### UI Certificate
 
 The UI certificate is used for certificate-based authentication in the API. It can be omitted if the system is started in development mode.
@@ -42,6 +68,8 @@ openssl req -newkey rsa:4096 -keyout ui.key -out ui.csr -config ui.conf -nodes
 openssl x509 -req -in ui.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out ui.crt -days 9999 -sha256 -extfile ui.conf -extensions req_ext
 openssl pkcs12 -export -out ui.pfx -inkey ui.key -in ui.crt -certfile rootCA.crt -passout pass:""
 ```
+
+Next, install the certificates in the operating system.
 
 ### HTTPS Certificate
 
@@ -53,22 +81,10 @@ openssl x509 -req -in app.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -
 openssl pkcs12 -export -out app.pfx -inkey app.key -in app.crt -certfile rootCA.crt -passout pass:""
 ```
 
-## Software Dependencies
+## Before Next Steps
 
-The commands below install dependencies using Docker.
+Make sure you have installed the certificates in the operating system.
 
-### PostgreSQL
-
-```bash
-docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_USER=admin -e POSTGRES_DB=LGDXRobotCloud -v postgres-data:/var/lib/postgresql/data -p 5432:5432 -d postgres
-```
-
-### RabbitMQ
-
-```bash
-docker run --name rabbitmq -p 5672:5672 -p 15672:15672 -d rabbitmq:4.0-management
-```
-
-### SMTP Server
-
-LGDXRobot Cloud relies on email for notifications, but there is no recommended SMTP server for development. You can use the SMTP server from free email providers, such as Gmail, Outlook, or iCloud.
+* Root certificate
+* Redis certificate (Client only)
+* UI certificate

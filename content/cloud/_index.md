@@ -1,19 +1,20 @@
 ---
 title: LGDXRobot Cloud
-description: The core of your robotics solution — a cloud-based robot management system for LGDXRobot, designed with a focus on flexibility and security.
+description: The core of your robotics solution, designed with flexibility and security in mind.
 homepage: https://lgdxrobot.bristolgram.uk/cloud/
 weight: 1
 ---
 
 LGDXRobot Cloud is a robot management system for Automated Guided Vehicles (AGVs), designed with a focus on flexibility and security. It can monitor the status of robots in real-time and manage automated tasks for transportation and logistics. The system is also designed to support easy integration with third-party services and workflows. It integrates seamlessly with the [LGDXRobot2](https://lgdxrobot.bristolgram.uk/lgdxrobot2/) robot, providing a solid foundation for a robotics solution.
 
-## Tech Stack
+## Software Dependencies
 
-| Software Dependencies | Version |
-|-----------------------|---------|
-| .NET                  | 9       |
-| PostgreSQL            | latest  |
-| RabbitMQ              | 4       |
+| Name       | Version |
+|------------|---------|
+| .NET       | 9       |
+| PostgreSQL | latest  |
+| RabbitMQ   | 4       |
+| Redis      | latest  |
 {.table}
 
 ## Links

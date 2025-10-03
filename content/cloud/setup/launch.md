@@ -1,6 +1,6 @@
 ---
 title: Launch
-weight: 4
+weight: 5
 ---
 
 ## Create First User
@@ -9,7 +9,11 @@ weight: 4
 
 ```bash
 cd LGDXRobotCloud.Data
-dotnet run --initialiseData "true" --email "email@example.com" --fullName "Full Name" --userName "admin" --password "password"
+dotnet run --initialiseData "true" \
+  --email "email@example.com" \
+  --fullName "Full Name" \
+  --userName "admin" \
+  --password "password"
 ```
 
 | Parameter        | Example Value       | Description                 |
