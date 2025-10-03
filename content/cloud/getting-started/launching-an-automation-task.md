@@ -1,6 +1,6 @@
 ---
 title: Launching an Automation Task
-weight: 5
+weight: 6
 ---
 
 Finally, the system is ready to start the first automation task.

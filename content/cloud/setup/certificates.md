@@ -29,6 +29,9 @@ Next, install the root certificate in the operating system then trust the root c
 
 The gRPC certificate is used for communication between the API and the robots via gRPC.
 
+Ensure the [alt_names] section in the `grpc.conf` file is set to the IP address of the machine running the API.
+{.alert .alert-info}
+
 ```bash
 openssl req -newkey rsa:4096 -keyout grpc.key -out grpc.csr -config grpc.conf -nodes 
 openssl x509 -req -in grpc.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out grpc.crt -days 9999 -sha256 -extfile grpc.conf -extensions req_ext
@@ -72,6 +75,9 @@ Next, install the certificate in the operating system.
 ### 5. HTTPS Certificate
 
 The HTTPS certificate is used for HTTPS communication between the API, the UI, and the browser. It can be replaced with a .NET dev-certificate.
+
+Ensure the [alt_names] section in the `app.conf` file is set to the IP address of the machine running the API.
+{.alert .alert-info}
 
 ```bash
 openssl req -newkey rsa:4096 -keyout app.key -out app.csr -config app.conf -nodes 
