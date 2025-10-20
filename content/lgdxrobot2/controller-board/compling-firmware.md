@@ -1,5 +1,5 @@
 ---
-title: Flashing Firmware
+title: Compling Firmware
 weight: 4
 ---
 
@@ -9,11 +9,10 @@ The LGDXRobot2 MCU includes only the minimal source code, so it is necessary to 
 
 The following software is required to build and flash the firmware:
 
-- [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html)  
-- A supported IDE, such as:  
-  - [MDK-Community Edition](https://www.keil.arm.com/mdk-community/) (not for commercial use)  
-  - [STM32 VS Code extension](https://www.st.com/content/st_com/en/campaigns/stm32-vs-code-extension-z11.html)  
-- [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html) (optional)
+* [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html)  
+* A supported IDE, such as:  
+  * [STM32 VS Code extension](https://www.st.com/content/st_com/en/campaigns/stm32-vs-code-extension-z11.html)  
+  * [MDK-Community Edition](https://www.keil.arm.com/mdk-community/) (not for commercial use)  
 
 ## Build
 
@@ -35,7 +34,3 @@ Clone the [project repository](https://gitlab.com/yukaitung/lgdxrobot2-mcu), the
 *Note: The arrays start from motor 1.*
 
 Once the modifications are complete, you can build and flash the firmware onto the device.
-
-## Next Steps
-
-You can test the chassis using the ChassisTuner application, which allows you to check the speed of each motor and adjust the PID parameters accordingly.
