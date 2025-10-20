@@ -2,7 +2,7 @@
 title: LGDXRobot2  
 description: A flexible DIY Mecanum wheel chassis designed to inspire your enthusiasm on robotics.
 homepage: https://lgdxrobot.bristolgram.uk/lgdxrobot2/  
-weight: 1
+weight: 4
 ---
 
 LGDXRobot2 is a DIY Mecanum wheel chassis designed for building ROS2 robots using low-cost hardware. It offers complete freedom to customise hardware specifications and aims to inspire your enthusiasm on robotics. It also integrates seamlessly with the [LGDXRobot Cloud](https://lgdxrobot.bristolgram.uk/cloud/).

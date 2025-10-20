@@ -1,7 +1,7 @@
 ---
 title: ChassisTuner
 layout: sub-section
-weight: 2
+weight: 3
 ---
 
 LGDXRobot2 ChassisTuner is a GUI tool written in Qt, designed for testing and fine-tuning LGDXRobot2 hardware. It allows you to validate your setup and optimise performance. 
