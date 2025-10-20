@@ -1,15 +1,16 @@
 ---
 title: LGDXRobot2  
-description: Highly configurable low-cost DIY Mecanum wheel chassis for hobbyists.
+description: A flexible DIY Mecanum wheel chassis designed to inspire your enthusiasm on robotics.
 homepage: https://lgdxrobot.bristolgram.uk/lgdxrobot2/  
-weight: 2
+weight: 1
 ---
 
-LGDXRobot2 is a DIY Mecanum wheel chassis designed for building a ROS 2-compatible robot using low-cost hardware, offering flexibility to customise hardware specifications. It also integrates seamlessly with the [LGDXRobot Cloud](https://lgdxrobot.bristolgram.uk/cloud/).
+LGDXRobot2 is a DIY Mecanum wheel chassis designed for building ROS2 robots using low-cost hardware. It offers complete freedom to customise hardware specifications and aims to inspire your enthusiasm on robotics. It also integrates seamlessly with the [LGDXRobot Cloud](https://lgdxrobot.bristolgram.uk/cloud/).
 
-The hardware section explains how to assemble the robot and optimise the chassis using a GUI tool:
+This tutorial covers how to assemble the robot, configure the firmware, and integrate with ROS 2. To start build the physical robot, following tutorials below:
 
-* [MCU / Hardware](mcu)  
+* [Chassis](chassis)
+* [Control Board](mcu)  
 * [ChassisTuner](chassistuner)  
 
 The software section covers integration with ROS 2. It includes examples for using the robot with NAV2 and joystick (JOY), as well as simulation configurations in Webots:
@@ -18,19 +19,12 @@ The software section covers integration with ROS 2. It includes examples for usi
 
 ## Links
 
-### GitLab Repositories
+### Repositories
 
-* [LGDXRobot2-MCU](https://gitlab.com/yukaitung/lgdxrobot2-mcu)
-* [LGDXRobot2-ChassisTuner](https://gitlab.com/yukaitung/lgdxrobot2-chassistuner)
-* [LGDXRobot2-ROS2](https://gitlab.com/yukaitung/lgdxrobot2-ros2)
-* [LGDXRobot2-Webots](https://gitlab.com/yukaitung/lgdxrobot2-webots)
-
-### GitHub Repositories
-
-* [LGDXRobot2-MCU](https://github.com/yukaitung/lgdxrobot2-mcu)
-* [LGDXRobot2-ChassisTuner](https://github.com/yukaitung/lgdxrobot2-chassistuner)
-* [LGDXRobot2-ROS2](https://github.com/yukaitung/lgdxrobot2-ros2)
-* [LGDXRobot2-Webots](https://github.com/yukaitung/lgdxrobot2-webots)
+* Hardware designs for both the chassis and control: [GitLab](https://gitlab.com/yukaitung/lgdxrobot2-design) [GitHub](https://github.com/yukaitung/lgdxrobot2-design)
+* Firmware for the control board: [GitLab](https://gitlab.com/yukaitung/lgdxrobot2-mcu) [GitHub](https://github.com/yukaitung/lgdxrobot2-mcu)
+* ChassisTuner: [GitLab](https://gitlab.com/yukaitung/lgdxrobot2-chassistuner) [GitHub](https://github.com/yukaitung/lgdxrobot2-chassistuner)
+* ROS2 Packages: [GitLab](https://gitlab.com/yukaitung/lgdxrobot2-ros2) [GitHub](https://github.com/yukaitung/lgdxrobot2-ros2)
 
 ### Docker Images
 
