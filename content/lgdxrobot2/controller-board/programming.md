@@ -33,17 +33,17 @@ switch (data[2])
 {
   case MCU_DATA_TYPE:
     McuData mcuData;
-    memcpy(&mcuData, frame.data(), sizeof(McuData));
+    memcpy(&mcuData, data.data(), sizeof(McuData));
     // Your function to process the data
     break;
   case MCU_SERIAL_NUMBER_TYPE:
     McuSerialNumber mcuSerialNumber;
-    memcpy(&mcuSerialNumber, frame.data(), sizeof(McuSerialNumber));
+    memcpy(&mcuSerialNumber, data.data(), sizeof(McuSerialNumber));
     // Your function to process the data
     break;
   case MCU_PID_TYPE:
     McuPid mcuPid;
-    memcpy(&mcuPid, frame.data(), sizeof(McuPid));
+    memcpy(&mcuPid, data.data(), sizeof(McuPid));
     // Your function to process the data
     break;
   default:
