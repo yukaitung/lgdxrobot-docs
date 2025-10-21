@@ -3,7 +3,7 @@ title: Bill of materials (BOM)
 weight: 3
 ---
 
-### Chassis
+## Chassis
 
 | Item Name | Quantity | Notes |
 |------------|-----------|--------|
@@ -17,12 +17,12 @@ weight: 3
 | M4 Standoffs (35 mm) | 8 | — |
 {.table}
 
-### Controller Board
+## Controller Board
 
 | Item Name | Quantity | Notes |
 |-----------|----------|-------|
 | LGDXRobot2 Controller Board | 1 | The instructions are provided on the next page. |
-| BlackPill (STM32F411CEU6) | 1 | [Official GitHub (not affiliated)](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1) |
+| BlackPill (STM32F411CEU6) | 1 | [Official GitHub (not an affiliate link)](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1) |
 | TB6612FNG Module | 2 | — |
 | INA226 Module | 2 | Optional. The **shunt resistor** must be **R010** to support high current. |
 | Relay Module | 1 | — |
@@ -36,7 +36,7 @@ weight: 3
 | PH2.0 Cable (15cm) | 4 | — |
 {.table}
 
-### Power Supply
+## Power Supply
 
 | Item | Quantity | Notes |
 |------|-----------|--------|
@@ -45,12 +45,13 @@ weight: 3
 | 18650 Battery Protection Board | 2 | Optional |
 | 12V DC-DC Buck Converter | 1 | — |
 | 5V DC-DC Buck Converter | 1 | You may choose another voltage if you are not using a Raspberry Pi or Jetson Nano. |
+| DC Power Jack / USB Cable | 1 | Depends on the power input for your computer |
 {.table}
 
 You can design own power supply but please be aware that the voltage for the motors is **12V**.
 {.alert .alert-info}
 
-### Miscellaneous
+## Miscellaneous
 
 | Item | Quantity | Notes |
 |------|----------|-------|
@@ -59,18 +60,18 @@ You can design own power supply but please be aware that the voltage for the mot
 | Cables | Suitable length | — |
 {.table}
 
-### Computer
+## Computer
 
 | Item | Quantity | Notes |
 |------|----------|-------|
-| NUC (Was Intel NUC) | 1 | — |
+| NUC (Was Intel NUC) | 1 | Only Slim Kit is supported. |
 | M3 Screws (10 mm length) | 2 | Only for the **NUC**. |
 | Raspberry Pi or NVIDIA Jetson Nano | 1 | — |
 | M2.5 Screws (8 mm length) | 4 | Only for the **Raspberry Pi** or **NVIDIA Jetson Nano**. |
 | M2.5 Standoffs (16 mm) | 4 | Only for the **Raspberry Pi** or **NVIDIA Jetson Nano**. |
 {.table}
 
-### Sensors
+## Sensors
 
 | Item | Quantity | Notes |
 |------|----------|-------|
@@ -80,14 +81,15 @@ You can design own power supply but please be aware that the voltage for the mot
 | 1/4-Inch Tripod Screw | 1 | Optional |
 {.table}
 
-### Tools (Not installed on the robot)
+## Tools (Not installed on the robot)
 
 | Item | Quantity | Notes |
 |------|----------|-------|
 | Hex Key Set | 1 | — |
 | 7 mm Wrench | 1 | — |
-| Cross-Head Screwdriver | 1 | — |
+| Crosshead Screwdriver | 1 | — |
 | Soldering Iron | 1 | — |
 | Solder Paste | 1 | — |
+| Hot Glue Gun / Strong Double Sided Tape | 1 | — |
 | ST-LINK V2 | 1 | For flashing the MCU firmware. |
 {.table}

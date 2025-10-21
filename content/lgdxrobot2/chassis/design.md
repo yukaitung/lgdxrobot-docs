@@ -3,7 +3,7 @@ title: Design
 weight: 2
 ---
 
-LGDXRobot2 is a Mecanum wheel chassis with four wheels. The size is set to 240mm x 240mm x 120mm. It has a threee layer chassis structure.
+LGDXRobot2 is a Mecanum wheel chassis with four wheels. The size is set to 240mm width x 240mm length with variable height. It has a threee layer chassis structure.
 
 ## Bottom Plate
 
@@ -17,5 +17,5 @@ The PC plate is a flat plate with mounting holes for different devices including
 
 The top plate is a flat plate with mounting holes for LiDAR, it support only RPLIDAR C1 and RPLIDAR A1. Also, it has a hole for heat dissipation for Nvidia Jetson Nano.
 
-Please do not treat the hole as handle.
+Please do not use the hole as handle.
 {.alert .alert-warning}
