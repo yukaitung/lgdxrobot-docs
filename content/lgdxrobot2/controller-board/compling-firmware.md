@@ -16,21 +16,36 @@ The following software is required to build and flash the firmware:
 
 ## Build
 
-Clone the [project repository](https://gitlab.com/yukaitung/lgdxrobot2-mcu), then open it with STM32CubeMX and generate the project accordingly. Next, launch your IDE and open the file `Inc/motor.h`. Modify the source code as needed to match your robot's specifications.
+### Generate The Project
 
-| Variable Name   | Example Value                           | Description                                                           |
-|-----------------|---------------------------------------|-----------------------------------------------------------------------|
-| CHASSIS_LX      | 0.237                                 | Size of the chassis in metres (m), X axis representing left to right |
-| CHASSIS_LY      | 0.287                                 | Size of the chassis in metres (m), Y axis facing forward             |
-| WHEEL_RADIUS    | 0.0375                                | Radius of the wheels in metres (m)                                    |
-| MOTOR_GEAR_RATIO| 90                                    | Gear ratio of the motor                                               |
-| MOTOR_MAX_SPEED | {10.948, 11.424, 11.1066, 10.6306}   | Maximum speed of each motor (wheel velocity in ChassisTuner)         |
-| ENCODER_PPR     | 3960                                  | Encoder pulses per revolution; multiply by 4 (e.g., 11 × 90 × 4)      |
-| PID_KP          | {6, 5, 6, 6}                         | Proportional constant for motor PID                                   |
-| PID_KI          | {11, 11, 13, 13}                     | Integral constant for motor PID                                       |
-| PID_KD          | {0.0, 0.0, 0.0, 0.0}                 | Derivative constant for motor PID                                     |
+1. Clone the [project repository](https://gitlab.com/yukaitung/lgdxrobot2-mcu)
+2. Launch STM32CubeMX and open the ioc file
+3. (Exclude VS Code extension) Switch to the Project Manager tab and select corrsponding IDE
+4. Press GENERATE CODE button
+
+### Configure And Build
+
+The firmware is designed to be adaptable to different configurations, but we need to customise the firmware. Open the project in the IDE and navigate to the `Inc/configuatuion.h` file. Change the following variables to match your configuration:
+
+| Variable Name | Example Value | Description |
+|----------------|----------------|----------------|
+| CHASSIS_LX | 0.237 | Chassis size in metres (m) along the X-axis (left to right). |
+| CHASSIS_LY | 0.287 | Chassis size in metres (m) along the Y-axis (forward direction). |
+| WHEEL_RADIUS | 0.0375 | Radius of each wheel in metres (m). |
+| ENCODER_PPR | 3960 | Encoder pulses per revolution; multiply by 4 (e.g. 11×90×4). |
+| MOTOR_GEAR_RATIO | 90 | Gear ratio of the motor. |
+| MOTOR_MAX_SPEED | {10.948,11.424,11.1066,10.6306} | Maximum speed of each motor (wheel velocity in *ChassisTuner*). |
+| PID_LEVEL_VELOCITY | {2.0f,5.0f,10.0f} | Velocity for each PID level (m/s). |
+| PID_KP | {{6,5,6,6},{...},{...}} | Proportional gain constant for motor PID control. |
+| PID_KI | {{6,5,6,6},{...},{...}} | Integral gain constant for motor PID control. |
+| PID_KD | {{6,5,6,6},{...},{...}} | Derivative gain constant for motor PID control. |
+| MOTOR_SPEED_RAMP | 0.1f | Speed ramp rate when decelerating the motor (m/s). |
+| ENABLE_POWER_MONITORING | N/A | Enables INA226 power monitoring; comment out if not used. |
+| POWER_MAXIMUM_CURRENT | 15.0f | Maximum current limit of the power supply (A). A higher value indicates an open circuit. |
+| POWER_MINIMUM_VOLTAGE | 12.0f | Minimum operating voltage for the motor power supply (V). A lower value indicates a depleted battery. |
 {.table}
 
-*Note: The arrays start from motor 1.*
+The motor starting motor 1 and the level starting from 1
+{.alert .alert-info}
 
 Once the modifications are complete, you can build and flash the firmware onto the device.

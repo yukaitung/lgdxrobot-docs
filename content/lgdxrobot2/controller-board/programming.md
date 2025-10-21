@@ -59,10 +59,10 @@ The logic for sending data is similar to reading data. We need to identify the c
 // Create McuInverseKinematicsCommand struct
 McuInverseKinematicsCommand command;
 
-// Set the command type
+// Set the command type corrsponding to the command
 command.command = MCU_INVERSE_KINEMATICS_COMMAND_TYPE;
 
-// Set the target velocity
+// Set the target velocity by putting the desired values
 command.velocity.x = 1.0f;
 command.velocity.y = 0.0f;
 command.velocity.rotation = 0.0f;
