@@ -5,6 +5,9 @@ weight: 5
 
 Communication with the MCU is managed via the STM32 Virtual COM Port, which is compatible with standard serial port programming. When initialising the connection to the MCU, ensure all settings (baud rate, data bits, etc.) are left at their default values. To reduce communication overhead, this project relies on raw data transfer. To programming, the lgdxrobot2.h must be included in the source code. This tutorial uses Qt as example as the functions are self-explanatory.
 
+Please note that the big endian based device will causing issue.
+{.alert .alert-info}
+
 ### Reading Data
 
 The data received from the MCU starting with hex `0xAA55` and ending with hex `0xA55A`, we can use it to split the data. Assume the program have the complete first data packet.
