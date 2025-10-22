@@ -3,29 +3,30 @@ title: Compling Firmware
 weight: 4
 ---
 
-The LGDXRobot2 MCU includes only the minimal source code, so it is necessary to generate the complete project before proceeding. You may then use any supported IDE to build and flash the firmware.
+The LGDXRobot2 MCU includes only the minimal source code, so it is necessary to generate the complete project before proceeding. You can then use any supported IDE to build and flash the firmware.
 
 ## Prerequisites
 
 The following software is required to build and flash the firmware:
 
 * [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html)  
+* ST-LINK V2 programmer
 * A supported IDE, such as:  
   * [STM32 VS Code extension](https://www.st.com/content/st_com/en/campaigns/stm32-vs-code-extension-z11.html)  
   * [MDK-Community Edition](https://www.keil.arm.com/mdk-community/) (not for commercial use)  
 
 ## Build
 
-### Generate The Project
+### Generate the Project
 
-1. Clone the [project repository](https://gitlab.com/yukaitung/lgdxrobot2-mcu)
-2. Launch STM32CubeMX and open the ioc file
-3. (Exclude VS Code extension) Switch to the Project Manager tab and select corrsponding IDE
-4. Press GENERATE CODE button
+1. Clone the [project repository](https://gitlab.com/yukaitung/lgdxrobot2-mcu).  
+2. Launch STM32CubeMX and open the `.ioc` file.  
+3. (If not using the VS Code extension) Switch to the **Project Manager** tab and select the corresponding IDE.  
+4. Press the **GENERATE CODE** button.
 
-### Configure And Build
+### Configure and Build
 
-The firmware is designed to be adaptable to different configurations, but we need to customise the firmware. Open the project in the IDE and navigate to the `Inc/configuatuion.h` file. Change the following variables to match your configuration:
+The firmware is designed to be adaptable to different configurations, but it must be customised for your specific setup. Open the project in your IDE and navigate to the `Inc/configuration.h` file. Change the following variables to match your configuration:
 
 | Variable Name | Example Value | Description |
 |----------------|----------------|----------------|
@@ -45,7 +46,7 @@ The firmware is designed to be adaptable to different configurations, but we nee
 | POWER_MINIMUM_VOLTAGE | 12.0f | Minimum operating voltage for the motor power supply (V). A lower value indicates a depleted battery. |
 {.table}
 
-The motor starting motor 1 and the level starting from 1
+Motor numbering starts from 1, and PID levels also start from 1.
 {.alert .alert-info}
 
 Once the modifications are complete, you can build and flash the firmware onto the device.

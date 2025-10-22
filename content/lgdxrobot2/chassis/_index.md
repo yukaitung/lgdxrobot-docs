@@ -4,6 +4,6 @@ layout: sub-section
 weight: 1
 ---
 
-This section introduces the chassis design, materials required, and assembly instructions. LGDXRobot2 now includes design files for the chassis in the [lgdxrobot2-design](https://gitlab.com/yukaitung/lgdxrobot2-design) repository. The files are requires FreeCAD installed. 
+This section introduces the chassis design, the materials required, and the assembly instructions. LGDXRobot2 now includes the chassis design files in the [lgdxrobot2-design](https://gitlab.com/yukaitung/lgdxrobot2-design) repository. These files require **FreeCAD** to be installed.
 
-The design files are located in the root of `Chassis` folder as well as an assembly example `assembly.FCStd` file. There are also some components that are not included but for reference purpose only. The file for manufacturing are located in `Chassis/Outputs` folder.
+The design files are located in the root of the `Chassis` folder, along with an assembly example file named `assembly.FCStd`. Some additional component files are included for reference purposes only and are not part of the final build. The files for manufacturing are located in the `Chassis/Outputs` folder.

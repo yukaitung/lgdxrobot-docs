@@ -44,11 +44,11 @@ weight: 3
 | 18650 Battery Case | 2 | — |
 | 18650 Battery Protection Board | 2 | Optional |
 | 12V DC-DC Buck Converter | 1 | — |
-| 5V DC-DC Buck Converter | 1 | You may choose another voltage if you are not using a Raspberry Pi or Jetson Nano. |
+| 5V DC-DC Buck Converter | 1 | You may choose another voltage if you are using NUC. |
 | DC Power Jack / USB Cable | 1 | Depends on the power input for your computer |
 {.table}
 
-You can design own power supply but please be aware that the voltage for the motors is **12V**.
+You may design your own power supply, but please note that the motor voltage is 12 V.
 {.alert .alert-info}
 
 ## Miscellaneous
@@ -64,7 +64,7 @@ You can design own power supply but please be aware that the voltage for the mot
 
 | Item | Quantity | Notes |
 |------|----------|-------|
-| NUC (Was Intel NUC) | 1 | Only Slim Kit is supported. |
+| NUC | 1 | Only Slim Kit is supported. (37mm height) |
 | M3 Screws (10 mm length) | 2 | Only for the **NUC**. |
 | Raspberry Pi or NVIDIA Jetson Nano | 1 | — |
 | M2.5 Screws (8 mm length) | 4 | Only for the **Raspberry Pi** or **NVIDIA Jetson Nano**. |

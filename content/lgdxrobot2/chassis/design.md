@@ -3,19 +3,19 @@ title: Design
 weight: 2
 ---
 
-LGDXRobot2 is a Mecanum wheel chassis with four wheels. The size is set to 240mm width x 240mm length with variable height. It has a threee layer chassis structure.
+LGDXRobot2 is a Mecanum wheel chassis with four wheels. The chassis measures 240 mm in width and 240 mm in length, with a variable height. It features a three layer chassis structure.
 
 ## Bottom Plate
 
-The bottom plate mounts the motors and the wheels, as well as putting the contorller board, the power supply, and the battery on top. It also provides a mounting point for the camera (Optional).
+The bottom plate holds the motors and wheels, and provides mounting positions for the controller board, power supply, and battery. It also includes an optional mounting point for a camera.
 
 ## PC Plate
 
-The PC plate is a flat plate with mounting holes for different devices including the NUC (Was Intel NUC), Raspberry Pi or Nvidia Jetson Nano. There are only two directions for mounting for both facing the front and back of the chassis.
+The PC plate is a flat plate with mounting holes for various devices, including the NUC (formerly Intel NUC), Raspberry Pi, or Nvidia Jetson Nano. Devices can be mounted in two orientations, facing either the front or the rear of the chassis.
 
 ## Top Plate
 
-The top plate is a flat plate with mounting holes for LiDAR, it support only RPLIDAR C1 and RPLIDAR A1. Also, it has a hole for heat dissipation for Nvidia Jetson Nano.
+The top plate is a flat plate with mounting holes for LiDAR units. It supports only the **RPLIDAR C1** and **RPLIDAR A1**. The plate also includes an opening for heat dissipation for the Nvidia Jetson Nano.
 
-Please do not use the hole as handle.
+Do not use the hole as a handle.
 {.alert .alert-warning}

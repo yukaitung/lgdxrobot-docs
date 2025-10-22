@@ -3,11 +3,11 @@ title: Reference
 weight: 6
 ---
 
-This page introduces the all kinds of data that can be received from the MCU as well as the commands that can be sent to the MCU.
+This page introduces all types of data that can be received from the MCU, as well as the commands that can be sent to the MCU.
 
 ## Common Structs
 
-Those are the detail for the structs that are used in the communication. Check here if the daty type is starting from MCU.
+The following are details of the structs used in communication. Check here if the data type starts with `MCU`.
 
 ### McuDof
 
@@ -17,7 +17,7 @@ Those are the detail for the structs that are used in the communication. Check h
 | y | float | Y-axis position |
 | rotation | float | Rotation |
 {.table}
-
+ 
 ### McuPower
 
 | Variable Name | Type | Description |
@@ -30,7 +30,7 @@ Those are the detail for the structs that are used in the communication. Check h
 
 ### Robot Data
 
-Consist of the basic data likes transforms, motor speeds and sensors data.
+This consists of the basic data such as transforms, motor speeds, and sensor data.
 
 `McuData` is defined as follows:
 
@@ -39,26 +39,26 @@ Consist of the basic data likes transforms, motor speeds and sensors data.
 | type | char | Must be `MCU_DATA_TYPE` |
 | transform | McuDof | Transform of the robot |
 | motors_target_velocity | float[4] | Target velocity of the motors |
-| motors_desire_velocity | float[4] | Desired velocity of the motors (For speed down control) |
+| motors_desired_velocity | float[4] | Desired velocity of the motors (for speed control) |
 | motors_actual_velocity | float[4] | Actual velocity of the motors |
-| motors_ccr | int[4] | The output of the PID controller and the final PWM value |
-| battery1 | McuPower | Power of the battery 1 |
-| battery2 | McuPower | Power of the battery 2 |
-| software_emergency_stop_enabled | bool | Whether the emergency stop is enabled |
-| hardware_emergency_stop_enabled | bool | Whether the hardware stop is pressed |
-| bettery_low_emergency_stop_enabled | bool | Whether the battery is low for motors power |
+| motors_ccr | int[4] | Output of the PID controller and final PWM value |
+| battery1 | McuPower | Power of battery 1 |
+| battery2 | McuPower | Power of battery 2 |
+| software_emergency_stop_enabled | bool | Whether the software emergency stop is enabled |
+| hardware_emergency_stop_enabled | bool | Whether the hardware stop button is pressed |
+| battery_low_emergency_stop_enabled | bool | Whether the battery level is too low for motor power |
 {.table}
 
 ### Serial Number
 
-The serial number of the MCU, convert the bit to hex and concatenate them.
+The serial number of the MCU. Convert the bits to hexadecimal and concatenate them to obtain the full serial number.
 
 ```cpp
 QString serialNumber = QString("%1%2%3")
-		.arg(mcuSerialNumber.serial_number1, 8, 16, QLatin1Char('0'))
-		.arg(mcuSerialNumber.serial_number2, 8, 16, QLatin1Char('0'))
-		.arg(mcuSerialNumber.serial_number3, 8, 16, QLatin1Char('0'))
-		.toUpper();
+	.arg(mcuSerialNumber.serial_number1, 8, 16, QLatin1Char('0'))
+	.arg(mcuSerialNumber.serial_number2, 8, 16, QLatin1Char('0'))
+	.arg(mcuSerialNumber.serial_number3, 8, 16, QLatin1Char('0'))
+	.toUpper();
 ```
 
 `McuSerialNumber` is defined as follows:
@@ -73,7 +73,7 @@ QString serialNumber = QString("%1%2%3")
 
 ### PID
 
-The PID setting for each motor.
+PID settings for each motor.
 
 `McuPid` is defined as follows:
 
@@ -84,12 +84,12 @@ The PID setting for each motor.
 | p | float[3][4] | Proportional gain constant for motor PID control |
 | i | float[3][4] | Integral gain constant for motor PID control |
 | d | float[3][4] | Derivative gain constant for motor PID control |
-| motors_maximum_speed | float[4] | Maximum speed of the motor |
+| motors_maximum_speed | float[4] | Maximum speed of the motors |
 {.table}
 
 ## PC to MCU (Write to MCU)
 
-Please ensure the command variable is set correctly to prevent unexpected behaviour.
+Please ensure the `command` variable is set correctly to prevent unexpected behaviour.
 {.alert .alert-info}
 
 ### Software Emergency Stop
@@ -118,7 +118,7 @@ Control the movement of the robot.
 
 ### Motor Speed
 
-Set the speed of the one motor.
+Set the speed of a single motor.
 
 `McuMotorCommand` is defined as follows:
 
@@ -138,12 +138,12 @@ Set the level velocity of the PID controller.
 | Variable Name | Type | Description |
 |---------------|------|-------------|
 | command | char | Must be `MCU_SET_LEVEL_VELOCITY_COMMAND_TYPE` |
-| level | float[3] | The velocity for each PID level |
+| level | float[3] | Velocity for each PID level |
 {.table}
 
 ### Get PID
 
-Get the PID setting of the motor, the MCU will return it from serial read.
+Get the PID settings of the motor. The MCU will return it via serial read.
 
 `McuGetPidCommand` is defined as follows:
 
@@ -154,7 +154,7 @@ Get the PID setting of the motor, the MCU will return it from serial read.
 
 ### Set PID
 
-Set the PID setting of one motor and one level.
+Set the PID settings for a single motor and a single level.
 
 `McuSetPidCommand` is defined as follows:
 
@@ -163,14 +163,14 @@ Set the PID setting of one motor and one level.
 | command | char | Must be `MCU_SET_PID_COMMAND_TYPE` |
 | motor | uint8_t | Motor number (0 to 3) |
 | level | uint8_t | Level number (0 to 2) |
-| p | float | Proportional gain constant for motor PID control |
-| i | float | Integral gain constant for motor PID control |
-| d | float | Derivative gain constant for motor PID control |
+| p | float | Proportional gain constant |
+| i | float | Integral gain constant |
+| d | float | Derivative gain constant |
 {.table}
 
 ### Save PID
 
-Save the PID setting and the level velocity. It will presist after reset, but could be overwritten by full chip erase.
+Save the PID settings and level velocities. These persist after reset but may be overwritten by a full chip erase.
 
 `McuSavePidCommand` is defined as follows:
 
@@ -194,7 +194,7 @@ Set the maximum speed of all motors.
 
 ### Get Serial Number
 
-Get the serial number of the MCU, the MCU will return it from serial read.
+Get the serial number of the MCU. The MCU will return it via serial read.
 
 `McuGetSerialNumberCommand` is defined as follows:
 
