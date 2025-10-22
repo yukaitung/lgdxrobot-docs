@@ -1,0 +1,43 @@
+---
+title: Hardware Testing
+weight: 3
+---
+
+The Hardware Testing (Robot Data tab) section covers reading data from the robot and sending commands to it.
+
+## Connecting to the Robot
+
+1. Connect the controller board to your computer using a USB cable, as communication is performed over USB (STM32 Virtual COM Port), not standard serial.
+2. In the top-right corner, select the correct serial device name.
+3. If the device is not listed, press **Refresh** on the left.
+4. Press **Connect** on the right.
+5. The connection status should display **Connected**.
+6. You should see data being received from the robot. Try rotating the wheels to observe changes in the data.
+
+## Sending Commands (Hardware Testing Section)
+
+### Get Serial Number
+
+Each microcontroller has a unique serial number. Press **Get** under Get Serial Number. The serial number will be displayed at the top.
+
+### Reset Transform
+
+Press the **Reset** button to reset the robot's transform. The transform values should return to zero.
+
+### Inverse Kinematics
+
+This command sets the robot’s vector motion. You can set the velocity for each axis individually and press **Send**. Press **Stop** to halt the robot. The robot should move in the desired direction.
+
+Please ensure the robot is lifted when sending commands. Otherwise, the robot may move and cause damage.
+{.alert .alert-danger}
+
+### Motor Speed
+
+This command sets the speed of an individual motor. Select the motor from the drop-down menu, set the desired velocity, and press **Send**. Press **Stop** to halt the motor. Only the selected motor should move.
+
+Please ensure the robot is lifted when sending commands. Otherwise, the robot may move and cause damage.
+{.alert .alert-danger}
+
+### Set Software Emergency Stop
+
+This command enables or disables the software emergency stop. Press **Enable** to activate it and **Disable** to deactivate it. When enabled, the status should change to **Enabled** and the red LED will illuminate.
