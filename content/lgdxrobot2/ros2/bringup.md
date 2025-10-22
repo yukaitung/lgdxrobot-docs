@@ -1,6 +1,6 @@
 ---
 title: Bringup
-weight: 5
+weight: 6
 ---
 
 The `lgdxrobot2_bringup` package includes launch files that demonstrate how to bring up the robot with NAV2 and the LGDXRobot Cloud.

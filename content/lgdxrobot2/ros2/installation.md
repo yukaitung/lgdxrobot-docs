@@ -3,45 +3,34 @@ title: Installation
 weight: 2
 ---
 
-## Docker Installation
+LGDXRobot2 ROS2 is available as Docker images for both AMD64 and ARM64 architectures. You can choose either the desktop images or the command-line images.
 
-Docker images support both AMD64 and ARM64 architectures and it is suitable for simulation.
+## Desktop Images
+
+The desktop images include ROS2 GUI tools and provide a web interface suitable for remote control. After starting the container, you can access the web interface at [http://localhost:3000](http://localhost:3000).
+
+### With Webots
+
+```bash
+docker run -it --name lgdxrobot2 yukaitung/lgdxrobot2.desktop:latest
+```
+
+### Without Webots
+
+```bash
+docker run -it --name lgdxrobot2 yukaitung/lgdxrobot2.desktop:latest-lite
+```
+
+## Command Line Images
+
+### With Webots
 
 ```bash
 docker run -it --name lgdxrobot2 yukaitung/lgdxrobot2:latest
 ```
 
-## Tradtional Installation
-
-It is recommanded to use Ubuntu 24.04 LTS on an AMD64 computer.
-
-### Prerequisites
-
-1. [Install ROS2](https://docs.ros.org/en/jazzy/Installation.html)
-2. [Install NAV2](https://docs.nav2.org/getting_started/index.html)
+### Without Webots
 
 ```bash
-sudo apt install ros-jazzy-navigation2
-sudo apt install ros-jazzy-nav2-bringup
-```
-
-3. [Install Webots](https://cyberbotics.com/doc/guide/installation-procedure)
-4. [Install Webots ROS2 Interface](https://github.com/cyberbotics/webots_ros2/wiki/Getting-Started)
-5. Install the following packages:
-
-```bash
-sudo apt install libprotobuf-dev libgrpc++-dev protobuf-compiler-grpc 
-sudo apt install ros-jazzy-rtabmap-ros ros-jazzy-imu-transformer # Optional for physical robot
-```
-
-### Build
-
-After installing all dependencies, clone the project and run the following commands:
-
-```bash
-mkdir -p ~/lgdx_ws/src
-cd ~/lgdx_ws/src
-git clone --recurse-submodules https://gitlab.com/yukaitung/lgdxrobot2-ros2
-cd ..
-colcon build
+docker run -it --name lgdxrobot2 yukaitung/lgdxrobot2:latest-lite
 ```

@@ -60,15 +60,24 @@ You may design your own power supply, but please note that the motor voltage is 
 | Cables | Suitable length | — |
 {.table}
 
-## Computer
+## Computer (NUC)
+
+You can either choose the NUC setting or the Single Board Computer (SBC) setting.
+{.alert .alert-info}
 
 | Item | Quantity | Notes |
 |------|----------|-------|
 | NUC | 1 | Only Slim Kit is supported. (37mm height) |
-| M3 Screws (10 mm length) | 2 | Only for the **NUC**. |
+| M3 Screws (10 mm length) | 2 | — |
+{.table}
+
+## Computer (SBC)
+
+| Item | Quantity | Notes |
+|------|----------|-------|
 | Raspberry Pi or NVIDIA Jetson Nano | 1 | — |
-| M2.5 Screws (8 mm length) | 4 | Only for the **Raspberry Pi** or **NVIDIA Jetson Nano**. |
-| M2.5 Standoffs (16 mm) | 4 | Only for the **Raspberry Pi** or **NVIDIA Jetson Nano**. |
+| M2.5 Screws (8 mm length) | 4 | — |
+| M2.5 Standoffs (16 mm) | 4 | — |
 {.table}
 
 ## Sensors

@@ -1,5 +1,5 @@
 ---
-title: Compiling the ChassisTuner
+title: Compling the ChassisTuner
 weight: 2
 ---
 
