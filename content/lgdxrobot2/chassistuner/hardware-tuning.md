@@ -38,6 +38,9 @@ Please ensure the robot is lifted when sending commands. Otherwise, it may move 
 3. Press **Send** to start the test and observe the chart.
 4. Press **Stop** to halt the test.
 
+There are various methods for tuning PID. When adjusting the PID constants, try increasing P by 1, I by 10, and D by 0.1.
+{.alert .alert-info}
+
 The two additional checkboxes allow you to define a custom velocity for testing, enabling further performance evaluation.
 
 The reverse direction option changes the motor to rotate in the opposite direction.
