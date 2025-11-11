@@ -7,7 +7,7 @@ weight: 3
 
 | Item Name | Quantity | Notes |
 |------------|-----------|--------|
-| LGDXRobot2 Chassis Plates | 1 | The instrustion is on the next page |
+| LGDXRobot2 Chassis Plates | 1 | The instructions are provided on the next page. |
 | GM37-520 DC Gear Motor (12V) | 4 | A gear ratio of at least **1:90** is recommended to ensure sufficient torque. The motor must include an **encoder**, and the **connector type is PH2.0**. |
 | Mounting Bracket for 37mm DC Gear Motor (with screws) | 4 | These brackets are sometimes included when purchasing the motor. |
 | Mecanum Wheel Set | 1 set (4 wheels) | It is recommended to choose wheels with a **75–80 mm diameter** and **32+ mm width**. The **coupler must be 6 mm** to fit the motor shaft. |
@@ -33,7 +33,7 @@ weight: 3
 | 2.54 mm (0.1 inch) Header Strip (Female) | Total 68 pins | Optional if you want to **solder** modules on the board. |
 | XT30 Connector (Male & Female) | 1 | Optional if you want to **solder** wires on the board. |
 | PH2.0 Connector (Female) | 4 | — |
-| PH2.0 Cable (15cm) | 4 | — |
+| PH2.0 Cable (~15 cm) | 4 | It is recommended that the keys face opposite directions. |
 {.table}
 
 ## Power Supply
