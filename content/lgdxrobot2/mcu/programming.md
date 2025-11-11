@@ -1,5 +1,5 @@
 ---
-title: Programming (C++)
+title: Programming (Qt C++)
 weight: 5
 ---
 
@@ -63,7 +63,9 @@ The logic for sending data is similar to reading data. First, identify the comma
 // Create the McuInverseKinematicsCommand struct
 McuInverseKinematicsCommand command;
 
-// Set the command type corresponding to the inverse kinematics command
+// Set the header and command type corresponding to the inverse kinematics command
+command.header1 = MCU_HEADER1;
+command.header2 = MCU_HEADER2;
 command.command = MCU_INVERSE_KINEMATICS_COMMAND_TYPE;
 
 // Set the target velocities
