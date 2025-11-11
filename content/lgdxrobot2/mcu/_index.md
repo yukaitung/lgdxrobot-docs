@@ -1,9 +1,11 @@
 ---
-title: MCU / Hardware
+title: Controller Board (MCU)
 layout: sub-section
-weight: 1
+weight: 2
 ---
 
-LGDXRobot2 MCU is an STM32-based controller board designed specifically for the LGDXRobot2 platform. It supports a four-wheeled Mecanum chassis configuration with a straightforward, minimalistic design. While both the hardware design and source code are provided, the firmware must be compiled and uploaded manually to the device.
+The controller board is an STM32-based board designed specifically for the LGDXRobot2. It supports a four-wheeled Mecanum chassis and can be adapted for other configurations.
 
-![Image of LGDXRobot2](img/lgdxrobot2.png)
+The source code is available in the **LGDXRobot2 MCU** repository ([GitLab](https://gitlab.com/yukaitung/lgdxrobot2-mcu) | [GitHub](https://github.com/yukaitung/lgdxrobot2-mcu)).
+
+In addition, the controller board has an open-source PCB design, which is available in the **LGDXRobot2 Design** repository ([GitLab](https://gitlab.com/yukaitung/lgdxrobot2-design) | [GitHub](https://github.com/yukaitung/lgdxrobot2-design)). The design files are located in the `Board` folder and require **KiCad** to be installed.

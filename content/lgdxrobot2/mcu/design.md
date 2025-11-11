@@ -3,27 +3,13 @@ title: Design
 weight: 2
 ---
 
-**LGDXRobot2 MCU** follows a modular design, allowing individual components to be replaced when necessary. For basic safety precautions, it includes an emergency stop button.
+The controller board follows a modular design, allowing individual components to be replaced when necessary. For basic safety, it includes an emergency stop button.
 
-## Control Board
+The board features the **BlackPill (STM32F411CEU6)** microcontroller, which provides a sufficient number of GPIO pins at a reasonable cost. It is equipped with **two TB6612FNG** motor driver modules to control the four motors, and **two INA226** modules are included to monitor battery voltage and current. The relay module controls the power supply to the motors.
 
-![LGDXRobot2 Control Board](../img/control-board.jpg)
-[Download the PDF](/files/board.pdf)
+The board has a built-in three-level PID controller for the motors, which uses encoders for feedback. The three levels allow three distinct PID configurations for different velocities, stabilising the motors under variable speed changes. The response time is approximately 20 ms.
 
-The control board features the **BlackPill (STM32F411CEU6)** microcontroller, which provides a sufficient number of GPIO pins at a reasonable cost. It is equipped with **two TB6612FNG** motor driver modules to control the four motors, and **two INA219** modules are included to monitor the battery voltage. Please note that current sensing is not implemented.
+The motors are controlled via PWM. The system clock is 96 MHz, and the PWM frequency is 10 kHz. Therefore, the auto-reload register (ARR) is 9599, calculated using the formula: Fpwm = (Fclk / ((ARR + 1) * (PSC + 1))).
 
-**LGDXRobot2** is designed to operate using **two 12V batteries**: one dedicated to powering the motors and the other for the onboard computer. This separation provides a simple and effective way to prevent damage caused by voltage fluctuations. Users are welcome to integrate a battery protection board or choose a higher-capacity battery according to their requirements.
-
-## Hardware (Mechanical)
-
-**LGDXRobot2** is compatible with Mecanum wheel chassis of various sizes. Users may select any chassis and wheel dimensions they prefer; however, they must modify the source code — specifically a set of constants — to reflect the chosen configuration.
-
-The recommended motor for this platform is the **GM37-520 12V with a 1:90 gear ratio**. It is advisable to use motors with at least a 1:90 ratio to ensure that the robot has sufficient torque for reliable operation.
-
-## Hardware (Computing)
-
-Any computer that supports **Ubuntu 24.04** can be used with **LGDXRobot2**. However, only **x86-based PCs**, such as **Intel NUC** devices, have been tested. An **Intel RealSense** camera can be used for sensing purposes.
-
-## Assembly
-
-The assembly process is straightforward. All components should be connected as specified in the provided schematic. There is no need to fabricate a printed circuit board (**PCB**), making the construction accessible and convenient.
+For the wheels and encoders, 1 revolution of a wheel corresponds to 3960 counts in the STM32 counter.  
+The gear ratio is 1:90, and the encoder PPR is 11 × 4 counts per edge (up/down), giving 11 × 4 × 90 = 3960 counts per wheel revolution. Each count corresponds to approximately 0.0015867 rad.
