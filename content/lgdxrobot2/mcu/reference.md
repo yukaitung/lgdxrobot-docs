@@ -38,6 +38,7 @@ This consists of the basic data such as transforms, motor speeds, and sensor dat
 |---------------|------|-------------|
 | type | char | Must be `MCU_DATA_TYPE` |
 | transform | McuDof | Transform of the robot |
+| forward_kinematic | McuDof | Forward Kinematic of the robot |
 | motors_target_velocity | float[4] | Target velocity of the motors |
 | motors_desired_velocity | float[4] | Desired velocity of the motors (for speed control) |
 | motors_actual_velocity | float[4] | Actual velocity of the motors |
@@ -80,7 +81,7 @@ PID settings for each motor.
 | Variable Name | Type | Description |
 |---------------|------|-------------|
 | type | char | Must be `MCU_PID_TYPE` |
-| level_velocity | float[3] | Velocity for each PID level |
+| pid_speed | float[3] | Speed for each PID level |
 | p | float[3][4] | Proportional gain constant for motor PID control |
 | i | float[3][4] | Integral gain constant for motor PID control |
 | d | float[3][4] | Derivative gain constant for motor PID control |
@@ -129,16 +130,16 @@ Set the speed of a single motor.
 | velocity | float | Target velocity of the motor |
 {.table}
 
-### Set Level Velocity
+### Set PID Speed
 
-Set the level velocity of the PID controller.
+Set the speed of the PID controller.
 
-`McuSetLevelVelocityCommand` is defined as follows:
+`McuSetPidSpeedCommand` is defined as follows:
 
 | Variable Name | Type | Description |
 |---------------|------|-------------|
-| command | char | Must be `MCU_SET_LEVEL_VELOCITY_COMMAND_TYPE` |
-| level | float[3] | Velocity for each PID level |
+| command | char | Must be `MCU_SET_PID_SPEED_COMMAND_TYPE` |
+| pid_speed | float[3] | Speed for each PID level |
 {.table}
 
 ### Get PID
