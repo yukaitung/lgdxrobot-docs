@@ -13,9 +13,9 @@ This documentation covers the process of building the LGDXRobot2 from scratch. T
 * [Control Board](mcu)  
 * [ChassisTuner](chassistuner)  
 
-The final section covers software integration with ROS 2, including using the robot with NAV2 and the joystick (JOY), as well as simulation in Webots.
+The final section covers software integration with ROS2, including using the robot with NAV2 and the joystick (JOY), as well as simulation in Webots.
 
-* [ROS 2](ros2)
+* [ROS2](ros2)
 
 ## Links
 
