@@ -3,7 +3,7 @@ title: Flashing Firmware
 weight: 3
 ---
 
-The firmware is available in the [lgdxrobot2-mcu](https://gitlab.com/yukaitung/lgdxrobot2-mcu) repository. Download the `.elf` file from the latest release.
+Download the `.elf` file [here](https://gitlab.com/yukaitung/lgdxrobot2-mcu/-/releases).
 
 ## Prerequisites
 
