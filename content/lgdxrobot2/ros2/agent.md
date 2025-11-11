@@ -25,11 +25,11 @@ weight: 5
 | mcu_enable             | bool   | Enables the serial connection. If unspecified (Linux only), an automatic search is performed. |
 | mcu_port_name         | string | The name of the serial port device.                                                           |
 | mcu_reset_transform    | bool   | Resets the robot’s transform on initialisation.                                               |
-| mcu_control_mode       | string | Control mode, e.g., `joy` for joystick or `cmd_vel` for ROS navigation stack.                |
+| mcu_control_mode       | string | Control mode, e.g., `joy` for joystick or `cmd_vel` for ROS navigation stack or `both` for both inputs.                |
 | mcu_publish_odom       | bool   | Enables publishing of odometry information.                                                   |
 | mcu_publish_tf         | bool   | Enables publishing of `tf` transformation frames.                                             |
+| mcu_publish_joint_state | bool   | Enables publishing of JointState messages.
 | mcu_base_link_name     | string | Custom name for the `base_link` frame.                                                        |
-| mcu_use_external_imu   | bool   | Enables the use of an external IMU for odometry calculations.                                 |
 {.table}
 
 
@@ -40,15 +40,16 @@ weight: 5
 | sim_enable   | bool | Enables simulation for LGDXRobot2 hardware. The MCU must be disabled for this feature. |
 {.table}
 
-## Published Topics
+## Topics
+### Published Topics
 
 | Topic Name         | Type                                                                                                  | Description                                             |
 |--------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| /agent/odom        | nav_msgs/Odometry                                                                                     | Odometry from the encoders in the robot (MCU required). |
+| /joint_states        |  sensor_msgs/JointState                                                                                     | Robot wheels movement (MCU required). |
+| /agent/odom        | nav_msgs/Odometry                                                                                     | Odometry for the robot (MCU required). |
 | /agent/auto_task   | [lgdxrobot2_agent/AutoTask](https://gitlab.com/yukaitung/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/msg/AutoTask.msg)   | Current task of the robot (Cloud required).             |
 | /agent/robot_data  | [lgdxrobot2_agent/RobotData](https://gitlab.com/yukaitung/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/msg/RobotData.msg) | Current robot data from sensors.                        |
 {.table}
-
 
 ### Subscribed Topics
 
@@ -58,7 +59,6 @@ MCU only:
 |----------------|---------------------|---------------------------------|
 | /cmd_vel       | geometry_msgs/Twist |                                 |
 | /joy           | sensor_msgs/Joy     |                                 |
-| /agent/ext_imu | sensor_msgs/Imu     | Subject to be removed in future |
 {.table}
 
 ### Services
@@ -70,14 +70,3 @@ Cloud only:
 | auto_task_next   | [lgdxrobot2_agent/AutoTaskNext](https://gitlab.com/yukaitung/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/srv/AutoTaskNext.srv)   | Commands the robot to proceed to the next step in the task. |
 | auto_task_abort  | [lgdxrobot2_agent/AutoTaskAbort](https://gitlab.com/yukaitung/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/srv/AutoTaskAbort.srv) | Aborts the current task.                                   |
 {.table}
-
-
-## Example
-
-To connect LGDXRobot2 using a joystick:
-
-```bash
-cd lgdx_ws
-. install/setup.bash
-ros2 launch lgdxrobot2_agent joy.launch.py
-```
