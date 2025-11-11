@@ -30,8 +30,8 @@ The firmware is designed to be adaptable to different configurations, but it mus
 
 | Variable Name | Example Value | Description |
 |----------------|----------------|----------------|
-| CHASSIS_LX | 0.237 | Chassis size in metres (m) along the X-axis (left to right). |
-| CHASSIS_LY | 0.287 | Chassis size in metres (m) along the Y-axis (forward direction). |
+| CHASSIS_LX  | 0.237  | Distance from chassis centre to wheel centre in metres (m) along the X-axis (left to right). |
+| CHASSIS_LY  | 0.287  | Distance from chassis centre to wheel centre in metres (m) along the Y-axis (forward direction). |
 | WHEEL_RADIUS | 0.0375 | Radius of each wheel in metres (m). |
 | ENCODER_PPR | 3960 | Encoder pulses per revolution; multiply by 4 (e.g. 11×90×4). |
 | MOTOR_GEAR_RATIO | 90 | Gear ratio of the motor. |
