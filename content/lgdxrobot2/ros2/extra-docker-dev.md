@@ -1,5 +1,5 @@
 ---
-title: Extra - Docker Image for Development
+title: Extra - Docker for Development
 weight: 10
 ---
 
