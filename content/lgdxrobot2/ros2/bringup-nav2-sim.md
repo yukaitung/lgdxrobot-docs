@@ -1,28 +1,34 @@
 ---
-title: Bringup - NAV2
-weight: 7
+title: Bringup - NAV2 Simulation
+weight: 8
 ---
 
-The `nav` launch file is used to start the robot with all required hardware, the **NAV2** stack, and display it in the **RViz2** GUI.
+The `simulation_nav.launch` launch file is used to start the robot in Webots simulation, the **NAV2** stack, and display it in the **RViz2** GUI. Webots is required to be installed.
 
 ## Examples
 
 SLAM on NAV2
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py slam:=True profile:='slam'
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py slam:=True profile:='sim-slam'
 ```
 
 Localisation on NAV2
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py map:<Absolute path to the map yaml file>
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py profile:='sim-loc' 
 ```
 
-SLAM on NAV2 with JOY
+SLAM on other map
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py slam:=True profile:='slam' use_joy:=True
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py slam:=True profile:='sim-slam' world:='apartment.wbt' map:='apartment.yaml'
+```
+
+Localisation on other map
+
+```bash
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py profile:='sim-loc' world:='apartment.wbt' map:='apartment.yaml'
 ```
 
 ## Parameters

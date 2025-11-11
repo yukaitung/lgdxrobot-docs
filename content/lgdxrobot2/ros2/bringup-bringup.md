@@ -28,7 +28,7 @@ ros2 launch lgdxrobot2_bringup bringup.launch.py
 Using Other LiDAR Models (default is C1)
 
 ```bash
-ros2 launch lgdxrobot2_bringup bringup.launch.py lidar_model:=a1
+ros2 launch lgdxrobot2_bringup bringup.launch.py lidar_model:='a1'
 ```
 
 Launch Without RealSense Camera
