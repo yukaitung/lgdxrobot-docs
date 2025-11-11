@@ -62,7 +62,7 @@ docker run -d \
 
 ### With Realsense IMU
 
-For older versions of Ubuntu, you may need to use the `--security-opt` option.
+Realsense IMU requires privileged mode.
 
 Privileged mode is recommended for development purposes only.
 {.alert .alert-warning}

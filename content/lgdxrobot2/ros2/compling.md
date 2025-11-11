@@ -3,6 +3,8 @@ title: Compling
 weight: 3
 ---
 
+This tutorial assumes that you have already installed Ubuntu 24.04 LTS.
+
 ## Prerequisites
 
 1. [Install ROS2](https://docs.ros.org/en/jazzy/Installation.html)
