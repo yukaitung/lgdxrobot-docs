@@ -86,7 +86,7 @@ docker run -d \
 
 ### For Older Hardware
 
-For older version of Ununtu, you may need to use the `security-opt` option.
+For older version of Ubuntu, you may need to use the `security-opt` option.
 
 Privileged mode and `--security-opt` are suitable for development purposes only.
 {.alert .alert-warning}
