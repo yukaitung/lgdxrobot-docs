@@ -22,33 +22,25 @@ Below is the mapping of the Xbox controller:
 ## Examples
 
 ```bash
-cd lgdx_ws
-. install/setup.bash
 ros2 launch lgdxrobot2_bringup bringup.launch.py
 ```
 
 Using Other LiDAR Models (default is C1)
 
 ```bash
-cd lgdx_ws
-. install/setup.bash
 ros2 launch lgdxrobot2_bringup bringup.launch.py lidar_model:=a1
 ```
 
 Launch Without RealSense Camera
 
 ```bash
-cd lgdx_ws
-. install/setup.bash
 ros2 launch lgdxrobot2_bringup bringup.launch.py use_camera:=false
 ```
 
-Launch Without LiDAR
+Launch Without JOY only
 
 ```bash
-cd lgdx_ws
-. install/setup.bash
-ros2 launch lgdxrobot2_bringup bringup.launch.py use_lidar:=false
+ros2 launch lgdxrobot2_bringup bringup.launch.py use_camera:=false use_lidar:=false
 ```
 
 ## Parameters
