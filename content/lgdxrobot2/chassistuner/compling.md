@@ -42,7 +42,8 @@ PATH="$PATH:$QT_PATH/Tools/CMake/bin:$QT_PATH/Tools/Ninja:$QT_PATH/$QT_VERSION/g
 2. Install the required system packages:
 
 ```bash
-sudo apt install libxkbcommon-dev libxkbfile-dev libgl-dev libvulkan-dev python3-pip
+sudo apt install libxkbcommon-dev libxkbfile-dev libgl-dev libvulkan-dev python3-pip # Buildtime dependencies
+sudo apt install libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-keysyms1 # Runtime dependencies
 ```
 
 3. Install `aqtinstall` via **pip** and set it to the **PATH**

@@ -14,7 +14,7 @@ Only the latest version of the binary is retained, and the download links for al
 2. Install the following packages:
 
 ```bash
-sudo apt-get install libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-keysyms1
+sudo apt install libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-keysyms1
 ```
 
 3. Download the binary from the [GitLab releases page](https://gitlab.com/yukaitung/lgdxrobot2-chassistuner/-/releases).
