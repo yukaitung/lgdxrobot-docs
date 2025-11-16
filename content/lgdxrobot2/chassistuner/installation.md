@@ -3,7 +3,7 @@ title: Installation
 weight: 2
 ---
 
-LGDXRobot2 ChassisTuner only distributes binary releases for Linux on both amd64 and arm64. To obtain the binary, download the latest release from the [GitLab releases page](https://gitlab.com/yukaitung/lgdxrobot2-chassistuner/-/releases).
+LGDXRobot2 ChassisTuner only distributes binary releases for Linux on both amd64 and arm64. Also, it is included in the [LGDXRobot2 Desktop Docker image](https://hub.docker.com/r/yukaitung/lgdxrobot2.desktop).
 
 Only the latest version of the binary is retained, and the download links for all releases point to the same file.
 {.alert .alert-info}
