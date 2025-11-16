@@ -1,6 +1,6 @@
 ---
 title: PID Tuning
-weight: 4
+weight: 5
 ---
 
 The **PID Tuning** tab allows you to fine-tune the PID constants for each motor to achieve the desired performance. The controller board supports three levels of PID control, which helps maintain system stability at different velocities.

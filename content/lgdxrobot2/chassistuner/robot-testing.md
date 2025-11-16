@@ -1,6 +1,6 @@
 ---
 title: Robot Testing
-weight: 3
+weight: 4
 ---
 
 The Robnot Testing section covers reading data from the robot and sending commands to it.
