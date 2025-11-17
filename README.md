@@ -1,13 +1,5 @@
-# LGDXRobot-Docs
+# LGDXRobotics Documentation
 
-The expected organisation of content to prevent issue:
+[https://docs.lgdxrobot.bristolgram.uk/](https://docs.lgdxrobot.bristolgram.uk/)
 
-content/
-├── lgdxrobot2/
-│   └── _index.md
-│   ├── section1/
-│   │   ├── _index.md (render: never)
-│   │   ├── page1.md
-│   │   └── page2.md
-│   ├── section2/
-│   │   └── _index.md (render: never)
+Some code from [Hugo Book Theme](https://github.com/alex-shpak/hugo-book/tree/main)
