@@ -47,8 +47,8 @@ weight: 5
 |--------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
 | /joint_states        |  sensor_msgs/JointState                                                                                     | Robot wheels movement (MCU required). |
 | /agent/odom        | nav_msgs/Odometry                                                                                     | Odometry for the robot (MCU required). |
-| /agent/auto_task   | [lgdxrobot2_agent/AutoTask](https://gitlab.com/yukaitung/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/msg/AutoTask.msg)   | Current task of the robot (Cloud required).             |
-| /agent/robot_data  | [lgdxrobot2_agent/RobotData](https://gitlab.com/yukaitung/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/msg/RobotData.msg) | Current robot data from sensors.                        |
+| /agent/auto_task   | [lgdxrobot2_agent/AutoTask](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/msg/AutoTask.msg)   | Current task of the robot (Cloud required).             |
+| /agent/robot_data  | [lgdxrobot2_agent/RobotData](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/msg/RobotData.msg) | Current robot data from sensors.                        |
 {.table}
 
 ### Subscribed Topics
@@ -67,6 +67,6 @@ Cloud only:
 
 | Service Name     | Type                                                                                                   | Description                                               |
 |------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| auto_task_next   | [lgdxrobot2_agent/AutoTaskNext](https://gitlab.com/yukaitung/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/srv/AutoTaskNext.srv)   | Commands the robot to proceed to the next step in the task. |
-| auto_task_abort  | [lgdxrobot2_agent/AutoTaskAbort](https://gitlab.com/yukaitung/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/srv/AutoTaskAbort.srv) | Aborts the current task.                                   |
+| auto_task_next   | [lgdxrobot2_agent/AutoTaskNext](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/srv/AutoTaskNext.srv)   | Commands the robot to proceed to the next step in the task. |
+| auto_task_abort  | [lgdxrobot2_agent/AutoTaskAbort](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/srv/AutoTaskAbort.srv) | Aborts the current task.                                   |
 {.table}

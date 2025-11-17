@@ -21,5 +21,5 @@ Before you start, make sure you have the following software installed:
 Then clone the repository:
 
 ```bash
-git clone https://gitlab.com/yukaitung/lgdxrobot2-cloud.git
+git clone https://gitlab.com/lgdxrobotics/lgdxrobot-cloud.git
 ```

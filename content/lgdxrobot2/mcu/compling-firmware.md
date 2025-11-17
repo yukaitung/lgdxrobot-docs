@@ -19,7 +19,7 @@ The following software is required to build and flash the firmware:
 
 ### Generate the Project
 
-1. Clone the [project repository](https://gitlab.com/yukaitung/lgdxrobot2-mcu).  
+1. Clone the [project repository](https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu).  
 2. Launch STM32CubeMX and open the `.ioc` file.  
 3. (If not using the VS Code extension) Switch to the **Project Manager** tab and select the corresponding IDE.  
 4. Press the **GENERATE CODE** button.

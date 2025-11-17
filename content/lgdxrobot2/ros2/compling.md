@@ -56,7 +56,7 @@ After installing all dependencies, clone the project and run the following comma
 ```bash
 mkdir -p ~/lgdx_ws/src
 cd ~/lgdx_ws/src
-git clone --recurse-submodules https://gitlab.com/yukaitung/lgdxrobot2-ros2
+git clone --recurse-submodules https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2
 cd ..
 source "~/webots_ws/install/setup.bash
 colcon build --symlink-install
@@ -67,7 +67,7 @@ If you are not using Webots:
 ```bash
 mkdir -p ~/lgdx_ws/src
 cd ~/lgdx_ws/src
-git clone --recurse-submodules https://gitlab.com/yukaitung/lgdxrobot2-ros2
+git clone --recurse-submodules https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2
 cd ..
 colcon build --symlink-install --packages-ignore lgdxrobot2_webots
 ```

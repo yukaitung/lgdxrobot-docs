@@ -3,7 +3,7 @@ title: Parts Manufacturing
 weight: 4
 ---
 
-The parts are designed by LGDXRobotics and require manufacturing. The full set of files is available in the **LGDXRobot2 Design** repository ([GitLab](https://gitlab.com/yukaitung/lgdxrobot2-design) | [GitHub](https://github.com/yukaitung/lgdxrobot2-design)) and does not require any additional software to open.
+The parts are designed by LGDXRobotics and require manufacturing. The full set of files is available in the **LGDXRobot2 Design** repository ([GitLab](https://gitlab.com/lgdxrobotics/lgdxrobot2-design) | [GitHub](https://github.com/yukaitung/lgdxrobot2-design)) and does not require any additional software to open.
 
 ## Chassis
 

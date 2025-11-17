@@ -13,7 +13,7 @@ The ChassisTuner provides two compilation options: the official Qt Installer, an
 * Qt Serial Port
 * Qt Graphs
 
-2. Clone the [lgdxrobot2-chassistuner](https://gitlab.com/yukaitung/lgdxrobot2-chassistuner) repository.
+2. Clone the [lgdxrobot2-chassistuner](https://gitlab.com/lgdxrobotics/lgdxrobot2-chassistuner) repository.
 3. Open the project in Qt Creator.
 4. Press **Run** to build and launch the application.
 
@@ -65,7 +65,7 @@ aqt install-tool -O "$QT_PATH" linux_arm64 desktop tools_cmake
 aqt install-tool -O "$QT_PATH" linux_arm64 desktop tools_ninja
 ```
 
-5. Clone the [lgdxrobot2-chassistuner](https://gitlab.com/yukaitung/lgdxrobot2-chassistuner) repository.
+5. Clone the [lgdxrobot2-chassistuner](https://gitlab.com/lgdxrobotics/lgdxrobot2-chassistuner) repository.
 6. Navigate to the project directory in the terminal.
 7. Build the application:
 
