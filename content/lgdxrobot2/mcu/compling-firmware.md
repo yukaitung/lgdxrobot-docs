@@ -3,35 +3,41 @@ title: Compling Firmware
 weight: 4
 ---
 
-The LGDXRobot2 MCU includes only the minimal source code, so it is necessary to generate the complete project before proceeding. You can then use any supported IDE to build and flash the firmware.
-
-## Prerequisites
-
-The following software is required to build and flash the firmware:
-
-* [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html)  
-* ST-LINK V2 programmer
-* A supported IDE, such as:  
-  * [STM32 VS Code extension](https://www.st.com/content/st_com/en/campaigns/stm32-vs-code-extension-z11.html)  
-  * [MDK-Community Edition](https://www.keil.arm.com/mdk-community/) (not for commercial use)  
-
 ## Build
 
-### Generate the Project
+Assume that you are using Ubuntu 24.04.
 
-1. Clone the [project repository](https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu).  
-2. Launch STM32CubeMX and open the `.ioc` file.  
-3. (If not using the VS Code extension) Switch to the **Project Manager** tab and select the corresponding IDE.  
-4. Press the **GENERATE CODE** button.
+1. Install the dependencies.
 
-### Configure and Build
+```bash
+sudo apt install --no-install-recommends cmake ninja-build gcc-arm-none-eabi libnewlib-arm-none-eabi
+```
+
+2. Clone the project repository.
+
+```bash
+git clone https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu.git
+```
+
+3. Navigate to the project directory in terminal.
+4. Build the firmware.
+
+```bash
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=./cmake/gcc-arm-none-eabi.cmake -S ./ -B ./build/Release -G Ninja
+cmake --build ./build/Release
+```
+
+5. Locate the firmware file (`.elf`) in the `build/Release` directory.
+6. Flash the firmware using STM32CubeProgrammer.
+
+## Configure
 
 The firmware is designed to be adaptable to different configurations, but it must be customised for your specific setup. Open the project in your IDE and navigate to the `Inc/configuration.h` file. Change the following variables to match your configuration:
 
 | Variable Name | Example Value | Description |
 |----------------|----------------|----------------|
-| CHASSIS_LX  | 0.237  | Distance from chassis centre to wheel centre in metres (m) along the X-axis (left to right). |
-| CHASSIS_LY  | 0.287  | Distance from chassis centre to wheel centre in metres (m) along the Y-axis (forward direction). |
+| CHASSIS_LX  | 0.082  | Distance from chassis centre to wheel centre in metres (m) along the X-axis (left to right). |
+| CHASSIS_LY  | 0.104  | Distance from chassis centre to wheel centre in metres (m) along the Y-axis (forward direction). |
 | WHEEL_RADIUS | 0.0375 | Radius of each wheel in metres (m). |
 | ENCODER_PPR | 3960 | Encoder pulses per revolution; multiply by 4 (e.g. 11×90×4). |
 | MOTOR_GEAR_RATIO | 90 | Gear ratio of the motor. |
@@ -48,5 +54,3 @@ The firmware is designed to be adaptable to different configurations, but it mus
 
 Motor numbering starts from 1, and PID levels also start from 1.
 {.alert .alert-info}
-
-Once the modifications are complete, you can build and flash the firmware onto the device.

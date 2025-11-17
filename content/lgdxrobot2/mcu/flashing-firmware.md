@@ -3,8 +3,6 @@ title: Flashing Firmware
 weight: 3
 ---
 
-Download the `.elf` file [here](https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu/-/releases).
-
 ## Prerequisites
 
 * [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html)
@@ -12,16 +10,17 @@ Download the `.elf` file [here](https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu/-
 
 ## Flashing
 
-1. Plug the BlackPill into the ST-LINK V2, then connect the ST-LINK V2 to your computer.
-2. Press the BOOT0 button on the BlackPill, then reset it to enter bootloader mode.
-3. Launch STM32CubeProgrammer.
-4. Click the **Connect** button on the right side of the window.
-5. Select **Erasing & Programming** from the left side of the window (arrow pointing to a device icon).
-6. Click **Browse** in the middle of the window and locate the firmware file (`.elf`).
-7. Press **Start Programming**.
-8. Wait for the firmware to be flashed.
-9. Close STM32CubeProgrammer and reset the BlackPill.
-10. You should hear a click sound from the relay module.
+1. Download the latest firmware from [here](https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu/-/releases).
+2. Plug the BlackPill into the ST-LINK V2, then connect the ST-LINK V2 to your computer.
+3. Press the BOOT0 button on the BlackPill, then reset it to enter bootloader mode.
+4. Launch STM32CubeProgrammer.
+5. Click the **Connect** button on the right side of the window.
+6. Select **Erasing & Programming** from the left side of the window (arrow pointing to a device icon).
+7. Click **Browse** in the middle of the window and locate the firmware file (`.elf`).
+8. Press **Start Programming**.
+9. Wait for the firmware to be flashed.
+10. Close STM32CubeProgrammer and reset the BlackPill.
+11. You should hear a click sound from the relay module.
 
 ## Next Steps
 
