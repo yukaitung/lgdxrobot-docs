@@ -23,7 +23,7 @@ To begin learning about LGDXRobot Cloud, click the **NEXT Setup >** link at the 
 
 * [GitLab Repository](https://gitlab.com/lgdxrobotics/lgdxrobot-cloud)
 * [GitHub Repository (Mirror)](https://github.com/yukaitung/lgdxrobot-cloud)
-* [Docker Image for LGDXRobotCloud.API](https://hub.docker.com/r/yukaitung/lgdxrobotcloud.api)
-* [Docker Image for LGDXRobotCloud.UI](https://hub.docker.com/r/yukaitung/lgdxrobotcloud.ui)
-* [Docker Image for LGDXRobotCloud.Worker](https://hub.docker.com/r/yukaitung/lgdxrobotcloud.worker)
-* [Docker Image for LGDXRobotCloud.Data](https://hub.docker.com/r/yukaitung/lgdxrobotcloud.data)
+* [Docker Image for LGDXRobotCloud.API](https://hub.docker.com/r/yukaitung/lgdxrobotcloud-api)
+* [Docker Image for LGDXRobotCloud.UI](https://hub.docker.com/r/yukaitung/lgdxrobotcloud-ui)
+* [Docker Image for LGDXRobotCloud.Worker](https://hub.docker.com/r/yukaitung/lgdxrobotcloud-worker)
+* [Docker Image for LGDXRobotCloud.Data](https://hub.docker.com/r/yukaitung/lgdxrobotcloud-data)

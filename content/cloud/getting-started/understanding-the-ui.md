@@ -28,6 +28,7 @@ The UI is divided into the following sections to help you navigate between pages
 LGDXRobot2 Cloud is also available on mobile, with a slightly different UI:
 
 ![](../img/ui3.png)
+{.w-50}
 
 1. **Sidebar Toggle**: Press the button to show or hide the sidebar.
 2. **Profile Dropdown**: Functions the same as the desktop version, and also allows you to switch between realms.

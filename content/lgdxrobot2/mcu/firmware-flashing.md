@@ -12,7 +12,7 @@ The firmware can be found in the [Releases](https://gitlab.com/lgdxrobotics/lgdx
 
 ## Flashing
 
-1. Download the latest firmware from [here](https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu/-/releases).
+1. Download the latest firmware from [Releases](https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu/-/releases) page.
 2. Plug the BlackPill into the ST-LINK V2, then connect the ST-LINK V2 to your computer.
 3. Press the BOOT0 button on the BlackPill, then reset it to enter bootloader mode.
 4. Launch STM32CubeProgrammer.
