@@ -1,7 +1,9 @@
 ---
-title: Flashing Firmware
+title: Firmware Flashing
 weight: 3
 ---
+
+The firmware can be found in the [Releases](https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu/-/releases) page for the MCU project.
 
 ## Prerequisites
 

@@ -3,11 +3,11 @@ title: Installation
 weight: 2
 ---
 
-LGDXRobot2 ROS2 is available as Docker images for both **AMD64** and **ARM64** architectures. It provides web interface access for GUI tools such as **rqt** and **RViz2**.
+LGDXRobot2 ROS2 is available as Docker images for both AMD64 and ARM64 architectures. It provides web interface access for GUI tools such as rqt, RViz2 and ChassisTuner.
 
 ## Permission Configuration
 
-The host machine must be configured to allow access to the USB devices used by the robot. The corresponding udev rules are stored in the `udev` folder. Copy the rules to `/etc/udev/rules.d` and reload them using the commands below:
+The host machine must be configured to allow access to the USB devices used by the robot. The corresponding udev rules are stored in the [udev](gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/tree/main/udev?ref_type=heads) folder. Copy the rules to `/etc/udev/rules.d` and reload them using the commands below:
 
 
 ```bash
@@ -39,7 +39,7 @@ docker run -d \
   -e PGID=1000 \
   -p 3000:3000 \
   -p 3001:3001 \
-  yukaitung/lgdxrobot2.desktop:latest
+  yukaitung/lgdxrobot2-desktop:latest
 ```
 
 ### Basic Usage
@@ -57,7 +57,7 @@ docker run -d \
   --device-cgroup-rule='c 13:* rwm' \
   -p 3000:3000 \
   -p 3001:3001 \
-  yukaitung/lgdxrobot2.desktop:latest
+  yukaitung/lgdxrobot2-desktop:latest
 ```
 
 ### With Realsense IMU
@@ -81,7 +81,7 @@ docker run -d \
   --privileged \
   -p 3000:3000 \
   -p 3001:3001 \
-  yukaitung/lgdxrobot2.desktop:latest
+  yukaitung/lgdxrobot2-desktop:latest
 ```
 
 ### For Older Hardware
@@ -106,5 +106,5 @@ docker run -d \
   --security-opt seccomp=unconfined \
   -p 3000:3000 \
   -p 3001:3001 \
-  yukaitung/lgdxrobot2.desktop:latest
+  yukaitung/lgdxrobot2-desktop:latest
 ```

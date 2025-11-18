@@ -1,11 +1,11 @@
 ---
-title: Compling Firmware
+title: Compile the Firmware
 weight: 4
 ---
 
-## Build
+The firmware can be compiled using IDEs such as [MDK-Community Edition](https://www.keil.arm.com/mdk-community/) or [STM32CubeIDE for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=stmicroelectronics.stm32-vscode-extension).
 
-Assume that you are using Ubuntu 24.04.
+This guide explains how to compile the firmware using the command line, which is particularly useful for CI/CD pipelines. It has been tested on Ubuntu 24.04.
 
 1. Install the dependencies.
 
@@ -20,14 +20,14 @@ git clone https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu.git
 ```
 
 3. Navigate to the project directory in terminal.
-4. Build the firmware.
+4. Compile the firmware.
 
 ```bash
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=./cmake/gcc-arm-none-eabi.cmake -S ./ -B ./build/Release -G Ninja
 cmake --build ./build/Release
 ```
 
-5. Locate the firmware file (`.elf`) in the `build/Release` directory.
+5. The firmware file `LGDXRobot2.elf` is located in the `build/Release` directory.
 6. Flash the firmware using STM32CubeProgrammer.
 
 ## Configure

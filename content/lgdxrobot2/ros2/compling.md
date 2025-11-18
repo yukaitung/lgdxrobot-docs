@@ -58,7 +58,7 @@ mkdir -p ~/lgdx_ws/src
 cd ~/lgdx_ws/src
 git clone --recurse-submodules https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2
 cd ..
-source "~/webots_ws/install/setup.bash
+source "~/webots_ws/install/setup.bash"
 colcon build --symlink-install
 ```
 
@@ -74,9 +74,16 @@ colcon build --symlink-install --packages-ignore lgdxrobot2_webots
 
 ## Configuration
 
+First, add the user to the `dialout` group to allow access to the controller board.
+
 ```bash
-sudo usermod -a -G dialout $USER # Add user to dialout group
+sudo usermod -a -G dialout $USER
+```
+
+Then, source the setup files for the ROS2 workspaces. You can optionally ignore the Webots workspace.
+
+```bash
 source ~/lgdx_ws/install/setup.bash
 source ~/ros2_ws/install/setup.bash
-source ~/webots_ws/install/setup.bash # Optional without Webots
+source ~/webots_ws/install/setup.bash
 ```

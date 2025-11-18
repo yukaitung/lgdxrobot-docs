@@ -20,7 +20,7 @@ docker run -d  \
   -e PGID=1000 \
   -v ~/webots_share:/config/webots_share \
   -p 3000:3000 \
-  -p 3001:3001 yukaitung/lgdxrobot2.desktop:latest
+  -p 3001:3001 yukaitung/lgdxrobot2-desktop:latest
 ```
 
 3. Set environment variables inside the container
