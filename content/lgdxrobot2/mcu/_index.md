@@ -1,7 +1,7 @@
 ---
 title: Controller Board (MCU)
 layout: sub-section
-weight: 2
+weight: 3
 ---
 
 The controller board is an STM32-based board designed specifically for the LGDXRobot2. It supports a four-wheeled Mecanum chassis and can be adapted for other configurations.
