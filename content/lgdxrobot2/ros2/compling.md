@@ -1,6 +1,6 @@
 ---
 title: Compling
-weight: 3
+weight: 4
 ---
 
 This tutorial assumes that you have already installed Ubuntu 24.04 LTS.

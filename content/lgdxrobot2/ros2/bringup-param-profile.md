@@ -1,6 +1,6 @@
 ---
 title: Bringup - Parameter Profile
-weight: 9
+weight: 10
 ---
 
 You may be aware that when running the NAV2 bringup, a `profile` is required in the parameters. The `profile` is designed to switch the parameter sets for the nodes used by the NAV2 bringup. To check the available profiles, navigate to the `lgdxrobot2_bringup/param` folder.

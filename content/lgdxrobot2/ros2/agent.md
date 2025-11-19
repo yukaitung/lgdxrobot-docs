@@ -1,6 +1,6 @@
 ---
 title: Agent Node
-weight: 5
+weight: 6
 ---
 
 `lgdxrobot2_agent_node` is a ROS 2 node that drives the robot using ROS 2 topics and services. It also functions as a client for the LGDXRobot Cloud.
