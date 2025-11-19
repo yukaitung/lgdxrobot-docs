@@ -1,7 +1,7 @@
 ---
 title: Chassis
 layout: sub-section
-weight: 1
+weight: 2
 ---
 
 This section introduces the chassis design, the required materials, and the assembly instructions. The LGDXRobot2 project now includes the complete chassis design files.

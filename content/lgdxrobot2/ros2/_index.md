@@ -1,7 +1,7 @@
 ---
 title:  ROS2
 layout: sub-section
-weight: 4
+weight: 5
 ---
 
 LGDXRobot2 ROS2 is an integration layer for the ROS2 ecosystem, with examples for both physical robots and simulations. It is developed in ROS2 Jazzy on Ubuntu 24.04 and offers seamless integration with the [LGDXRobot Cloud](https://gitlab.com/lgdxrobotics/lgdxrobot2-cloud). 
