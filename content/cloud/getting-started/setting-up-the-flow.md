@@ -15,7 +15,7 @@ In the **Flow Detail** section, you can specify the flow name and details. Searc
 
 ![](../img/flow1.png)
 
-**Progress Name** defines each step in the flow. You can customise the robot's behaviour in ROS2 for each step (excluding `PreMoving` and `Moving`).  
+**Progress Name** defines each step in the flow. You can customise the robot's behaviour in ROS 2 for each step (excluding `PreMoving` and `Moving`).  
 - `Moving` is required and handles robot navigation.  
 - `PreMoving` instructs the robot to move to the first waypoint and allows for preparatory actions, such as loading.
 

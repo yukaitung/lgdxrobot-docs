@@ -11,7 +11,7 @@ Expand the **Navigation**, select **Realms** and click **View** link for **First
 
 ### Step 2: Launch NAV2 Stack
 
-Ensure that the PATH is set up correctly for the ROS2 environment. (You can ignore this step if you are using the Docker image.)
+Ensure that the PATH is set up correctly for the ROS 2 environment. (You can ignore this step if you are using the Docker image.)
 
 ```bash
 cd lgdx_ws

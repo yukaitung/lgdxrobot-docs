@@ -7,7 +7,7 @@ This tutorial assumes that you have already installed Ubuntu 24.04 LTS.
 
 ## Prerequisites
 
-1. [Install ROS2](https://docs.ros.org/en/jazzy/Installation.html)
+1. [Install ROS 2](https://docs.ros.org/en/jazzy/Installation.html)
 2. [Install NAV2](https://docs.nav2.org/getting_started/index.html)
 
 ```bash
@@ -38,7 +38,7 @@ sudo apt install ros-jazzy-imu-filter-madgwick ros-jazzy-librealsense2* ros-jazz
 ```
 
 6. [Install Webots](https://cyberbotics.com/doc/guide/installation-procedure) (Optional)
-7. [Install Webots ROS2 Interface](https://github.com/cyberbotics/webots_ros2/wiki/Getting-Started) (Optional)
+7. [Install Webots ROS 2 Interface](https://github.com/cyberbotics/webots_ros2/wiki/Getting-Started) (Optional)
 ```bash
 mkdir -p ~/webots_ws/src
 cd ~/webots_ws/src
@@ -80,7 +80,7 @@ First, add the user to the `dialout` group to allow access to the controller boa
 sudo usermod -a -G dialout $USER
 ```
 
-Then, source the setup files for the ROS2 workspaces. You can optionally ignore the Webots workspace.
+Then, source the setup files for the ROS 2 workspaces. You can optionally ignore the Webots workspace.
 
 ```bash
 source ~/lgdx_ws/install/setup.bash

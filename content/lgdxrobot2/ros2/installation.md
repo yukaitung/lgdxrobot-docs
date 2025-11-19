@@ -3,7 +3,7 @@ title: Installation
 weight: 2
 ---
 
-LGDXRobot2 ROS2 is available as Docker images for both AMD64 and ARM64 architectures. It provides web interface access for GUI tools such as rqt, RViz2 and ChassisTuner.
+LGDXRobot2 ROS 2 is available as Docker images for both AMD64 and ARM64 architectures. It provides web interface access for GUI tools such as rqt, RViz2 and ChassisTuner.
 
 ## Permission Configuration
 
@@ -17,7 +17,7 @@ sudo udevadm trigger
 
 ## Desktop Images
 
-The desktop images include ROS2 GUI tools and provide a web interface suitable for remote control. After starting the container, you can access the web interface at [http://localhost:3000](http://localhost:3000). For external access, use `https://<host-ip>:3001`.
+The desktop images include ROS 2 GUI tools and provide a web interface suitable for remote control. After starting the container, you can access the web interface at [http://localhost:3000](http://localhost:3000). For external access, use `https://<host-ip>:3001`.
 
 The image may require access to USB devices, so it is necessary to mount the host's `/dev` and pass the appropriate cgroup rules. Below are the groups for the corresponding devices. You can remove the `--device-cgroup-rule` options if they are not needed.
 

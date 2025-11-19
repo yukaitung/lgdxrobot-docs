@@ -4,7 +4,7 @@ layout: sub-section
 weight: 2
 ---
 
-This section explains how to set up LGDXRobot Cloud, including the fleet and workflow. After that, you can start your first job. This tutorial relies on the simulation, and LGDXRobot2 ROS2 is required. LGDXRobotics provides a Docker image for running ROS2 with all dependencies, so installing ROS2 separately is not necessary.
+This section explains how to set up LGDXRobot Cloud, including the fleet and workflow. After that, you can start your first job. This tutorial relies on the simulation, and LGDXRobot2 ROS 2 is required. LGDXRobotics provides a Docker image for running ROS 2 with all dependencies, so installing ROS 2 separately is not necessary.
 
 ### Step 1: Create a Folder for Storing the Certificates
 
