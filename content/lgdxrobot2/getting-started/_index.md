@@ -4,4 +4,4 @@ layout: sub-section
 weight: 1
 ---
 
-This section provides an overview of the LGDXRobot2 project, including its history, hardware and software components.
+This section provides an overview of the LGDXRobot2 project, including its development and design.
