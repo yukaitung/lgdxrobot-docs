@@ -4,7 +4,7 @@ layout: sub-section
 weight: 2
 ---
 
-This section introduces the chassis design, the required materials, and the assembly instructions. The LGDXRobot2 project now includes the complete chassis design files.
+This section introduces the the required materials, and the assembly instructions. The LGDXRobot2 project now includes the complete chassis design files.
 
 The full set of design files is available in the **LGDXRobot2 Design** repository ([GitLab](https://gitlab.com/lgdxrobotics/lgdxrobot2-design) | [GitHub](https://github.com/yukaitung/lgdxrobot2-design)) and can be opened using **FreeCAD**.
 
