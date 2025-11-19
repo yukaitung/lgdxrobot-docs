@@ -30,11 +30,10 @@ export WEBOTS_SHARED_FOLDER=~/webots_share:/config/webots_share
 ```
 
 4. Save the [local simulation server script](https://github.com/cyberbotics/webots-server/blob/main/local_simulation_server.py) on the host machine.
-5. Run the local simulation server on the host machine.
+5. Define [WEBOTS_HOME](https://cyberbotics.com/doc/guide/compiling-controllers-in-a-terminal) and run the local simulation server on the host machine.
 
 ```bash
-export WEBOTS_HOME=/Applications/Webots.app # macOS
-python3 /Users/sam/Develop/keys/local_simulation_server.py
+python3 <path>/local_simulation_server.py
 ```
 
 6. Run the simulation in the container. When you run the simulation in the container, the Webots GUI will open automatically on your host machine.
