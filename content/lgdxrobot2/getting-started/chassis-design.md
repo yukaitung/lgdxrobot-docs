@@ -1,8 +1,9 @@
 ---
-title: Chassis
+title: Chassis Design
 weight: 3
 ---
-LGDXRobot2 is a Mecanum wheel chassis with four wheels. The chassis measures 240 mm in width and length, with a height of 130 mm (depending on the wheels and without LiDAR). It is designed to maximise the use of available space and features a three-layer chassis structure. This page provides details of each layer, from bottom to top.
+
+LGDXRobot2 is a Mecanum wheel chassis with four wheels. The chassis measures 240 mm in width and length, with a height of 134 mm (depending on the wheels and without LiDAR). It is designed to maximise the use of available space and features a three-layer chassis structure. This page provides details of each layer, from bottom to top.
 
 ## Bottom Plate
 

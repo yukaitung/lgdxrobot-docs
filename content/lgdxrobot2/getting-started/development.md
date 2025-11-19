@@ -9,7 +9,7 @@ The first publicly released robot is LGDXRobot2, though it may seem unusual that
 
 LGDXRobot was originally built as part of my university project in 2021. The aim was to design a robot capable of collecting and sorting rubbish for recycling. The chassis was purchased from an online store, while the robot’s body was hand-crafted from cardboard. It included three containers for different types of waste, and the robot identified each item, opened the appropriate container, and picked it up automatically.
 
-The robot ran on an NVIDIA Jetson Nano using ROS Melodic, with object detection powered by the [jetson-inference](https://github.com/dusty-nv/jetson-inference) framework. It also featured a remote control interface that streamed system status, logs, and live images from the robot.
+The robot ran on an Nvidia Jetson Nano using ROS Melodic, with object detection powered by the [jetson-inference](https://github.com/dusty-nv/jetson-inference) framework. It also featured a remote control interface that streamed system status, logs, and live images from the robot.
 
 The source code is available in the [GitLab](https://gitlab.com/groups/lgdxrobotics/-/inactive)
 
