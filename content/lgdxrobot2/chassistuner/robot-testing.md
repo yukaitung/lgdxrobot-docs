@@ -14,7 +14,7 @@ The Robnot Testing section covers reading data from the robot and sending comman
 3. If the device is not listed, press **Refresh** on the left.
 4. Press **Connect** on the right.
 5. The connection status should display **Connected**.
-6. You should see data being received from the robot. Try rotating the wheels to observe changes in the data.
+6. Data should be visible as being received from the robot. Rotating the wheels will show corresponding changes in the data.
 
 ## Sending Commands (Hardware Testing Section)
 
@@ -30,7 +30,7 @@ Press the **Reset** button to reset the robot's transform. The transform values 
 
 ### Inverse Kinematics
 
-This command sets the robot’s vector motion. You can set the velocity for each axis individually and press **Send**. Press **Stop** to halt the robot. The robot should move in the desired direction.
+This command sets the robot’s vector motion. The velocity for each axis can be set individually before pressing **Send**. Press **Stop** to halt the robot. The robot should move in the desired direction.
 
 Please ensure the robot is lifted when sending commands. Otherwise, the robot may move and cause damage.
 {.alert .alert-danger}

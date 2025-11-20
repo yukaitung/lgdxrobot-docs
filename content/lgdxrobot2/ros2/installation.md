@@ -17,9 +17,9 @@ sudo udevadm trigger
 
 ## Desktop Images
 
-The desktop images include ROS 2 GUI tools and provide a web interface suitable for remote control. After starting the container, you can access the web interface at [http://localhost:3000](http://localhost:3000). For external access, use `https://<host-ip>:3001`.
+The desktop images include ROS 2 GUI tools and provide a web interface suitable for remote control. After the container is started, the web interface becomes accessible at [http://localhost:3000](http://localhost:3000). For external access, the address `https://<host-ip>:3001` should be used.
 
-The image may require access to USB devices, so it is necessary to mount the host's `/dev` and pass the appropriate cgroup rules. Below are the groups for the corresponding devices. You can remove the `--device-cgroup-rule` options if they are not needed.
+The image may require access to USB devices, so it is necessary to mount the host's `/dev` and pass the appropriate cgroup rules. Below are the groups for the corresponding devices. The `--device-cgroup-rule` options may be removed if they are not required.
 
 | Major Number | Device |
 |-------------|--------|
@@ -86,7 +86,7 @@ docker run -d \
 
 ### For Older Hardware
 
-For older version of Ubuntu, you may need to use the `security-opt` option.
+For older version of Ubuntu, the `security-opt` option may be required.
 
 Privileged mode and `--security-opt` are suitable for development purposes only.
 {.alert .alert-warning}

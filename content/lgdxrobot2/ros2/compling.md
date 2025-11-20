@@ -3,7 +3,7 @@ title: Compling
 weight: 4
 ---
 
-This tutorial assumes that you have already installed Ubuntu 24.04 LTS.
+This tutorial assumes that Ubuntu 24.04 LTS has already been installed.
 
 ## Prerequisites
 
@@ -62,7 +62,7 @@ source "~/webots_ws/install/setup.bash"
 colcon build --symlink-install
 ```
 
-If you are not using Webots:
+If Webots is not being used:
 
 ```bash
 mkdir -p ~/lgdx_ws/src
@@ -80,7 +80,7 @@ First, add the user to the `dialout` group to allow access to the controller boa
 sudo usermod -a -G dialout $USER
 ```
 
-Then, source the setup files for the ROS 2 workspaces. You can optionally ignore the Webots workspace.
+Then, source the setup files for the ROS 2 workspaces. Optionally, the Webots workspace may be ignored.
 
 ```bash
 source ~/lgdx_ws/install/setup.bash

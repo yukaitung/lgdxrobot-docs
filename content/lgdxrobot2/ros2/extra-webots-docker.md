@@ -3,7 +3,7 @@ title: Extra - Native Webots For Docker
 weight: 51
 ---
 
-The LGDXRobot2 ROS 2 Docker image allows you to deploy all dependencies in one go, but it does not include Webots. Running Webots inside Docker may be slow. Fortunately, Webots is flexible and can run on the simulation via network.
+The LGDXRobot2 ROS 2 Docker image allows all dependencies to be deployed in one go, but it does not include Webots. Running Webots inside Docker may be slow. Fortunately, Webots is flexible and can operate with the simulation over the network.
 
 1. Create a folder for sharing Webots files
 
@@ -36,4 +36,4 @@ export WEBOTS_SHARED_FOLDER=~/webots_share:/config/webots_share
 python3 <path>/local_simulation_server.py
 ```
 
-6. Run the simulation in the container. When you run the simulation in the container, the Webots GUI will open automatically on your host machine.
+6. Run the simulation in the container. When the simulation is run in the container, the Webots GUI opens automatically on the host machine.

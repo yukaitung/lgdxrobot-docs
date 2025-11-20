@@ -3,7 +3,7 @@ title: Assembling the PC Plate
 weight: 7
 ---
 
-The installation procedure depends on the type of PC you are using. Three types of PC are supported: **Nvidia Jetson Nano**, **Raspberry Pi**, and **NUC**.
+The installation procedure depends on the type of PC being used. Three types of PC are supported: **Nvidia Jetson Nano**, **Raspberry Pi**, and **NUC**.
 
 Insert M4 screws through the PC plate into the M4 standoffs and tighten them with a hex key. Then install the PC according to its type.
 

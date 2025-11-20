@@ -9,7 +9,7 @@ Additionally, it is included in the LGDXRobot2 Desktop Docker image (`yukaitung/
 
 ## Instructions
 
-The following instructions assume that you are using Ubuntu 24.04.
+The following instructions assume that Ubuntu 24.04 is being used.
 
 1. Install the following packages:
 

@@ -3,13 +3,13 @@ title: PID Tuning
 weight: 5
 ---
 
-The **PID Tuning** tab allows you to fine-tune the PID constants for each motor to achieve the desired performance. The controller board supports three levels of PID control, which helps maintain system stability at different velocities.
+The **PID Tuning** tab allows fine-tuning of the PID constants for each motor to achieve the desired performance. The controller board supports three levels of PID control, which helps maintain system stability at different velocities.
 
 Switch to the **PID Tuning** tab to view the PID parameters. If they are not visible, press **Refresh**.
 
 ## Motors Maximum Speed
 
-The maximum speed defines the upper limit used by the PID controller when calculating output. To obtain the maximum speed, press the **Auto Config** button to automatically measure the maximum speed for each motor. You can also set the maximum speed manually and press **Send**.
+The maximum speed defines the upper limit used by the PID controller when calculating output. To obtain the maximum speed, press the **Auto Config** button to automatically measure the maximum speed for each motor. The maximum speed can also be set manually before pressing **Send**.
 
 Please ensure the robot is lifted when sending commands; otherwise, it may move and cause damage.  
 {.alert .alert-danger}
@@ -29,7 +29,7 @@ To define the PID speed:
 
 ## PID Test
 
-The **PID Test** allows you to fine-tune the PID constants for each motor using a chart. Adjust the PID values for each motor and each level to achieve the desired performance. 
+The **PID Test** allows fine-tuning of the PID constants for each motor using a chart. Adjust the PID values for each motor and each level to achieve the desired performance. 
 
 ![Screenshot of the PID Test](../img/pid_test.png)
 
@@ -46,7 +46,7 @@ Please ensure the robot is lifted when sending commands; otherwise, it may move 
 There are various methods for tuning PID. When adjusting the PID constants, try increasing P by 1, I by 10, and D by 0.1.  
 {.alert .alert-info}
 
-You can check the **Custom Velocity** checkbox to define a custom velocity for testing.
+The **Custom Velocity** checkbox may be selected to define a custom velocity for testing.
 
 ## Save Configuration
 

@@ -20,4 +20,4 @@ Ensure the TB6612FNG modules are installed correctly, as incorrect installation 
 
 ## Power Supply
 
-Solder the 18650 battery holders to connect the batteries in series. If you are using a battery protection board, connect it according to the manufacturer’s instructions.
+Solder the 18650 battery holders to connect the batteries in series. If a battery protection board is being used, connect it according to the manufacturer’s instructions.

@@ -22,8 +22,8 @@ The firmware can be found in the [Releases](https://gitlab.com/lgdxrobotics/lgdx
 8. Press **Start Programming**.
 9. Wait for the firmware to be flashed.
 10. Close STM32CubeProgrammer and reset the BlackPill.
-11. You should hear a click sound from the relay module.
+11. A click sound should be heard from the relay module.
 
 ## Next Steps
 
-If you are not planning to modify the firmware, you can skip to the ChassisTuner section.
+If there are no plans to modify the firmware, skip to the ChassisTuner section.
