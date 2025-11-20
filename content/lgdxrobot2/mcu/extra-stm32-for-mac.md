@@ -22,7 +22,7 @@ find ~ -type f -name "arm-none-eabi-gcc" 2>/dev/null
 /Users/<user>/Library/Application Support/stm32cube/bundles/gnu-tools-for-stm32/<version>/bin/arm-none-eabi-gcc
 ```
 
-4. In Visual Studio Code, press `Ctrl+Cmd+P` to open the command palette, and search for `Preferences: Open Settings (JSON)`. Then, add the path to the `bin` folder to the `cmake.environment.PATH` variable:
+4. In Visual Studio Code, press `Ctrl+Cmd+P` to open the command palette, and search for **Preferences: Open Settings (JSON)**. Then, add the path to the `bin` folder to the `cmake.environment.PATH` variable:
 
 ```json
 "cmake.environment": {
@@ -30,10 +30,10 @@ find ~ -type f -name "arm-none-eabi-gcc" 2>/dev/null
 }
 ``` 
 
-5. Switch to the `STM32CubeIDE` tab, select the `Setup STM32CubeIDE project(s)` option, and choose the correct device and project. Then press `Save and Close`.
+5. Switch to the **STM32CubeIDE** tab, select the **Setup STM32CubeIDE project(s)** option, and choose the correct device and project. Then press **Save and Close**.
 
 ![Setup STM32CubeIDE project(s)](../img/extra/stm32-setting.png)
 
-6. Switch to the `Run and Debug` tab, press `Run and Debug`. A dropdown menu will appear. Select the GDB Server for the corresponding debugger.
+6. Switch to the **Run and Debug** tab, press **Run and Debug.** A dropdown menu will appear. Select the GDB Server for the corresponding debugger.
 
 7. Visual Studio Code will automatically compile and flash the firmware to the MCU, then launch the debugger.
