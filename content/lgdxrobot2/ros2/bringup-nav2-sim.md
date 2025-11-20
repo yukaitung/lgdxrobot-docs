@@ -3,7 +3,9 @@ title: Bringup - NAV2 Simulation
 weight: 9
 ---
 
-The `simulation_nav.launch` launch file is used to start the robot in Webots simulation, the **NAV2** stack, and display it in the **RViz2** GUI. Webots is required to be installed.
+![Screenshot](../img/bringup/nav2-sim.png)
+
+The `simulation_nav` launch file is used to start the NAV2 stack by initialising the Webots simulation and displaying it in RViz2.
 
 ## Examples
 

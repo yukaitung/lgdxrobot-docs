@@ -51,3 +51,5 @@ source install/local_setup.bash
 ```bash
 ros2 run turtlesim turtlesim_node
 ```
+
+![Screenshot](../img/extra/docker.png)

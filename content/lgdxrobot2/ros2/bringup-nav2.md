@@ -3,7 +3,7 @@ title: Bringup - NAV2
 weight: 8
 ---
 
-The `nav` launch file is used to start the robot with all required hardware, the **NAV2** stack, and display it in the **RViz2** GUI.
+The `nav` launch file is used to start the NAV2 stack by initialising the required hardware and displaying it in RViz2.
 
 ## Examples
 

@@ -3,21 +3,7 @@ title: Bringup - Bringup
 weight: 7
 ---
 
-The `bringup` launch file is used to start the robot with all required hardware, the **joy** node, and display it in the **RViz2** GUI.
-
-Below is the mapping of the Xbox controller:
-
-| Xbox Controller Button | Function                                  |
-|------------------------|------------------------------------------|
-| A                      | Disable software emergency stop          |
-| B                      | Enable software emergency stop           |
-| D-pad                  | Move the robot                            |
-| LSB                    | Move the robot                            |
-| LB                     | Reduce robot speed                        |
-| RB                     | Increase robot speed                      |
-| LT                     | Rotate the robot counter-clockwise        |
-| RT                     | Rotate the robot clockwise                |
-{.table}
+The `bringup` launch file is used to start the robot with all required hardware, the joy node, and display it in the RViz2 GUI.
 
 ## Examples
 
@@ -53,4 +39,18 @@ ros2 launch lgdxrobot2_bringup bringup.launch.py use_camera:=false use_lidar:=fa
 | lidar_model      | string | RPLIDAR model name.                      |
 | use_camera       | bool   | Whether to enable the camera.            |
 | use_rviz         | bool   | Visualize in RViz.                       |
+{.table}
+
+## Mapping For Xbox Controller
+
+| Button | Function                                  |
+|------------------------|------------------------------------------|
+| A                      | Disable software emergency stop          |
+| B                      | Enable software emergency stop           |
+| D-pad                  | Move the robot                            |
+| LSB                    | Move the robot                            |
+| LB                     | Reduce robot speed                        |
+| RB                     | Increase robot speed                      |
+| LT                     | Rotate the robot counter-clockwise        |
+| RT                     | Rotate the robot clockwise                |
 {.table}
