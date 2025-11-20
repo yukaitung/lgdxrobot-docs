@@ -17,7 +17,7 @@ The controller board follows a modular design, allowing individual components to
 
 The board is built around the BlackPill (STM32F411CEU6) microcontroller, which provides a sufficient number of GPIO pins at a reasonable cost. It is equipped with two TB6612FNG motor driver modules for controlling the four motors, and two INA226 modules to monitor power sources voltage and current. A relay module manages the power supply to the motors.
 
-The controller is also responsible for PID regulation of the motors, using encoder feedback. The PID system offers three levels, allowing distinct configurations for different velocities and stabilising the motors under variable speed conditions. The response time is approximately 20 ms.
+The controller is also responsible for PID regulation of the motors, using encoder feedback. The PID system offers three levels, allowing distinct configurations for different velocities and stabilising the motors under variable speed conditions. The response time is approximately 10 ms.
 
 Motor control is achieved via PWM. The system clock runs at 96 MHz, and the PWM frequency is set to 10 kHz. The auto-reload register (ARR) is therefore 9599, calculated using the formula: Fpwm = (Fclk / ((ARR + 1) * (PSC + 1))).
 
