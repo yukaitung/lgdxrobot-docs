@@ -3,7 +3,7 @@ title: Development
 weight: 2
 ---
 
-The first publicly released robot is LGDXRobot2, though it may seem unusual that the project starts with ‘2’. This is because the first robot was originally part of another project and was eventually redesigned into LGDXRobot2.
+The first publicly released robot is LGDXRobot2, though it may seem unusual that the project starts with **2**. This is because the first robot was originally part of another project and was eventually redesigned into LGDXRobot2.
 
 ## LGDXRobot
 
