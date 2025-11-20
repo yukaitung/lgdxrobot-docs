@@ -7,7 +7,7 @@ LGDXRobot2 ROS 2 is available as Docker images for both AMD64 and ARM64 architec
 
 ## Permission Configuration
 
-The host machine must be configured to allow access to the USB devices used by the robot. The corresponding udev rules are stored in the [udev](gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/tree/main/udev?ref_type=heads) folder. Copy the rules to `/etc/udev/rules.d` and reload them using the commands below:
+The host machine must be configured to allow access to the USB devices used by the robot. The corresponding udev rules are stored in the [udev](http://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/tree/main/udev?ref_type=heads) folder. Copy the rules to `/etc/udev/rules.d` and reload them using the commands below:
 
 
 ```bash

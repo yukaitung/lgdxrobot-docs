@@ -11,6 +11,6 @@ If the terminal window is not visible, right-click to open a menu. From this men
 
 ![Screenshot of the menu](../img/desktop-tutorial/menu.png)
 
-If a command is too long, press the blue button on the middle-left to expand the Clipboard section. The command can then be pasted into the text box, and right-clicking in the terminal will paste it.
+To copy a command into the terminal, press the blue button on the middle-left and expand the **Clipboard** section. Paste the command into the text box. It will be copied to the clipboard automatically. Then right-click in the terminal and select **Paste**.
 
 ![Screenshot of the clipboard](../img/desktop-tutorial/clipboard.png)
