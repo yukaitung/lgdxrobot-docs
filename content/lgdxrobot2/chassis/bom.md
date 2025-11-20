@@ -45,7 +45,7 @@ weight: 3
 | 18650 Battery Protection Board | 2 | Optional |
 | 12V DC-DC Buck Converter | 1 | — |
 | 5V DC-DC Buck Converter | 1 | Another voltage may be chosen if using NUC. |
-| DC Power Jack / USB Cable | 1 | Depends on the power input for your computer |
+| DC Power Jack / USB Cable | 1 | Depends on the power input for the computer |
 {.table}
 
 A custom power supply may be designed, but note that the motor voltage is 12 V.

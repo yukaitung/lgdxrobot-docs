@@ -9,7 +9,7 @@ The Robnot Testing section covers reading data from the robot and sending comman
 
 ![Screenshot of the Robot Data tab](../img/robot_data.png)
 
-1. Connect the controller board to your computer using a USB cable, as communication is performed over USB (STM32 Virtual COM Port).
+1. Connect the controller board to the computer using a USB cable, as communication is performed over USB (STM32 Virtual COM Port).
 2. In the top-right corner, select the correct serial device name.
 3. If the device is not listed, press **Refresh** on the left.
 4. Press **Connect** on the right.

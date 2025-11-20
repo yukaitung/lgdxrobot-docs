@@ -32,7 +32,7 @@ cmake --build ./build/Release
 
 ## Configure
 
-The firmware is designed to be adaptable to different configurations, but it must be customised for your specific setup. Open the project in your IDE and navigate to the `Inc/configuration.h` file. Change the following variables to match your configuration:
+The firmware is designed to be adaptable to different configurations, but it must be customised for specific setup. Open the project in IDE and navigate to the `Inc/configuration.h` file. Change the following variables to match the configuration:
 
 | Variable Name | Example Value | Description |
 |----------------|----------------|----------------|

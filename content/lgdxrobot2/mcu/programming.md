@@ -3,7 +3,7 @@ title: Programming (Qt C++)
 weight: 5
 ---
 
-Communication with the MCU is managed via the STM32 Virtual COM Port, which is compatible with standard serial port programming. When initialising the connection to the MCU, ensure all settings (baud rate, data bits, etc.) remain at their default values. To reduce communication overhead, this project relies on raw data transfer. To program the MCU, include `lgdxrobot2.h` in your source code. This tutorial uses Qt as an example, as the functions are self-explanatory.
+Communication with the MCU is managed via the STM32 Virtual COM Port, which is compatible with standard serial port programming. When initialising the connection to the MCU, ensure all settings (baud rate, data bits, etc.) remain at their default values. To reduce communication overhead, this project relies on raw data transfer. To program the MCU, include `lgdxrobot2.h` in the source code. This tutorial uses Qt as an example, as the functions are self-explanatory.
 
 Big-endian devices may cause issues.
 {.alert .alert-info}
