@@ -1,9 +1,9 @@
 ---
-title: Extra - STM32 for macOS
+title: Extra - STM32 for Mac
 weight: 90
 ---
 
-macOS plays a crucial role in the development of the LGDXRobot2. This tutorial describes how to install the necessary tools and compile any STM32 firmware on macOS. It assumes the Mac is running on Apple Silicon and that the ST-Link is connected to the Mac.
+Mac plays a crucial role in the development of the LGDXRobot2. This tutorial describes how to install the necessary tools and compile any STM32 firmware on Mac. It assumes the Mac is running on Apple Silicon and that the ST-Link is connected to the Mac.
 
 1. Install the following tools:
 
