@@ -12,25 +12,25 @@ The `simulation_nav` launch file is used to start the NAV2 stack by initialising
 SLAM on NAV2
 
 ```bash
-ros2 launch lgdxrobot2_bringup simulation_nav.launch.py slam:=True profile:='sim-slam'
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py slam:=True profile:='slam-sim'
 ```
 
 Localisation on NAV2
 
 ```bash
-ros2 launch lgdxrobot2_bringup simulation_nav.launch.py profile:='sim-loc' 
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py profile:='loc-sim' 
 ```
 
 SLAM on other map
 
 ```bash
-ros2 launch lgdxrobot2_bringup simulation_nav.launch.py slam:=True profile:='sim-slam' world:='apartment.wbt' map:='apartment.yaml'
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py slam:=True profile:='slam-sim' world:='apartment.wbt' map:='apartment.yaml'
 ```
 
 Localisation on other map
 
 ```bash
-ros2 launch lgdxrobot2_bringup simulation_nav.launch.py profile:='sim-loc' world:='apartment.wbt' map:='apartment.yaml'
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py profile:='loc-sim' world:='apartment.wbt' map:='apartment.yaml'
 ```
 
 ## Parameters

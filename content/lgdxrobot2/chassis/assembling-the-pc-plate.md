@@ -39,6 +39,9 @@ Insert M4 screws through the PC plate into the M4 standoffs and tighten them wit
 
 ### NUC
 
+The case of the NUC must be removed before installing on the PC plate.
+{.alert .alert-warning}
+
 Place the NUC on the PC plate and secure it using M3 screws from the underside of the NUC, tightening with a hex key.
 
 ![Image of the install NUC](../img/asm_pc/nuc_install.png)

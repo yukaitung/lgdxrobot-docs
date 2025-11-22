@@ -5,6 +5,8 @@ weight: 7
 
 The `bringup` launch file is used to start the robot with all required hardware, the joy node, and display it in the RViz2 GUI.
 
+![Image of the bringup](../img/bringup/bringup.png)
+
 ## Examples
 
 ```bash
