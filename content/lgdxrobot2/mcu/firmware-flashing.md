@@ -8,15 +8,14 @@ The firmware can be found in the [Releases](https://gitlab.com/lgdxrobotics/lgdx
 ## Prerequisites
 
 * [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html)
-* ST-LINK V2
 
 ## Flashing
 
 1. Download the latest firmware from [Releases](https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu/-/releases) page.
-2. Plug the BlackPill into the ST-LINK V2, then connect the ST-LINK V2 to the computer.
-3. Press the BOOT0 button on the BlackPill, then reset it to enter bootloader mode.
-4. Launch STM32CubeProgrammer.
-5. Click the **Connect** button on the right side of the window.
+2. Connect the USB-C Port on the BlackPill to the computer.
+3. Press the BOOT0 button on the BlackPill, then reset it to enter bootloader mode.  
+4. Launch STM32CubeProgrammer.  
+5. On the right-hand side of the window, the drop-down menu shows **ST-LINK**. Change it to **USB** and click **Connect**.
 6. Select **Erasing & Programming** from the left side of the window (arrow pointing to a device icon).
 7. Click **Browse** in the middle of the window and locate the firmware file (`.elf`).
 8. Press **Start Programming**.

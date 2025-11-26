@@ -100,5 +100,4 @@ Either the NUC setting or the Single Board Computer (SBC) setting may be chosen.
 | Soldering Iron | 1 | — |
 | Solder Paste | 1 | — |
 | Hot Glue Gun / Strong Double Sided Tape | 1 | — |
-| ST-LINK V2 | 1 | For flashing the MCU firmware. |
 {.table}
