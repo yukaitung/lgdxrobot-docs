@@ -13,6 +13,8 @@ TLS certificates are required for machine-to-machine communication. A few certif
 
 The commands below require a `.conf` file for certificate generation, which can be found in the `/docker-compose/certs` folder. The certificates are for testing purposes only, so you can adjust the configurations, validity period, and passwords according to your needs.
 
+Alternatively, run the `/docker-compose/certs/generate-certs.sh` script to generate the certificates.
+
 ### 1. Root Certificate
 
 The root certificate forms the base of the certificate chain in LGDXRobot Cloud.
@@ -87,8 +89,10 @@ openssl pkcs12 -export -out app.pfx -inkey app.key -in app.crt -certfile rootCA.
 
 ## Before the Next Steps
 
-Make sure you have installed the following certificates on your operating system, trusted the root certificate, and copied the `grpc.pfx` file to the base directory of the `LGDXRobotCloud.API` project.
+Make sure the following certificates are installed on the operating system and that the root certificate is trusted:
 
 * Root certificate
-* Redis certificate (Client only)
+* Redis certificate (client only)
 * UI certificate
+
+Then copy the `grpc.pfx` file to the base directory of the `LGDXRobotCloud.API` project.

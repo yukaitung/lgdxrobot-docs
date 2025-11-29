@@ -14,9 +14,9 @@ To begin learning about LGDXRobot Cloud, click the **NEXT Setup >** link at the 
 | Name       | Version |
 |------------|---------|
 | .NET       | 9       |
-| PostgreSQL | latest  |
+| PostgreSQL | 18      |
 | RabbitMQ   | 4       |
-| Redis      | latest  |
+| Redis      | 8       |
 {.table}
 
 ## Links
