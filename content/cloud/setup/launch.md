@@ -1,7 +1,16 @@
 ---
 title: Launch
-weight: 5
+weight: 8
 ---
+
+## Libraries for LGDXRobotCloud.UI
+
+`LGDXRobotCloud.UI` requires several JavaScript libraries that can be managed using LibMan. Install the LibMan CLI and run the following command:
+
+```bash
+cd LGDXRobotCloud.UI
+libman restore
+```
 
 ## Create First User
 
