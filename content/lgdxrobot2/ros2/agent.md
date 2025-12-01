@@ -12,10 +12,11 @@ weight: 6
 | Parameter           | Type   | Description                                                       |
 |---------------------|--------|-------------------------------------------------------------------|
 | cloud_enable        | bool   | Enables connection to the LGDXRobot2 Cloud.                       |
-| cloud_address       | string | Address and port number of the LGDXRobot2 Cloud service.   |
+| cloud_address       | string | Address and port number of the LGDXRobot2 Cloud service.          |
 | cloud_root_cert     | string | Path to the server's root certificate (required by the cloud).    |
 | cloud_client_key    | string | Path to the client’s key file (required by the cloud).            |
 | cloud_client_cert   | string | Path to the client’s certificate file (required by the cloud).    |
+| cloud_slam_enable   | bool   | Enable LGDXRobot Cloud SLAM Mode.                                 |
 {.table}
 
 ### Serial Port Parameters
