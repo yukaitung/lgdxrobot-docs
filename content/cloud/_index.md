@@ -11,12 +11,9 @@ To begin learning about LGDXRobot Cloud, click the **NEXT Setup >** link at the 
 
 ## Software Dependencies
 
-Please note that .NET 10 upgrade is current in progress.
-{.alert .alert-info}
-
 | Name       | Version |
 |------------|---------|
-| .NET       | 9       |
+| .NET       | 10      |
 | PostgreSQL | 18      |
 | RabbitMQ   | 4       |
 | Redis      | 8       |
