@@ -1,7 +1,7 @@
 ---
 title: Setup
 layout: sub-section
-weight: 1
+weight: 2
 ---
 
 This section explains how to set up LGDXRobot Cloud step by step. LGDXRobot Cloud relies on machine-to-machine communication, so you must generate a root certificate and the corresponding key pairs. It also lists the required software dependencies and configuration steps. The setup process is divided into the following steps:

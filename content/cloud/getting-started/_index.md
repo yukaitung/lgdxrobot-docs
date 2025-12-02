@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 layout: sub-section
-weight: 2
+weight: 3
 ---
 
 This section explains how to set up LGDXRobot Cloud, including the fleet and workflow. After that, you can start your first job. This tutorial relies on the simulation, and LGDXRobot2 ROS 2 is required. LGDXRobotics provides a Docker image for running ROS 2 with all dependencies, so installing ROS 2 separately is not necessary.
