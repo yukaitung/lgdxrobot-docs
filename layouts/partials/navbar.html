@@ -4,7 +4,20 @@
     <div class="navbar-brand navbar-expand-md" style="height: 48px">
       <a href="{{ relLangURL "" }}"><img src="/img/logo/logo.png" class="img-fluid" alt="LGDXRobot Logo" style="height: 32px"/></a>
     </div>
-    <ul class="navbar-nav collapse navbar-collapse justify-content-end" id="navbar-menu">
+    <form class="justify-content-center" method="get" id="ddgSearch" action="https://duckduckgo.com/">
+      <input type="hidden" name="sites" value="docs.lgdxrobot.bristolgram.uk"/>
+      <input type="hidden" name="k7" value="#ffffff"/>
+      <input type="hidden" name="k8" value="#222222"/>
+      <input type="hidden" name="k9" value="#00278e"/>
+      <input type="hidden" name="kx" value="#20692b"/>
+      <input type="hidden" name="kj" value="#fafafa"/>
+      <input type="hidden" name="kt" value="p"/>
+      <div class="input-group">
+        <input class="form-control" type="text" name="q" placeholder="Search…" aria-label="Search docs.lgdxrobot.bristolgram.uk on DuckDuckGo"/>
+        <button class="btn" type="submit">Search</button>
+      </div>
+    </form>
+    <ul class="navbar-nav" id="navbar-menu">
       <li class="nav-item">
         <a href="https://lgdxrobot.bristolgram.uk" class="btn btn-5" rel="noreferrer">
           <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
@@ -30,6 +43,19 @@
     <!-- Sidebar, dont run in homepage -->
     {{ if not $.currentPage.IsHome }}
       <div class="collapse navbar-collapse" id="sidebar-menu">
+        <form class="d-md-none" method="get" id="ddgSearch" action="https://duckduckgo.com/">
+          <input type="hidden" name="sites" value="docs.lgdxrobot.bristolgram.uk"/>
+          <input type="hidden" name="k7" value="#ffffff"/>
+          <input type="hidden" name="k8" value="#222222"/>
+          <input type="hidden" name="k9" value="#00278e"/>
+          <input type="hidden" name="kx" value="#20692b"/>
+          <input type="hidden" name="kj" value="#fafafa"/>
+          <input type="hidden" name="kt" value="p"/>
+          <div class="input-group">
+            <input class="form-control" type="text" name="q" placeholder="Search…" aria-label="Search docs.lgdxrobot.bristolgram.uk on DuckDuckGo"/>
+            <button class="btn" type="submit">Search</button>
+          </div>
+        </form>
         <h2 class="ms-3 mt-3">{{ $.currentSection.Title }}</h2>
         <!-- Section Documentation -->
         <ul class="navbar-nav">
