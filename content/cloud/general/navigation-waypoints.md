@@ -3,7 +3,7 @@ title: Navigation - Waypoints
 weight: 51
 ---
 
-A *Waypoint* is a location on the map that a robot can navigate to during a Task. Waypoints represent goal positions used by Nav2.
+A *Waypoint* is a location on the Realm that a robot can navigate to during a Task. Waypoints represent goal positions used by Nav2.
 
 ## Creating a Waypoint
 
