@@ -34,6 +34,3 @@ The system will prevent a user from deleting themselves.
 * **Roles**: The roles assigned to the user, which determine their access level.
   * **Role**: Search for the role by name to add it.
   * **Remove**: Click the bin icon to remove the role.
-
-The Email Recipient role is a special role that allows the user to receive email notifications from the system. It does not grant any system access.
-{.alert .alert-info}
