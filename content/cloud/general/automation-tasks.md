@@ -2,6 +2,7 @@
 title: Automation - Tasks
 weight: 100
 ---
+
 A *Task* is an automation job executed by a robot. It includes a list of waypoints that the robot must visit, as well as a flow that defines the steps to be performed when executing the task.
 
 ## Creating a Task
