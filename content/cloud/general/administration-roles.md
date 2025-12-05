@@ -3,7 +3,7 @@ title: Administration - Roles
 weight: 152
 ---
 
-LGDXRobot Cloud allows you to create roles to define customised access control for users. A role contains a list of scopes that determine what the user can access. The access can be fine-grained, such as specific permissions (read, write, delete) within a controller, or broad, such as access to everything in the system.
+LGDXRobot Cloud allows creating roles to define customised access control for users. A role contains a list of scopes that determine what the user can access. The access can be fine-grained, such as specific permissions (read, write, delete) within a controller, or broad, such as access to everything in the system.
 
 The Email Recipient role is a special role that allows the user to receive email notifications from the system. It does not grant any system access.
 {.alert .alert-info}
