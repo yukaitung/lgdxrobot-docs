@@ -3,7 +3,7 @@ title: Third-Party API Access
 weight: 1
 ---
 
-LGDXRobot Cloud API provides RESTful API access for the UI and third-party systems. This tutorial describes how to gain access to the API using Postman.
+This tutorial describes how to gain access to the API using Postman.
 
 ## Authentication to the API
 
