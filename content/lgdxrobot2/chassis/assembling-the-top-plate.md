@@ -16,3 +16,6 @@ Position the top plate onto the bottom plate, insert M4 screws, and tighten them
 ![Image of the install Top Plate](../img/asm_top/final.png)
 
 Install the batteries for the power supply.
+
+Warning: Ensure that the batteries are installed with the correct polarity.
+{.alert .alert-danger}

@@ -49,13 +49,19 @@ Place the two DC-DC buck converters near the centre of the bottom plate, and pos
 
 The left side of the power supply is designated for the PC. Solder the following connections:  
 
-**Power Supply → Power Switch → INA226 → DC-DC Buck Converter → DC Power Jack / USB**.
+**Power Supply → Power Switch → INA226 IN+ (No wired connection) INA226 IN- → DC-DC Buck Converter → DC Power Jack / USB**.
+
+Warning: Ensure that the power supply’s positive terminal is connected to INA226 IN+. Incorrect wiring may cause a fire.
+{.alert .alert-danger}
 
 ![Image of the connect for the power supply on PC side](../img/asm_bottom/power_pc.png)
 
 The right side of the power supply is for the motors. Solder the following connections:  
 
-**Power Supply → INA226 → Relay Module → Emergency Stop Button → DC-DC Buck Converter → XT30 Connector**, then connect to the boards.
+**Power Supply → INA226 IN+ (No wired connection) INA226 IN- → Relay Module COM (No wired connection) Relay Module NO → Emergency Stop Button COM (No wired connection) Emergency Stop Button NC → DC-DC Buck Converter → XT30 Connector**, then connect to the boards.
+
+Warning: Ensure that the power supply’s positive terminal is connected to INA226 IN+. Incorrect wiring may cause a fire.
+{.alert .alert-danger}
 
 ![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_motors.png)
 
