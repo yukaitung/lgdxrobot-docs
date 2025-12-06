@@ -5,7 +5,7 @@ weight: 3
 
 The dependencies can be installed using Docker.
 
-### 1. PostgreSQL
+## 1. PostgreSQL
 
 ```bash
 docker run --name postgres \
@@ -17,7 +17,7 @@ docker run --name postgres \
   -d postgres:18
 ```
 
-### 2. RabbitMQ
+## 2. RabbitMQ
 
 ```bash
 docker run --name rabbitmq \
@@ -35,7 +35,7 @@ docker run --name rabbitmq \
   rabbitmq:4-management
 ```
 
-### 3. Redis
+## 3. Redis
 
 The Redis server requires a certificate. Copy the following certificates to a suitable location:
 
@@ -53,6 +53,6 @@ docker run -d --name redis \
   redis-server /usr/local/etc/redis/redis.conf
 ```
 
-### 4. SMTP Server
+## 4. SMTP Server
 
 LGDXRobot Cloud relies on email for notifications, but no specific SMTP server is recommended for development. You can use the SMTP servers of free email providers, such as Gmail, Outlook, or iCloud. Alternatively, you can skip this setup, but you will not receive notifications.

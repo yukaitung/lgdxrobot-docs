@@ -15,7 +15,7 @@ The commands below require a `.conf` file for certificate generation, which can 
 
 Alternatively, run the `/docker-compose/certs/generate-certs.sh` script to generate the certificates.
 
-### 1. Root Certificate
+## 1. Root Certificate
 
 The root certificate forms the base of the certificate chain in LGDXRobot Cloud.
 
@@ -27,7 +27,7 @@ openssl pkcs12 -export -out rootCA.pfx -inkey rootCA.key -in rootCA.crt -passout
 
 Next, install the root certificate in the operating system then trust the root certificate.
 
-### 2. gRPC Certificate
+## 2. gRPC Certificate
 
 The gRPC certificate is used for communication between the API and the robots via gRPC.
 
@@ -42,7 +42,7 @@ openssl pkcs12 -export -out grpc.pfx -inkey grpc.key -in grpc.crt -certfile root
 
 Next, copy the `grpc.pfx` to the base directory of the `LGDXRobotCloud.API` project.
 
-### 3. Redis Certificate
+## 3. Redis Certificate
 
 Generate a certificate for the Redis server.
 
@@ -62,7 +62,7 @@ openssl pkcs12 -export -out redis_client.pfx -inkey redis_client.key -in redis_c
 
 Next, install the certificate (Only client certificate is required) in the operating system.
 
-### 4. UI Certificate
+## 4. UI Certificate
 
 The UI certificate is used for certificate-based authentication in the API. It can be omitted if the system is started in development mode.
 
@@ -74,7 +74,7 @@ openssl pkcs12 -export -out ui.pfx -inkey ui.key -in ui.crt -certfile rootCA.crt
 
 Next, install the certificate in the operating system.
 
-### 5. HTTPS Certificate
+## 5. HTTPS Certificate
 
 The HTTPS certificate is used for HTTPS communication between the API, the UI, and the browser. It can be replaced with a .NET dev-certificate.
 
