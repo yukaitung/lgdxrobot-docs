@@ -1,6 +1,6 @@
 ---
 title: Authentication
-weight: 3
+weight: 4
 ---
 
 Security is important to LGDXRobot Cloud. Since the API contains nearly all system logic, authentication is required for all access. The authentication method varies depending on the component.

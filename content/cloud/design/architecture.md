@@ -1,6 +1,6 @@
 ---
 title: Architecture
-weight: 2
+weight: 3
 ---
 
 LGDXRobot Cloud uses a three-tier architecture consisting of a UI front end (Presentation Layer), an API and Worker service (Application Layer), and a database (Data Layer). The connections between each component and the end user (User and Robot) vary depending on the use case.
