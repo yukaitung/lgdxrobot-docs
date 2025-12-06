@@ -27,7 +27,8 @@ HTTPServer(('', 8000), Handler).serve_forever()
 ```
 
 2. Save the script as `server.py` and run it using `python server.py`.
-3. Create a trigger with the following properties:
+3. Create an LGDXRobot Cloud API Key and note the secret key.
+4. Create a trigger with the following properties:
 
 Field | Value
 --- | ---
@@ -46,11 +47,11 @@ RobotId | Robot ID
 
 ![Screenshot of creating a trigger](../img/progress-in-api/trigger.png)
 
-4. Create a new flow with two progress steps: Loading and Moving. The Proceed Condition for **Loading** is *API*, and the trigger is set to the trigger just created.
+5. Create a new flow with two progress steps: **Loading** and **Moving**. The Proceed Condition for Loading is *API*, and the trigger is set to the trigger just created.
 
 ![Screenshot of creating a new flow](../img/progress-in-api/flow.png)
 
-5. Connect a robot to LGDXRobot Cloud.
+6. Connect a robot to LGDXRobot Cloud.
 
 ## Completing the Progress
 
