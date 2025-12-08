@@ -41,3 +41,6 @@ A *Trigger* is a third-party API call that is invoked at the beginning of a prog
     * **Header**: The API Key is inserted in the header.
       * **Header Field Name**: The name of the header for the API Key.
       * **API Key**: The API Key to insert; search the name to find it.
+
+The minimum data required for the Next Token are the Robot ID, Task ID, and the Next Token. The Next Token is appended only when the Proceed Condition is set to ‘API’.
+{.alert .alert-info}

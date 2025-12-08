@@ -35,7 +35,6 @@ A *Flow* is a sequence of steps that defines the automation workflow when the ro
   * **Remove**: Click the bin icon to remove the step.
   * **Add Progress**: Click the **Add Progress** button to add a new progress step.
 
-Tips:
-
-1. The 'Moving' progress should be included in the flow for the robot to navigate.
-2. An external API call is required when using 'API' as the proceed condition, and a 'Next Token' will be appended automatically. 
+1: The 'Moving' progress should be included in the flow for the robot to navigate. \
+2: An external API call is required when using 'API' as the proceed condition.
+{.alert .alert-info}
