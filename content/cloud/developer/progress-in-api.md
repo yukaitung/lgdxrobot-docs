@@ -5,6 +5,9 @@ weight: 3
 
 This tutorial describes how to use the Next Token with a robot. This applies to both physical and simulated robots.
 
+This tutorial requires creating a LGDXRobot Cloud API Key but does not require authentication.
+{.alert .alert-info}
+
 ## Prerequisites
 
 1. Create a RESTful API for receiving the Next Token by using the following Python script.
@@ -43,6 +46,7 @@ Key | Value
 --- | ---
 TaskId | Task ID
 RobotId | Robot ID
+NextToken | Next Token
 {.table}
 
 ![Screenshot of creating a trigger](../img/progress-in-api/trigger.png)
@@ -56,12 +60,15 @@ RobotId | Robot ID
 ## Completing the Progress
 
 1. Create a new task using the flow just created. The waypoints can be any waypoints in the realm.
+
+![Screenshot of creating a new task](../img/progress-in-api/task.png)
+
 2. The robot will not move because the current progress is **Loading**.
 3. Note the Task ID, Robot ID, and Next Token from the terminal running the Python script.
 
 ![Screenshot of the python script](../img/progress-in-api/next-pyserver.png)
 
-4. In Postman, create a new request `https://localhost:5163/Automation/AutoTasksNext/<Task ID>` and set the method to `POST`.
+4. In Postman, create a new request `https://localhost:5163/Automation/AutoTasksApi/AutoTaskNext` and set the method to `POST`.
 5. In the **Headers** tab, add a new key `X-API-Key` and set the value to the API Key.
 
 ![Screenshot of the request headers](../img/progress-in-api/next-header.png)
@@ -70,6 +77,7 @@ RobotId | Robot ID
 
 ```json
 {
+  "taskId": <Task ID>,
   "robotId": "<Robot ID>",
   "nextToken": "<Next Token>"
 }
@@ -79,3 +87,31 @@ RobotId | Robot ID
 
 7. Click **Send**.
 8. The robot will move to the next waypoint.
+
+## Aborting the Task
+
+1. Create a new task using the flow just created. The waypoints can be any waypoints in the realm.
+2. The robot will not move because the current progress is **Loading**.
+3. Note the Task ID, Robot ID, and Next Token from the terminal running the Python script.
+
+![Screenshot of the python script](../img/progress-in-api/abort-pyserver.png)
+
+4. In Postman, create a new request `https://localhost:5163/Automation/AutoTasksApi/AutoTaskAbort` and set the method to `POST`.
+5. In the **Headers** tab, add a new key `X-API-Key` and set the value to the API Key.
+
+![Screenshot of the request headers](../img/progress-in-api/abort-header.png)
+
+6. In the **Body** tab, add a JSON object with the following properties:
+
+```json
+{
+  "taskId": <Task ID>,
+  "robotId": "<Robot ID>",
+  "nextToken": "<Next Token>"
+}
+```
+
+![Screenshot of the request body](../img/progress-in-api/abort-body.png)
+
+7. Click **Send**.
+8. The task will be aborted, and an email notification will be sent.
