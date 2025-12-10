@@ -3,9 +3,9 @@ title: Bringup - NAV2 Simulation
 weight: 9
 ---
 
-![Screenshot](../img/bringup/nav2-sim.png)
-
 The `simulation_nav` launch file is used to start the NAV2 stack by initialising the Webots simulation and displaying it in RViz2.
+
+![Screenshot](../img/bringup/nav2-sim.png)
 
 ## Examples
 
