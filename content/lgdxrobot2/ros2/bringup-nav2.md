@@ -18,7 +18,7 @@ ros2 launch lgdxrobot2_bringup nav.launch.py slam:=True profile:='slam'
 Localisation on NAV2
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py map:<Absolute path to the map yaml file>
+ros2 launch lgdxrobot2_bringup nav.launch.py map:=<Absolute path to the map yaml file>
 ```
 
 SLAM on NAV2 with JOY
