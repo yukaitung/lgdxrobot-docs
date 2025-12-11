@@ -4,23 +4,55 @@ layout: sub-section
 weight: 3
 ---
 
-This section explains how to set up LGDXRobot Cloud, including the fleet and workflow. After that, you can start your first job. This tutorial relies on the simulation, and LGDXRobot2 ROS 2 is required. LGDXRobotics provides a Docker image for running ROS 2 with all dependencies, so installing ROS 2 separately is not necessary.
+This section explains how to set up LGDXRobot Cloud, configure the map and workflow, and then start your first automation job. This tutorial is suitable for both physical and simulated robots, and it uses the LGDXRobot2 Docker image.
 
-### Step 1: Create a Folder for Storing the Certificates
+## Prerequisites
 
-Create a folder for storing the certificates and remember its path.
+### Physical Robot
 
-### Step 2: Run the Docker Image
+* LGDXRobot2 with LGDXRobot2 ROS 2 installed
 
-Run the following command to start the image. Replace `<path to keys>` with the folder you just created.
+### Simulation Robot
+
+* LGDXRobot2 ROS 2
+* Webots
+
+## Step 1: Create a Folders
+
+Create a folder to store the certificates, and if you are using simulation, create an additional folder to share the Webots files.
+
+## Step 2: Run the Docker Image
+
+### Physical Robot
+
+```bash
+docker run -d \
+  --name lgdxrobot2 \
+  -v <path to keys>:/config/keys \
+  -v /dev:/dev \
+  --device-cgroup-rule='c 81:* rwm' \
+  --device-cgroup-rule='c 189:* rwm' \
+  --device-cgroup-rule='c 188:* rwm' \
+  --device-cgroup-rule='c 166:* rwm' \
+  --device-cgroup-rule='c 13:* rwm' \
+  --privileged \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -p 3000:3000 \
+  -p 3001:3001 \
+  yukaitung/lgdxrobot2-desktop:latest
+```
+
+### Simulation Robot
 
 ```bash
 docker run --rm -it \
   -e PUID=1000 \
   -e PGID=1000 \
   -v <path to keys>:/config/keys \
+  -v <path to Webots files>:/config/share \
   -p 3000:3000 \
   -p 3001:3001 yukaitung/lgdxrobot2.desktop:latest
 ```
 
-Then, you can access the web interface at [http://localhost:3000/](http://localhost:3000/). If the terminal is closed, you can right-click on the desktop and relaunch it from the menu.
+For the desktop image, access the web interface at <http://localhost:3000/> or at `https://<ip>:3001` for a remote computer. If the terminal is closed, right-click on the desktop and relaunch it from the menu.
