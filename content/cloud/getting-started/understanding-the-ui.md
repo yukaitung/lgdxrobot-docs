@@ -3,41 +3,40 @@ title: Understanding the UI
 weight: 1
 ---
 
-Although the design of the LGDXRobot Cloud UI is simple, it may be helpful to understand the basic concepts.
-### Step 1: Log In
+## Step 1: Log In
 
-Visit [https://localhost:5103/Login](https://localhost:5103/Login), enter the username and password you created, and press **Log In**.
+Visit [https://localhost:5103/Login](https://localhost:5103/Login), enter the username and password, and press **Log In**.
 
-![](../img/ui1.png)
+![Screenshot of the login page](../img/ui/login.png)
 
-### Step 2: Navigate to Home Page
+## Step 2: Navigate to Home Page
 
-After logging in, you will be redirected to the home page, which displays a list of waiting and running tasks, as well as several charts for operational status.
+After logging in, the system will redirect to the home page, which displays a list of waiting and running tasks, as well as several charts for operational status.
 
-![](../img/ui2.png)
+![Screenshot of the home page](../img/ui/home.png)
 
-The UI is divided into the following sections to help you navigate between pages:
+The UI is divided into the following parts:
 
-1. **Sidebar**: Provides access to every page in the system (subject to your permissions). Click a section name (e.g., **Navigation**) to expand it. Press **Home** to return to the home page.
+1. **Sidebar**: Provides access to every page in the system (subject to the permissions). Click a section name (e.g., **Navigation**) to expand it. Press **Home** to return to the home page.
 2. **Segmented Control (Home Page Only)**: Switch between different automation system views, including tasks, maps, and robots. Views update in real time, except for charts, which are cached for a few minutes.
-3. **Realm Switch**: Press the button to open a dialog where you can select a realm. The button also displays the current realm.
-4. **Profile Dropdown**: Press the button to open a menu where you can select Profile (to view and update your profile) or Logout (to sign out).
+3. **Realm Switch**: Press the button to open a dialog where to switch the realm. The button also displays the current realm.
+4. **Profile Dropdown**: Press the button to open a menu where to change the settings or log out.
 
-### Step 3: View LGDXRobot2 Cloud on the Mobile (Optional)
+## Step 3: View LGDXRobot2 Cloud on the Mobile (Optional)
 
 LGDXRobot2 Cloud is also available on mobile, with a slightly different UI:
 
-![](../img/ui3.png)
+![The mobile version of the home page](../img/ui/mobile.png)
 {.w-50}
 
 1. **Sidebar Toggle**: Press the button to show or hide the sidebar.
-2. **Profile Dropdown**: Functions the same as the desktop version, and also allows you to switch between realms.
+2. **Profile Dropdown**: Functions the same as the desktop version, and also allows to switch between realms.
 
-### Step 4: Navegate a Function
+## Step 4: Navegate a Function
 
 Expand the **Navigation** section and select **Realms** from the sidebar list.
 
-![](../img/ui4.png)
+![Screenshot of the realms page](../img/ui/realms.png)
 
 Most pages share common functionalities:
 
