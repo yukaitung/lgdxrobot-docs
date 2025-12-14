@@ -40,8 +40,8 @@ Traffic rules require **Waypoint Traffic Control** to be enabled in the Realm se
 
 ## Creating a Traffic Rule
 
-* Click the **Traffic** dropdown at the top left.
-* Select **Single Way** or **Both Ways**.
+* Click the **Traffic rules** dropdown at the top left.
+* Select **Single-way traffic** or **Two-way traffic**.
 * Click the waypoint to set as the starting point.
 * Click the waypoint to set as the ending point.
 * A blue line will appear on the map.  
@@ -55,8 +55,8 @@ For single-way traffic, it is recommended to create a waypoint at each junction 
 
 ## Editing / Deleting a Traffic Rule
 
-* Click the **Traffic** dropdown at the top left.
-* Select **Delete Traffic**.
+* Click the **Traffic rules** dropdown at the top left.
+* Select **Delete Traffic rule**.
 * Click the traffic rule you want to delete.
 * The traffic rule will be removed from the map.
 * To edit a rule, create a new one with the updated direction.
