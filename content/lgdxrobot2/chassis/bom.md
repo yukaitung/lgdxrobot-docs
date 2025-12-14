@@ -11,7 +11,7 @@ weight: 3
 | GM37-520 DC Gear Motor (12V) | 4 | A gear ratio of at least **1:90** is recommended to ensure sufficient torque. The motor must include an **encoder**, and the **connector type is PH2.0**. |
 | Mounting Bracket for 37mm DC Gear Motor (with screws) | 4 | These brackets are sometimes included when purchasing the motor. |
 | Mecanum Wheel Set | 1 set (4 wheels) | It is recommended to choose wheels with a **75–80 mm diameter** and **32+ mm width**. The **coupler must be 6 mm** to fit the motor shaft. |
-| M4 Screws (12 mm length) | 44 | Only **20** screws must be exactly 12 mm in length; Other lengths may be used for the remaining **24** screws. |
+| M4 Screws (12 mm length) | 44 | Only **20** screws must be exactly 12 mm in length; Longer screws may be used for the remaining **24** screws. |
 | M4 Nuts | 18 | — |
 | M4 Standoffs (70 mm) | 8 | — |
 | M4 Standoffs (35 mm) | 8 | — |
@@ -30,7 +30,7 @@ weight: 3
 | 3.5 mm Green LED | 1 | — |
 | Resistor (220 Ω) | 1 | — |
 | Resistor (4.7 kΩ) | 1 | — |
-| 2.54 mm (0.1 inch) Header Strip (Female) | Total 68 pins | Optional for soldering modules onto the board. |
+| 2.54 mm (0.1 inch) Header Strip (Female) | Total 68 pins | — |
 | XT30 Connector (Male & Female) | 1 | Optional for soldering wires onto the board. |
 | PH2.0 Connector (Female) | 4 | — |
 | PH2.0 Cable (~15 cm) | 4 | It is recommended that the keys face opposite directions. |
@@ -42,7 +42,7 @@ weight: 3
 |------|-----------|--------|
 | 18650 Battery | 8 | — |
 | 18650 Battery Case | 2 | — |
-| 18650 Battery Protection Board | 2 | Optional |
+| 18650 Battery Protection Board | 2 | Optional ![Image of Battery Protection Board](../img/bom/bms.jpg) |
 | 12V DC-DC Buck Converter | 1 | — |
 | 5V DC-DC Buck Converter | 1 | Another voltage may be chosen if using NUC. |
 | DC Power Jack / USB Cable | 1 | Depends on the power input for the computer |
@@ -55,8 +55,8 @@ A custom power supply may be designed, but note that the motor voltage is 12 V.
 
 | Item | Quantity | Notes |
 |------|----------|-------|
-| Emergency Stop Button | 1 | — |
-| Power Switch | 1 | — |
+| Emergency Stop Button | 1 | ![Image of Emergency Stop Button](../img/bom/e-stop.jpg) |
+| Power Switch | 1 | ![Image of Power Switch](../img/bom/power-switch.jpg) |
 | Cables | Suitable length | — |
 {.table}
 
@@ -86,8 +86,8 @@ Either the NUC setting or the Single Board Computer (SBC) setting may be chosen.
 |------|----------|-------|
 | RPLIDAR A1 or C1 | 1 | — |
 | M2.5 Screws (8 mm length) | 4 | — |
-| RealSense D435 Camera | 1 | Optional |
-| 1/4-Inch Tripod Screw | 1 | Optional |
+| RealSense D435i Camera | 1 | Optional (LGDXRobot2 use the IMU from D435i) |
+| 1/4-Inch Tripod Screw | 1 | Optional ![Image of Tripod Screw](../img/bom/tripod-screw.jpg) |
 {.table}
 
 ## Tools (Not installed on the robot)
