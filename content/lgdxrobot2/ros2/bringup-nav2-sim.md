@@ -1,21 +1,23 @@
 ---
-title: Bringup - NAV2 Simulation
+title: Bringup - Nav2 Simulation
 weight: 9
 ---
 
-The `simulation_nav` launch file is used to start the NAV2 stack by initialising the Webots simulation and displaying it in RViz2.
+The `simulation_nav` launch file is used to start the Nav2 stack by initialising the Webots simulation and displaying it in RViz2.
 
-![Screenshot](../img/bringup/nav2-sim.png)
+![Screenshot](../img/bringup/Nav2-sim.png)
 
 ## Examples
 
-SLAM on NAV2
+### Robot Only
+
+SLAM on Nav2
 
 ```bash
 ros2 launch lgdxrobot2_bringup simulation_nav.launch.py slam:=True profile:='slam-sim'
 ```
 
-Localisation on NAV2
+Localisation on Nav2
 
 ```bash
 ros2 launch lgdxrobot2_bringup simulation_nav.launch.py profile:='loc-sim' 
@@ -31,6 +33,24 @@ Localisation on other map
 
 ```bash
 ros2 launch lgdxrobot2_bringup simulation_nav.launch.py profile:='loc-sim' world:='apartment.wbt' map:='apartment.yaml'
+```
+
+### With LGDXRobot Cloud
+
+Assuming that the `/config/keys` folder contains `root.crt`, `Robot1.key` and `Robot1.crt` files. The path of these files can be set using the `cloud_root_cert`, `cloud_client_key` and `cloud_client_cert` parameters.
+
+The `cloud_address` can be ignored if ROS 2 is running in a container and LGDXRobot Cloud is running on the host.
+
+SLAM
+
+```bash
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py slam:=True profile:='slam' use_cloud:=True cloud_address:=<Address of the LGDXRobot Cloud service>
+```
+
+Localisation
+
+```bash
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py map:=<Absolute path to the map yaml file> use_cloud:=True cloud_address:=<Address of the LGDXRobot Cloud service>
 ```
 
 ## Parameters
@@ -52,4 +72,9 @@ ros2 launch lgdxrobot2_bringup simulation_nav.launch.py profile:='loc-sim' world
 | lidar_model      | string | RPLIDAR model name.                                   |
 | use_camera       | bool   | Whether to enable the camera.                         |
 | use_joy          | bool   | Whether to enable the joy.                            |
+| use_cloud           | bool   | Whether to enable cloud connectivity.         |
+| cloud_address       | string | Address of the LGDXRobot Cloud service.        |
+| cloud_root_cert     | string | Path to the server’s root certificate file.   |
+| cloud_client_key    | string | Path to the client’s private key file.        |
+| cloud_client_cert   | string | Path to the client’s certificate file.        |
 {.table}

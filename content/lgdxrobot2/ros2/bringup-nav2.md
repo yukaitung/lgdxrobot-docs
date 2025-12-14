@@ -1,30 +1,48 @@
 ---
-title: Bringup - NAV2
+title: Bringup - Nav2
 weight: 8
 ---
 
-The `nav` launch file is used to start the NAV2 stack by initialising the required hardware and displaying it in RViz2.
+The `nav` launch file is used to start the Nav2 stack by initialising the required hardware and displaying it in RViz2.
 
-![Image of the NAV2](../img/bringup/nav2.png)
+![Image of the Nav2](../img/bringup/Nav2.png)
 
 ## Examples
 
-SLAM on NAV2
+### Robot Only
+
+SLAM on Nav2
 
 ```bash
 ros2 launch lgdxrobot2_bringup nav.launch.py slam:=True profile:='slam'
 ```
 
-Localisation on NAV2
+Localisation on Nav2
 
 ```bash
 ros2 launch lgdxrobot2_bringup nav.launch.py map:=<Absolute path to the map yaml file>
 ```
 
-SLAM on NAV2 with JOY
+SLAM on Nav2 with JOY
 
 ```bash
 ros2 launch lgdxrobot2_bringup nav.launch.py slam:=True profile:='slam' use_joy:=True
+```
+
+### With LGDXRobot Cloud
+
+Assuming that the `/config/keys` folder contains `root.crt`, `Robot1.key` and `Robot1.crt` files. The path of these files can be set using the `cloud_root_cert`, `cloud_client_key` and `cloud_client_cert` parameters.
+
+SLAM
+
+```bash
+ros2 launch lgdxrobot2_bringup nav.launch.py slam:=True profile:='slam' use_cloud:=True cloud_address:=<Address of the LGDXRobot Cloud service>
+```
+
+Localisation
+
+```bash
+ros2 launch lgdxrobot2_bringup nav.launch.py map:=<Absolute path to the map yaml file> use_cloud:=True cloud_address:=<Address of the LGDXRobot Cloud service>
 ```
 
 ## Parameters
@@ -46,4 +64,9 @@ ros2 launch lgdxrobot2_bringup nav.launch.py slam:=True profile:='slam' use_joy:
 | lidar_model      | string | RPLIDAR model name.                                   |
 | use_camera       | bool   | Whether to enable the camera.                         |
 | use_joy          | bool   | Whether to enable the joy.                            |
+| use_cloud           | bool   | Whether to enable cloud connectivity.         |
+| cloud_address       | string | Address of the LGDXRobot Cloud service.        |
+| cloud_root_cert     | string | Path to the server’s root certificate file.   |
+| cloud_client_key    | string | Path to the client’s private key file.        |
+| cloud_client_cert   | string | Path to the client’s certificate file.        |
 {.table}
