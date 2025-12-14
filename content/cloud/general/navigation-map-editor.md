@@ -57,7 +57,7 @@ For single-way traffic, it is recommended to create a waypoint at each junction 
 
 * Click the **Traffic rules** dropdown at the top left.
 * Select **Delete Traffic rule**.
-* Click the traffic rule you want to delete.
+* Click the traffic rule that is to be deleted.
 * The traffic rule will be removed from the map.
 * To edit a rule, create a new one with the updated direction.
 

@@ -5,7 +5,7 @@ weight: 6
 
 Update the corresponding `appsettings.json`.
 
-For managing secrets securely, please refer to the [Official Documentation](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets) on how to create and handle secrets in your environment.
+For managing secrets securely, please refer to the [Official Documentation](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets) on how to create and handle secrets.
 
 ## Settings
 

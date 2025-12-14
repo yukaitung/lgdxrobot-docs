@@ -55,4 +55,4 @@ docker run -d --name redis \
 
 ## 4. SMTP Server
 
-LGDXRobot Cloud relies on email for notifications, but no specific SMTP server is recommended for development. You can use the SMTP servers of free email providers, such as Gmail, Outlook, or iCloud. Alternatively, you can skip this setup, but you will not receive notifications.
+LGDXRobot Cloud relies on email for notifications, but no specific SMTP server is recommended for development. Any SMTP server from a free email provider can be used, such as Gmail, Outlook, or iCloud. Alternatively, you can skip this setup, but notifications will not be sent.

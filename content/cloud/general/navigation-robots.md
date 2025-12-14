@@ -11,7 +11,7 @@ A *Robot* is a device that belongs to a Realm and can execute Tasks.
 * Enter the Robot Details settings and press **Next**.
 * Enter the Chassis settings and press **Next**.
 * Press **Download** to download the Root Certificate, Robot Private Key, and Robot Public Key files.  
-  The input fields allow you to change the file names before downloading.
+  The input fields allows to change the file names before downloading.
 * Press **Next** after the files have been downloaded.
 * Press **Done** in the final step.
 * Send the downloaded files to the robot.

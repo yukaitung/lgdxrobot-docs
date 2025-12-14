@@ -4,7 +4,7 @@ layout: sub-section
 weight: 3
 ---
 
-This section explains how to set up LGDXRobot Cloud, configure the map and workflow, and then start your first automation job. This tutorial is suitable for both physical and simulated robots, and it uses the LGDXRobot2 Docker image.
+This section explains how to set up LGDXRobot Cloud, configure the map and workflow, and then start the first automation job. This tutorial is suitable for both physical and simulated robots, and it uses the LGDXRobot2 Docker image.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ This section explains how to set up LGDXRobot Cloud, configure the map and workf
 
 ## Step 1: Create a Folders
 
-Create a folder to store the certificates, and if you are using simulation, create an additional folder to share the Webots files.
+Create a folder to store the certificates, and if using simulation, create an additional folder to share the Webots files.
 
 ## Step 2: Run the Docker Image
 

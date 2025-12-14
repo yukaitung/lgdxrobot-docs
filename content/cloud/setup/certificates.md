@@ -11,7 +11,7 @@ TLS certificates are required for machine-to-machine communication. A few certif
 * UI certificate (optional)
 * HTTPS certificate (optional)
 
-The commands below require a `.conf` file for certificate generation, which can be found in the `/docker-compose/certs` folder. The certificates are for testing purposes only, so you can adjust the configurations, validity period, and passwords according to your needs.
+The commands below require a `.conf` file for certificate generation, which can be found in the `/docker-compose/certs` folder. The certificates are for testing purposes only, it is possible to adjust the configurations, validity period, and passwords according to the requirements.
 
 Alternatively, run the `/docker-compose/certs/generate-certs.sh` script to generate the certificates.
 
