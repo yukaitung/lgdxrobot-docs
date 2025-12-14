@@ -41,7 +41,7 @@ weight: 3
 | Item | Quantity | Notes |
 |------|-----------|--------|
 | 18650 Battery | 8 | — |
-| 18650 Battery Case | 2 | — |
+| 18650 Battery Holder | 2 | — |
 | 18650 Battery Protection Board | 2 | Optional ![Image of Battery Protection Board](../img/bom/bms.jpg) |
 | 12V DC-DC Buck Converter | 1 | — |
 | 5V DC-DC Buck Converter | 1 | Another voltage may be chosen if using NUC. |
