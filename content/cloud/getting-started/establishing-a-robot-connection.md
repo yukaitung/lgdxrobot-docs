@@ -24,7 +24,7 @@ ros2 launch lgdxrobot2_bringup nav.launch.py \
 ### Simulation Robot
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py \
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
   use_cloud:=True \
   profile:='loc-sim' \
   cloud_address:=<Address of the cloud with port or 'host.docker.internal:5162'> \
@@ -33,7 +33,7 @@ ros2 launch lgdxrobot2_bringup nav.launch.py \
   cloud_client_cert:="/config/keys/My Robot.crt"
 ```
 
-The map parameter can be omitted because it has a default map.
+The map parameter can be omitted in simulation because it has a default map.
 {.alert .alert-info}
 
 ## Step 2: Check the Connection
