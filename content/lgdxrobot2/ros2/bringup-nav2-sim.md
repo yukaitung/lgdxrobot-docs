@@ -1,11 +1,11 @@
 ---
-title: Navigation - Nav2 Simulation
+title: Bringup - Nav2 Simulation
 weight: 152
 ---
 
 The `simulation_nav` launch file is used to start the Nav2 stack by initialising the Webots simulation and displaying it in RViz2.
 
-![Screenshot](../img/navigation/sim.png) 
+![Screenshot](../img/bringup/sim-img.png)
 
 ## Examples
 
@@ -14,7 +14,7 @@ The `simulation_nav` launch file is used to start the Nav2 stack by initialising
 SLAM on Nav2
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
   slam:=True \
   profile:='slam-sim' \
   use_rviz:=True
@@ -23,7 +23,7 @@ ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
 Localisation on Nav2
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
   profile:='loc-sim' \
   use_rviz:=True
 ```
@@ -31,7 +31,7 @@ ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
 SLAM on other Webots map
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
   slam:=True \
   profile:='slam-sim' \
   world:='apartment.wbt' \
@@ -42,7 +42,7 @@ ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
 Localisation on other Webots map
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
   profile:='loc-sim' \
   world:='apartment.wbt' \
   map:='apartment.yaml' \
@@ -58,7 +58,7 @@ The `cloud_address` can be ignored if ROS 2 is running in a container and LGDXRo
 SLAM
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
   slam:=True \
   profile:='slam' \
   use_cloud:=True \
@@ -68,7 +68,7 @@ ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
 Localisation
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
   map:=<Absolute path to the map yaml file> \
   use_cloud:=True \
   cloud_address:=<Address of the LGDXRobot Cloud service with port>

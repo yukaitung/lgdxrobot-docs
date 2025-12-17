@@ -1,11 +1,11 @@
 ---
-title: Navigation - Nav2
+title: Bringup - Nav2
 weight: 151
 ---
 
 The `nav` launch file is used to start the Nav2 stack by initialising the required hardware and displaying it in RViz2.
 
-![Image of the Nav2](../img/navigation/nav.png)
+![Image of the Nav2](../img/bringup/nav-img.png)
 
 ## Examples
 
@@ -14,7 +14,7 @@ The `nav` launch file is used to start the Nav2 stack by initialising the requir
 SLAM on Nav2
 
 ```bash
-ros2 launch lgdxrobot2_navigation nav.launch.py \
+ros2 launch lgdxrobot2_bringup nav.launch.py \
   slam:=True \
   profile:='slam' \
   use_rviz:=True
@@ -23,7 +23,7 @@ ros2 launch lgdxrobot2_navigation nav.launch.py \
 Localisation on Nav2
 
 ```bash
-ros2 launch lgdxrobot2_navigation nav.launch.py \
+ros2 launch lgdxrobot2_bringup nav.launch.py \
   map:=<Absolute path to the map yaml file> \
   use_rviz:=True
 ```
@@ -31,7 +31,7 @@ ros2 launch lgdxrobot2_navigation nav.launch.py \
 SLAM on Nav2 with JOY
 
 ```bash
-ros2 launch lgdxrobot2_navigation nav.launch.py \
+ros2 launch lgdxrobot2_bringup nav.launch.py \
   slam:=True \
   profile:='slam' \
   use_joy:=True \
@@ -45,7 +45,7 @@ Assuming that the `/config/keys` folder contains `root.crt`, `Robot1.key` and `R
 SLAM
 
 ```bash
-ros2 launch lgdxrobot2_navigation nav.launch.py \
+ros2 launch lgdxrobot2_bringup nav.launch.py \
   slam:=True \
   profile:='slam' \
   use_cloud:=True \
@@ -55,7 +55,7 @@ ros2 launch lgdxrobot2_navigation nav.launch.py \
 Localisation
 
 ```bash
-ros2 launch lgdxrobot2_navigation nav.launch.py \
+ros2 launch lgdxrobot2_bringup nav.launch.py \
   map:=<Absolute path to the map yaml file> \
   use_cloud:=True \
   cloud_address:=<Address of the LGDXRobot Cloud service with port>

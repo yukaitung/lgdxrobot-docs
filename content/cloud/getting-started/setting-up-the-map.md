@@ -21,7 +21,7 @@ cd lgdx_ws
 ### Physical Robot
 
 ```bash
-ros2 launch lgdxrobot2_navigation slam.launch.py \
+ros2 launch lgdxrobot2_bringup slam.launch.py \
   slam:=True \
   profile:='slam' \
   use_cloud:=True \
@@ -34,7 +34,7 @@ ros2 launch lgdxrobot2_navigation slam.launch.py \
 ### Simulation Robot
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
   slam:=True \
   profile:='slam-sim' \
   use_cloud:=True \
