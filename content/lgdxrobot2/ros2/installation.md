@@ -17,6 +17,10 @@ sudo udevadm trigger
 ## Installation
 
 1. Install [ROS 2 Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
+
+The LGDXRobot2 ROS 2 is not configured to depend on RViz, it can be installed separately if required.
+{.alert .alert-info}
+
 2. The packages are hosted in a self-hosted repository, so add this repository before installation.
 
 ```bash
@@ -48,3 +52,13 @@ cd <path to .deb files>
 sudo apt install ./*.deb
 sudo dpkg -i ./*.deb
 ```
+
+## Customisation
+
+If certain functionality is not required, it can be omitted when installing the packages.
+
+- **`lgdxrobot2_navigation`**  
+  Can be omitted if the Nav2 is not required. In the `lgdxrobot2_bringup` package, launch files that include `nav` should not be used.
+
+- **`lgdxrobot2_webots`**  
+  Can be omitted if the Webots simulation is not required. In the `lgdxrobot2_bringup` package, launch files that include `simulation` should not be used.
