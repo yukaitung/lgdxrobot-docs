@@ -10,25 +10,33 @@ The `bringup` launch file is used to start the robot with all required hardware,
 ## Examples
 
 ```bash
-ros2 launch lgdxrobot2_bringup bringup.launch.py use_rviz:=true
+ros2 launch lgdxrobot2_bringup bringup.launch.py \
+  use_rviz:=true
 ```
 
 Using Other LiDAR Models (default is C1)
 
 ```bash
-ros2 launch lgdxrobot2_bringup bringup.launch.py lidar_model:='a1' use_rviz:=true
+ros2 launch lgdxrobot2_bringup bringup.launch.py \
+  lidar_model:='a1' \
+  use_rviz:=true
 ```
 
 Launch Without RealSense Camera
 
 ```bash
-ros2 launch lgdxrobot2_bringup bringup.launch.py use_camera:=false use_rviz:=true
+ros2 launch lgdxrobot2_bringup bringup.launch.py \
+  use_camera:=false \
+  use_rviz:=true
 ```
 
 Launch Without JOY only
 
 ```bash
-ros2 launch lgdxrobot2_bringup bringup.launch.py use_camera:=false use_lidar:=false use_rviz:=true
+ros2 launch lgdxrobot2_bringup bringup.launch.py \
+  use_camera:=false \
+  use_lidar:=false \
+  use_rviz:=true
 ```
 
 ## Parameters

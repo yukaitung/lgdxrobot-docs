@@ -14,25 +14,39 @@ The `simulation_nav` launch file is used to start the Nav2 stack by initialising
 SLAM on Nav2
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py slam:=True profile:='slam-sim' use_rviz:=true
+ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+  slam:=true \
+  profile:='slam-sim' \
+  use_rviz:=true
 ```
 
 Localisation on Nav2
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py profile:='loc-sim' use_rviz:=true
+ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+  profile:='loc-sim' \
+  use_rviz:=true
 ```
 
-SLAM on other map
+SLAM on other Webots map
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py slam:=True profile:='slam-sim' world:='apartment.wbt' map:='apartment.yaml' use_rviz:=true
+ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+  slam:=true \
+  profile:='slam-sim' \
+  world:='apartment.wbt' \
+  map:='apartment.yaml' \
+  use_rviz:=true
 ```
 
-Localisation on other map
+Localisation on other Webots map
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py profile:='loc-sim' world:='apartment.wbt' map:='apartment.yaml' use_rviz:=true
+ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+  profile:='loc-sim' \
+  world:='apartment.wbt' \
+  map:='apartment.yaml' \
+  use_rviz:=true
 ```
 
 ### With LGDXRobot Cloud
@@ -44,13 +58,20 @@ The `cloud_address` can be ignored if ROS 2 is running in a container and LGDXRo
 SLAM
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py slam:=True profile:='slam' use_cloud:=True cloud_address:=<Address of the LGDXRobot Cloud service>
+ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+  slam:=true \
+  profile:='slam' \
+  use_cloud:=true \
+  cloud_address:=<Address of the LGDXRobot Cloud service with port>
 ```
 
 Localisation
 
 ```bash
-ros2 launch lgdxrobot2_navigation simulation_nav.launch.py map:=<Absolute path to the map yaml file> use_cloud:=True cloud_address:=<Address of the LGDXRobot Cloud service>
+ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
+  map:=<Absolute path to the map yaml file> \
+  use_cloud:=true \
+  cloud_address:=<Address of the LGDXRobot Cloud service with port>
 ```
 
 ## Parameters
