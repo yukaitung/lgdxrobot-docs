@@ -15,9 +15,9 @@ SLAM on Nav2
 
 ```bash
 ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
-  slam:=true \
+  slam:=True \
   profile:='slam-sim' \
-  use_rviz:=true
+  use_rviz:=True
 ```
 
 Localisation on Nav2
@@ -25,18 +25,18 @@ Localisation on Nav2
 ```bash
 ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
   profile:='loc-sim' \
-  use_rviz:=true
+  use_rviz:=True
 ```
 
 SLAM on other Webots map
 
 ```bash
 ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
-  slam:=true \
+  slam:=True \
   profile:='slam-sim' \
   world:='apartment.wbt' \
   map:='apartment.yaml' \
-  use_rviz:=true
+  use_rviz:=True
 ```
 
 Localisation on other Webots map
@@ -46,7 +46,7 @@ ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
   profile:='loc-sim' \
   world:='apartment.wbt' \
   map:='apartment.yaml' \
-  use_rviz:=true
+  use_rviz:=True
 ```
 
 ### With LGDXRobot Cloud
@@ -59,9 +59,9 @@ SLAM
 
 ```bash
 ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
-  slam:=true \
+  slam:=True \
   profile:='slam' \
-  use_cloud:=true \
+  use_cloud:=True \
   cloud_address:=<Address of the LGDXRobot Cloud service with port>
 ```
 
@@ -70,7 +70,7 @@ Localisation
 ```bash
 ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
   map:=<Absolute path to the map yaml file> \
-  use_cloud:=true \
+  use_cloud:=True \
   cloud_address:=<Address of the LGDXRobot Cloud service with port>
 ```
 

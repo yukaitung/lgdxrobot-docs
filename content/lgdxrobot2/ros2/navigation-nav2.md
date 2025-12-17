@@ -15,9 +15,9 @@ SLAM on Nav2
 
 ```bash
 ros2 launch lgdxrobot2_navigation nav.launch.py \
-  slam:=true \
+  slam:=True \
   profile:='slam' \
-  use_rviz:=true
+  use_rviz:=True
 ```
 
 Localisation on Nav2
@@ -25,17 +25,17 @@ Localisation on Nav2
 ```bash
 ros2 launch lgdxrobot2_navigation nav.launch.py \
   map:=<Absolute path to the map yaml file> \
-  use_rviz:=true
+  use_rviz:=True
 ```
 
 SLAM on Nav2 with JOY
 
 ```bash
 ros2 launch lgdxrobot2_navigation nav.launch.py \
-  slam:=true \
+  slam:=True \
   profile:='slam' \
-  use_joy:=true \
-  use_rviz:=true
+  use_joy:=True \
+  use_rviz:=True
 ```
 
 ### With LGDXRobot Cloud
@@ -46,9 +46,9 @@ SLAM
 
 ```bash
 ros2 launch lgdxrobot2_navigation nav.launch.py \
-  slam:=true \
+  slam:=True \
   profile:='slam' \
-  use_cloud:=true \
+  use_cloud:=True \
   cloud_address:=<Address of the LGDXRobot Cloud service with port> 
 ```
 
@@ -57,7 +57,7 @@ Localisation
 ```bash
 ros2 launch lgdxrobot2_navigation nav.launch.py \
   map:=<Absolute path to the map yaml file> \
-  use_cloud:=true \
+  use_cloud:=True \
   cloud_address:=<Address of the LGDXRobot Cloud service with port>
 ```
 
