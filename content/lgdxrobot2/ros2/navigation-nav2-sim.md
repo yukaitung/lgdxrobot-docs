@@ -5,7 +5,7 @@ weight: 152
 
 The `simulation_nav` launch file is used to start the Nav2 stack by initialising the Webots simulation and displaying it in RViz2.
 
-![Screenshot](../img/bringup/Nav2-sim.png) 
+![Screenshot](../img/navigation/sim.png) 
 
 ## Examples
 
