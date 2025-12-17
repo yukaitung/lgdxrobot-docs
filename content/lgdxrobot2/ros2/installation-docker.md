@@ -9,13 +9,12 @@ LGDXRobot2 ROS 2 is available as Docker images for both AMD64 and ARM64 architec
 
 The host machine must be configured to allow access to the USB devices used by the robot. The corresponding udev rules are stored in the [udev](http://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/tree/main/udev?ref_type=heads) folder. Copy the rules to `/etc/udev/rules.d` and reload them using the commands below:
 
-
 ```bash
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-## Desktop Images
+## Desktop Docker Image
 
 The desktop images include ROS 2 GUI tools and provide a web interface suitable for remote control. After the container is started, the web interface becomes accessible at [http://localhost:3000](http://localhost:3000). For external access, the address `https://<host-ip>:3001` should be used.
 
@@ -107,4 +106,50 @@ docker run -d \
   -p 3000:3000 \
   -p 3001:3001 \
   yukaitung/lgdxrobot2-desktop:latest
+```
+
+## Command-line Image
+
+The command-line image is a smaller image that includes only the LGDXRobot2 ROS 2 packages.
+
+```bash
+docker run -d \
+  --name lgdxrobot2 \
+  yukaitung/lgdxrobot2-base:latest
+```
+
+## Other Images
+
+### Foxglove
+
+The Foxglove image has the bridge installed.
+
+```bash
+docker run -d \
+  --name lgdxrobot2 \
+  yukaitung/lgdxrobot2-base:latest-foxglove
+```
+
+```bash
+docker run -d \
+  --name lgdxrobot2 \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -p 3000:3000 \
+  -p 3001:3001 \
+  yukaitung/lgdxrobot2-desktop:latest-foxglove
+```
+
+### Full Image (Desktop only)
+
+The full image includes the development tools and the Foxglove bridge.
+
+```bash
+docker run -d \
+  --name lgdxrobot2 \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -p 3000:3000 \
+  -p 3001:3001 \
+  yukaitung/lgdxrobot2-desktop:latest-full
 ```
