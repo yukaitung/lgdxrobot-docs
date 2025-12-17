@@ -29,7 +29,7 @@ sudo apt update
 3. Install the packages. This will also install the required dependencies, including the Nav2 stack.
 
 ```bash
-apt install ros-${ROS_DISTRO}-sllidar-ros2 ros-${ROS_DISTRO}-lgdxrobot2*
+sudo apt install ros-${ROS_DISTRO}-sllidar-ros2 ros-${ROS_DISTRO}-lgdxrobot2*
 ```
 
 Do not install rplidar_ros, as it appears to be out of date.
