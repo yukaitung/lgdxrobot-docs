@@ -1,6 +1,6 @@
 ---
 title: Desktop Image Tutorial
-weight: 3
+weight: 4
 ---
 
 After entering the web interface, a terminal will open. All workspaces are sourced automatically, so any command can be run directly in this terminal.

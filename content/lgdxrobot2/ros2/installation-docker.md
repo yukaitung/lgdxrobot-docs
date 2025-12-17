@@ -1,6 +1,6 @@
 ---
 title: Installation - Docker
-weight: 2
+weight: 3
 ---
 
 LGDXRobot2 ROS 2 is available as Docker images for both AMD64 and ARM64 architectures. It provides web interface access for GUI tools such as rqt, RViz2 and ChassisTuner.

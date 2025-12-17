@@ -1,6 +1,6 @@
 ---
 title: Packages
-weight: 5
+weight: 51
 ---
 
 * `lgdxrobot2_agent`: A ROS agent node for integration with LGDXRobot2 hardware and LGDXRobot Cloud.

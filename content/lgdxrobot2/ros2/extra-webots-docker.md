@@ -1,6 +1,6 @@
 ---
 title: Extra - Native Webots For Docker
-weight: 51
+weight: 202
 ---
 
 The LGDXRobot2 ROS 2 Docker image allows all dependencies to be deployed in one go, but it does not include Webots. Running Webots inside Docker may be slow. Fortunately, Webots is flexible and can operate with the simulation over the network.

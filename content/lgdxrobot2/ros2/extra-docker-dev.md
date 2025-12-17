@@ -1,6 +1,6 @@
 ---
 title: Extra - Docker for Development
-weight: 50
+weight: 201
 ---
 
 The LGDXRobot2 ROS 2 Docker image comes with development tools installed, allowing custom ROS 2 packages to be developed. This tutorial shows how to build custom ROS 2 package. It is based on the [ROS 2 documentation](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html).
