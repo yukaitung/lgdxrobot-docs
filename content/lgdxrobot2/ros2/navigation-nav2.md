@@ -5,7 +5,7 @@ weight: 151
 
 The `nav` launch file is used to start the Nav2 stack by initialising the required hardware and displaying it in RViz2.
 
-![Image of the Nav2](../img/navigation/Nav2.png)
+![Image of the Nav2](../img/bringup/Nav2.png)
 
 ## Examples
 
