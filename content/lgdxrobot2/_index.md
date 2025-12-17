@@ -42,9 +42,7 @@ The final section covers software integration with ROS 2, including teleoperatio
 
 | Project | Description | Docker Hub |
 |---------|-------------|------------|
-| LGDXRobot2 Core | ROS image for command-line use | [Docker](https://hub.docker.com/r/yukaitung/lgdxrobot2-core) |
+| LGDXRobot2 Base | ROS image for command-line use | [Docker](https://hub.docker.com/r/yukaitung/lgdxrobot2-base) |
 | LGDXRobot2 Desktop | ROS image with GUI and ChassisTuner included | [Docker](https://hub.docker.com/r/yukaitung/lgdxrobot2-desktop) |
-| LGDXRobot2 Support Image | Base image for ROS builds | [Docker](https://hub.docker.com/r/yukaitung/lgdxrobot2-support-core) |
-| LGDXRobot2 Desktop Support Image | Base image for GUI-enabled ROS builds | [Docker](https://hub.docker.com/r/yukaitung/lgdxrobot2-support-desktop) |
 | LGDXRobot2 ChassusTuner Build Image | Toolchain image for building the ChassisTuner | [Docker](https://hub.docker.com/r/yukaitung/lgdxrobot2-chassistuner-build) |
 {.table}

@@ -1,5 +1,5 @@
 ---
-title: Bringup - Parameter Profile
+title: Navigation - Parameter Profile
 weight: 10
 ---
 

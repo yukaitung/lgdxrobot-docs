@@ -1,5 +1,5 @@
 ---
-title: Bringup - Nav2
+title: Navigation - Nav2
 weight: 8
 ---
 
@@ -14,19 +14,19 @@ The `nav` launch file is used to start the Nav2 stack by initialising the requir
 SLAM on Nav2
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py slam:=True profile:='slam'
+ros2 launch lgdxrobot2_navigation nav.launch.py slam:=True profile:='slam' use_rviz:=true
 ```
 
 Localisation on Nav2
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py map:=<Absolute path to the map yaml file>
+ros2 launch lgdxrobot2_navigation nav.launch.py map:=<Absolute path to the map yaml file> use_rviz:=true
 ```
 
 SLAM on Nav2 with JOY
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py slam:=True profile:='slam' use_joy:=True
+ros2 launch lgdxrobot2_navigation nav.launch.py slam:=True profile:='slam' use_joy:=True use_rviz:=true
 ```
 
 ### With LGDXRobot Cloud
@@ -36,13 +36,13 @@ Assuming that the `/config/keys` folder contains `root.crt`, `Robot1.key` and `R
 SLAM
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py slam:=True profile:='slam' use_cloud:=True cloud_address:=<Address of the LGDXRobot Cloud service>
+ros2 launch lgdxrobot2_navigation nav.launch.py slam:=True profile:='slam' use_cloud:=True cloud_address:=<Address of the LGDXRobot Cloud service>
 ```
 
 Localisation
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py map:=<Absolute path to the map yaml file> use_cloud:=True cloud_address:=<Address of the LGDXRobot Cloud service>
+ros2 launch lgdxrobot2_navigation nav.launch.py map:=<Absolute path to the map yaml file> use_cloud:=True cloud_address:=<Address of the LGDXRobot Cloud service>
 ```
 
 ## Parameters

@@ -22,7 +22,7 @@ docker run -d  \
   -e PGID=1000 \
   -v ~/my_ws/src:/config/my_ws/src \
   -p 3000:3000 \
-  -p 3001:3001 yukaitung/lgdxrobot2-desktop:latest
+  -p 3001:3001 yukaitung/lgdxrobot2-desktop:latest-full
 ```
 
 3. The web interface is now accessible at [http://localhost:3000](http://localhost:3000).
