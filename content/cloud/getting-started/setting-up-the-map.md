@@ -21,7 +21,7 @@ cd lgdx_ws
 ### Physical Robot
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py \
+ros2 launch lgdxrobot2_navigation slam.launch.py \
   slam:=True \
   profile:='slam' \
   use_cloud:=True \
@@ -34,11 +34,11 @@ ros2 launch lgdxrobot2_bringup nav.launch.py \
 ### Simulation Robot
 
 ```bash
-ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
+ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
   slam:=True \
   profile:='slam-sim' \
   use_cloud:=True \
-  cloud_address:=<Address of the cloud with port or 'host.docker.internal:5162'> \
+  cloud_address:=<Address of the cloud with port or 'host.docker.internal:port'> \
   cloud_root_cert:="/config/keys/root.crt" \
   cloud_client_key:="/config/keys/My Robot.key" \
   cloud_client_cert:="/config/keys/My Robot.crt"

@@ -12,7 +12,7 @@ Ensure that the PATH is set up correctly and the terminal running SLAM mode is c
 ### Physical Robot
 
 ```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py \
+ros2 launch lgdxrobot2_navigation nav.launch.py \
   use_cloud:=True \
   map:=<Absolute path to the map yaml file> \
   cloud_address:=<Address of the cloud with port> \
@@ -24,7 +24,7 @@ ros2 launch lgdxrobot2_bringup nav.launch.py \
 ### Simulation Robot
 
 ```bash
-ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
+ros2 launch lgdxrobot2_navigation simulation_nav.launch.py \
   use_cloud:=True \
   profile:='loc-sim' \
   cloud_address:=<Address of the cloud with port or 'host.docker.internal:5162'> \
