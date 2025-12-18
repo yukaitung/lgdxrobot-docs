@@ -20,6 +20,16 @@ ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
   use_rviz:=True
 ```
 
+SLAM on Nav2 with automatic exploration
+
+```bash
+ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
+  slam:=True \
+  profile:='slam-sim' \
+  use_rviz:=True \
+  use_explore_lite:=True
+```
+
 Localisation on Nav2
 
 ```bash
