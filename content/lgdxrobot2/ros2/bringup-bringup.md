@@ -14,7 +14,7 @@ ros2 launch lgdxrobot2_bringup bringup.launch.py \
   use_rviz:=True
 ```
 
-Using Other LiDAR Models (default is C1)
+Using other LiDAR models (default is C1)
 
 ```bash
 ros2 launch lgdxrobot2_bringup bringup.launch.py \
@@ -22,20 +22,20 @@ ros2 launch lgdxrobot2_bringup bringup.launch.py \
   use_rviz:=True
 ```
 
-Launch Without RealSense Camera
+Launch without RealSense camera
 
 ```bash
 ros2 launch lgdxrobot2_bringup bringup.launch.py \
-  use_camera:=false \
+  use_camera:=False \
   use_rviz:=True
 ```
 
-Launch Without JOY only
+Launch with JOY only
 
 ```bash
 ros2 launch lgdxrobot2_bringup bringup.launch.py \
-  use_camera:=false \
-  use_lidar:=false \
+  use_camera:=False \
+  use_lidar:=False \
   use_rviz:=True
 ```
 
