@@ -113,9 +113,10 @@ docker run -d \
 The command-line image is a smaller image that includes only the LGDXRobot2 ROS 2 packages.
 
 ```bash
-docker run -d \
+docker run -it \
   --name lgdxrobot2 \
-  yukaitung/lgdxrobot2-base:latest
+  yukaitung/lgdxrobot2-base:latest \
+  bash
 ```
 
 ## Other Images
@@ -125,9 +126,10 @@ docker run -d \
 The Foxglove image has the bridge installed.
 
 ```bash
-docker run -d \
+docker run -it \
   --name lgdxrobot2 \
-  yukaitung/lgdxrobot2-base:latest-foxglove
+  yukaitung/lgdxrobot2-base:latest-foxglove \
+  bash
 ```
 
 ```bash
