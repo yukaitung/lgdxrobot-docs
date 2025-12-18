@@ -78,6 +78,7 @@ ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
 
 | Parameter        | Type   | Description                                           |
 | ---------------- | ------ | ----------------------------------------------------- |
+| profiles_path    | string | bsolute path to the profiles directory, or leave empty to use the default. |
 | profile          | string | Parameters profile.                                   |
 | namespace        | string | Namespace for the robot.                              |
 | slam             | bool   | Whether to run a SLAM.                                |
