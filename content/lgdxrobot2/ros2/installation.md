@@ -44,7 +44,7 @@ Do not install rplidar_ros, as it appears to be out of date.
 If adding the repository is not possible, the packages can be installed using the .deb packages.
 
 1. Install [ROS 2 Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
-2. Download the `SLAMTEC LIDAR ROS 2` and `LGDXRobot2 ROS 2` packages from the [Releases](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/releases) page.
+2. Download the `SLAMTEC LIDAR ROS 2`, `M-EXPLORE ROS 2`, `LGDXRobot2 ROS 2` packages from the [Releases](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/releases) page.
 3. Install the packages and dependencies.
 
 ```bash
