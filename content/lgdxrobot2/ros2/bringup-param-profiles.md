@@ -5,7 +5,20 @@ weight: 153
 
 When running the NAV2 bringup, a **profile** is required in the parameters. It is used to switch between the parameter sets for the nodes used by the NAV2 bringup and it is simply a Python function that locates the relevant parameter files. To check the available profiles, navigate to the [lgdxrobot2_bringup/param](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/tree/main/lgdxrobot2_bringup/param?ref_type=heads) folder.
 
+## Nav2 Controller Plugins
+
+Nav2 offers different controller plugins for line following, each using a distinct algorithm. LGDXRobot2 ROS 2 allows switching between the available plugins through profiles.
+
+* `Model Predictive Path Integral Controller (MPPI)` – This is the default plugin, so specifying a profile is not required.
+* `DWB Controller` – Use `loc-dwb` as the profile name.
+* `Graceful Controller` – Use `loc-gc` as the profile name.
+* `Regulated Pure Pursuit Controller` – Use `loc-rpp` as the profile name.
+
+
 ## Profile Explanation
+
+This section is subject to change.
+{.alert .alert-warning}
 
 * A profile name starting with `slam` indicates that the profile is intended for SLAM, while `loc` indicates that it is intended for localisation.
 * If the profile name includes `-sim`, it is intended for simulation.
