@@ -14,7 +14,6 @@ Nav2 offers different controller plugins for line following, each using a distin
 * `Graceful Controller` – Use `loc-gc` as the profile name.
 * `Regulated Pure Pursuit Controller` – Use `loc-rpp` as the profile name.
 
-
 ## Profile Explanation
 
 This section is subject to change.
