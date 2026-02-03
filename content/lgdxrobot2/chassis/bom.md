@@ -24,16 +24,18 @@ weight: 3
 | LGDXRobot2 Controller Board | 1 | The instructions are provided on the next page. |
 | BlackPill (STM32F411CEU6) | 1 | [Official GitHub (not an affiliate link)](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1) |
 | TB6612FNG Module | 2 | — |
-| INA226 Module | 2 | Optional. The **shunt resistor** must be **R010** to support high current. |
 | Relay Module | 1 | — |
 | 3.5 mm Red LED | 1 | — |
-| 3.5 mm Green LED | 1 | — |
 | Resistor (220 Ω) | 1 | — |
-| Resistor (4.7 kΩ) | 1 | — |
-| 2.54 mm (0.1 inch) Header Strip (Female) | Total 68 pins | — |
+| Resistor (10 kΩ) | 3 | — |
+| Resistor (68 kΩ) | 3 | — |
+| Capacitor (0.1 µF) | 3 | — |
+| 2.54 mm (0.1 inch) Header Strip (Female) |  | — |
 | XT30 Connector (Male & Female) | 1 | Optional for soldering wires onto the board. |
-| PH2.0 Connector (Female) | 4 | — |
-| PH2.0 Cable (~15 cm) | 4 | It is recommended that the keys face opposite directions. |
+| PH2.0 2P Connector (Female) | 3 | — |
+| PH2.0 2P Cable | 3 | It is recommended that the keys face opposite directions. |
+| PH2.0 6P Connector (Female) | 4 | — |
+| PH2.0 6P Cable (~15 cm) | 4 | It is recommended that the keys face opposite directions. |
 {.table}
 
 ## Power Supply
@@ -86,7 +88,7 @@ Either the NUC setting or the Single Board Computer (SBC) setting may be chosen.
 |------|----------|-------|
 | RPLIDAR A1 or C1 | 1 | — |
 | M2.5 Screws (8 mm length) | 4 | — |
-| RealSense D435i Camera | 1 | Optional (LGDXRobot2 use the IMU from D435i) |
+| Camera | 1 | Optional: Any camera that can be fitted in the chassis |
 | 1/4-Inch Tripod Screw | 1 | Optional ![Image of Tripod Screw](../img/bom/tripod-screw.jpg) |
 {.table}
 

@@ -22,19 +22,10 @@ ros2 launch lgdxrobot2_bringup bringup.launch.py \
   use_rviz:=True
 ```
 
-Launch without RealSense camera
+Launch with joystick control only
 
 ```bash
 ros2 launch lgdxrobot2_bringup bringup.launch.py \
-  use_camera:=False \
-  use_rviz:=True
-```
-
-Launch with JOY only
-
-```bash
-ros2 launch lgdxrobot2_bringup bringup.launch.py \
-  use_camera:=False \
   use_lidar:=False \
   use_rviz:=True
 ```
@@ -47,7 +38,6 @@ ros2 launch lgdxrobot2_bringup bringup.launch.py \
 | use_joy          | bool   | Whether to enable the joy.               |
 | use_lidar        | bool   | Whether to enable the LiDAR.             |
 | lidar_model      | string | RPLIDAR model name.                      |
-| use_camera       | bool   | Whether to enable the camera.            |
 | use_rviz         | bool   | Visualize in RViz.                       |
 {.table}
 
