@@ -13,12 +13,12 @@ The bottom plate supports the motors and wheels and provides mounting positions 
 
 ## PC Plate
 
-The PC plate is a flat panel with mounting holes for various devices, including the NUC (formerly Intel NUC), Raspberry Pi, and Nvidia Jetson Nano. Devices can be mounted in two orientations, facing either the front or the rear of the chassis. It sits above the controller board.
+The PC plate is a flat panel with mounting holes for various devices, including the NUC, Raspberry Pi, and Nvidia Jetson Nano. Devices can be mounted in two orientations, facing either the front or the rear of the chassis. It sits above the controller board.
 
 ![Image of the PC Plate](../img/chassis/pc_plate.png)
 
 ## Top Plate
 
-The top plate is a flat panel with mounting holes for LiDAR units, including the RPLIDAR C1 and RPLIDAR A1. The plate also includes an opening for heat dissipation for the Nvidia Jetson Nano.
+The top plate is a flat panel with mounting holes for LiDAR units, including the RPLIDAR C1 and RPLIDAR A1. The plate also includes an opening for heat dissipation.
 
 ![Image of the Top Plate](../img/chassis/top_plate.png)
