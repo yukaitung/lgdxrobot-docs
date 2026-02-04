@@ -19,9 +19,6 @@ colcon build --symlink-install
 source src/rpldiar_ros2/scripts/create_udev_rules.sh
 ```
 
-Do not install rplidar_ros, as it appears to be out of date.
-{.alert .alert-info}
-
 ## Build
 
 Clone the project and run the following commands:
