@@ -30,12 +30,12 @@ weight: 3
 | Resistor (10 kΩ) | 3 | — |
 | Resistor (68 kΩ) | 3 | — |
 | Capacitor (0.1 µF) | 3 | — |
-| 2.54 mm (0.1 inch) Header Strip (Female) |  | — |
+| 2.54 mm (0.1 inch) Header Strip (Female) | Suitable | — |
 | XT30 Connector (Male & Female) | 1 | Optional for soldering wires onto the board. |
 | PH2.0 2P Connector (Female) | 3 | — |
-| PH2.0 2P Cable | 3 | It is recommended that the keys face opposite directions. |
+| PH2.0 2P Cable (Male) | 3 | — |
 | PH2.0 6P Connector (Female) | 4 | — |
-| PH2.0 6P Cable (~15 cm) | 4 | It is recommended that the keys face opposite directions. |
+| PH2.0 6P Cable (~15 cm) | 4 | The keys face opposite directions. |
 {.table}
 
 ## Power Supply
