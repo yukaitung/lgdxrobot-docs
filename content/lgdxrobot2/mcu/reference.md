@@ -231,7 +231,7 @@ Set the maximum speed of all motors.
 
 ### Get Magnetometer Calibration Data
 
-Get the magnetometer calibration data.
+Get the magnetometer calibration data. The MCU will return it via serial read.
 
 `McuGetMagCalibrationDataCommand` is defined as follows:
 
