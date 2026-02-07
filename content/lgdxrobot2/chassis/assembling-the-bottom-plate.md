@@ -43,32 +43,23 @@ Secure the board with additional M4 nuts.
 
 ![Image of the install controller board on the chassis](../img/asm_bottom/board_install_screw.png)
 
+## Motors Controller Board Connections
+
+Connect the PH2.0 connectors from the controller board to the motors according to the numbering. For example, **MJ1** on the controller board should be connected to **Motor 1 / Wheel 1**.
+
+![Image of the connectors on the controller board](../img/asm_bottom/connect_motor1.png)
+![Image of the connection of the motors](../img/asm_bottom/connect_motor2.png)
+
 ## Power Supply
 
-Place the two DC-DC buck converters near the centre of the bottom plate, and position the 18650 battery cases on the left and right sides.
-
-The left side of the power supply is designated for the PC. Solder the following connections:  
-
-**Power Supply → Power Switch → INA226 IN+ (No wired connection) INA226 IN- → DC-DC Buck Converter → DC Power Jack / USB**.
-
-Warning: Ensure that the power supply’s positive terminal is connected to INA226 IN+. Incorrect wiring may cause a fire.
-{.alert .alert-danger}
-
-![Image of the connect for the power supply on PC side](../img/asm_bottom/power_pc.png)
-
-The right side of the power supply is for the motors. Solder the following connections:  
-
-**Power Supply → INA226 IN+ (No wired connection) INA226 IN- → Relay Module COM (No wired connection) Relay Module NO → Emergency Stop Button COM (No wired connection) Emergency Stop Button NC → DC-DC Buck Converter → XT30 Connector**, then connect to the boards.
-
-Warning: Ensure that the power supply’s positive terminal is connected to INA226 IN+. Incorrect wiring may cause a fire.
-{.alert .alert-danger}
+xxx
 
 ![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_motors.png)
 
+
+xxx
+
+![Image of the connect for the power supply on PC side](../img/asm_bottom/power_pc.png)
+
 Attach the batteries, power switch and emergency stop button to the bottom plate using adhesive or glue.
 
-## Camera
-
-Place the camera at the front of the chassis and secure it using a 1/4-inch tripod screw.
-
-![Image of the installation of the camera](../img/asm_bottom/camera.png)
