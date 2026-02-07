@@ -34,3 +34,5 @@ I kept thinking about redesigning the chassis, and finally I made it happen. I f
 ## LGDXRobot2 R3 (Current Version)
 
 The third version of LGDXRobot2 improved hardware design. The controller board now includes an IMU, and the component layout has been slightly modified. Additionally, the chassis was redesigned to allow an NUC to be mounted on the robot.
+
+![The image LGDXRobot2 R3](../img/development/lgdxrobot2-r3.png)
