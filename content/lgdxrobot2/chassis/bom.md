@@ -21,21 +21,21 @@ weight: 3
 
 | Item Name | Quantity | Notes | Image |
 |-----------|----------|-------|-------|
-| LGDXRobot2 Controller Board | 1 | The instructions are provided on the next page. |  |
-| BlackPill (STM32F411CEU6) | 1 | [Official GitHub (not an affiliate link)](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1) |
-| TB6612FNG Module | 2 | — |
-| Relay Module | 1 | — |
-| 3.5 mm Red LED | 1 | — |
-| Resistor (220 Ω) | 1 | — |
-| Resistor (10 kΩ) | 3 | — |
-| Resistor (68 kΩ) | 3 | — |
-| Capacitor (0.1 µF) | 3 | — |
-| 2.54 mm (0.1 inch) Header Strip (Female) | Suitable | — |
-| XT30 Connector (Male & Female) | 1 | Optional for soldering wires onto the board. |
-| PH2.0 2P Connector (Female) | 3 | — |
-| PH2.0 2P Cable (Male) | 3 | — |
-| PH2.0 6P Connector (Female) | 4 | — |
-| PH2.0 6P Cable (~15 cm) | 4 | The keys face opposite directions. |
+| LGDXRobot2 Controller Board | 1 | The instructions are provided on the next page. | ![Image of the controller board](../img/bom/controller_cb.png) |
+| BlackPill (STM32F411CEU6) | 1 | [Official GitHub (not an affiliate link)](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1) | ![Image of the BlackPill](../img/bom/controller_mcu.png) |
+| TB6612FNG Module | 2 | — | ![Image of the TB6612FNG](../img/bom/controller_tb6612.png) |
+| Relay Module | 1 | — | ![Image of the Relay Module](../img/bom/controller_relay.png) |
+| 3.5 mm Red LED | 1 | — | ![Image of the LED](../img/bom/controller_led.png) |
+| Resistor (220 Ω) | 1 | — | ![Image of the resistor](../img/bom/controller_resistor_220.png) |
+| Resistor (10 kΩ) | 3 | — | ![Image of the resistor](../img/bom/controller_resistor_10k.png) |
+| Resistor (68 kΩ) | 3 | — | ![Image of the resistor](../img/bom/controller_resistor_68k.png) |
+| Capacitor (0.1 µF) | 3 | — | ![Image of the capacitor](../img/bom/controller_capacitor.png) |
+| 2.54 mm (0.1 inch) Header Strip (Female) | Suitable | — | ![Image of the header strip](../img/bom/controller_header_strip.png) |
+| XT30 Connector (Male & Female) | 1 | Optional for soldering wires onto the board. | ![Image of the XT30 connector](../img/bom/controller_xt30.png) |
+| PH2.0 2P Connector (Female) | 3 | — | ![Image of the PH2.0 connector](../img/bom/controller_ph202pf.png) |
+| PH2.0 2P Cable (Male) | 3 | — | ![Image of the PH2.0 cable](../img/bom/controller_ph202pm.png) |
+| PH2.0 6P Connector (Female) | 4 | — | ![Image of the PH2.0 connector](../img/bom/controller_ph206pf.png) |
+| PH2.0 6P Cable (~15 cm) | 4 | The keys face opposite directions. | ![Image of the PH2.0 cable](../img/bom/controller_ph206pm.png) |
 {.table}
 
 ## Power Supply
