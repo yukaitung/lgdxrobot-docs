@@ -5,23 +5,23 @@ weight: 3
 
 ## Chassis
 
-| Item Name | Quantity | Notes |
-|------------|-----------|--------|
-| LGDXRobot2 Chassis Plates | 1 | The instructions are provided on the next page. |
-| GM37-520 DC Gear Motor (12V) | 4 | A gear ratio of at least **1:90** is recommended to ensure sufficient torque. The motor must include an **encoder**, and the **connector type is PH2.0**. |
-| Mounting Bracket for 37mm DC Gear Motor (with screws) | 4 | These brackets are sometimes included when purchasing the motor. |
-| Mecanum Wheel Set | 1 set (4 wheels) | It is recommended to choose wheels with a **75–80 mm diameter** and **32+ mm width**. The **coupler must be 6 mm** to fit the motor shaft. |
-| M4 Screws (12 mm length) | 44 | Only **20** screws must be exactly 12 mm in length; Longer screws may be used for the remaining **24** screws. |
-| M4 Nuts | 18 | — |
-| M4 Standoffs (70 mm) | 8 | — |
-| M4 Standoffs (35 mm) | 8 | — |
+| Item Name | Quantity | Notes | Image |
+|-----------|----------|-------|-------|
+| LGDXRobot2 Chassis Plates | 1 | The instructions are provided on the next page. | ![Image of the chassis plates](../img/bom/chassis_plates.png) |
+| GM37-520 DC Gear Motor (12V) | 4 | A gear ratio of at least **1:90** is recommended to ensure sufficient torque. The motor must include an **encoder**, and the **connector type is PH2.0**. | ![Image of the motors](../img/bom/chassis_motor.png) |
+| Mounting Bracket for 37mm DC Gear Motor (with screws) | 4 | These brackets are sometimes included when purchasing the motor. | ![Image of the motor brackets](../img/bom/chassis_bracket.png) |
+| Mecanum Wheel Set | 1 set (4 wheels) | It is recommended to choose wheels with a **75–80 mm diameter** and **32+ mm width**. The **coupler must be 6 mm** to fit the motor shaft. | ![Image of the wheels](../img/bom/chassis_wheel.png) |
+| M4 Screws (12 mm length) | 44 | Only **20** screws must be exactly 12 mm in length; Longer screws may be used for the remaining **24** screws. | ![Image of the screws](../img/bom/chassis_screw.png) |
+| M4 Nuts | 18 | — | ![Image of the nuts](../img/bom/chassis_nut.png) |
+| M4 Standoffs (70 mm) | 8 | — | ![Image of the standoffs](../img/bom/chassis_standoff_70.png) |
+| M4 Standoffs (35 mm) | 8 | — | ![Image of the standoffs](../img/bom/chassis_standoff_35.png) |
 {.table}
 
 ## Controller Board
 
-| Item Name | Quantity | Notes |
-|-----------|----------|-------|
-| LGDXRobot2 Controller Board | 1 | The instructions are provided on the next page. |
+| Item Name | Quantity | Notes | Image |
+|-----------|----------|-------|-------|
+| LGDXRobot2 Controller Board | 1 | The instructions are provided on the next page. |  |
 | BlackPill (STM32F411CEU6) | 1 | [Official GitHub (not an affiliate link)](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1) |
 | TB6612FNG Module | 2 | — |
 | Relay Module | 1 | — |
