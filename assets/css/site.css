@@ -123,3 +123,7 @@ a.dropdown-item.active {
 .page-link:hover .page-item-title {
   color:color-mix(in srgb,transparent,var(--tblr-link-hover-color) var(--tblr-link-opacity,100%));
 }
+
+.table-img > tbody > tr > td > img {
+  max-width: 200px;
+}

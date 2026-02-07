@@ -15,7 +15,7 @@ weight: 3
 | M4 Nuts | 18 | — | ![Image of the nuts](../img/bom/chassis_nut.png) |
 | M4 Standoffs (70 mm) | 8 | — | ![Image of the standoffs](../img/bom/chassis_standoff_70.png) |
 | M4 Standoffs (35 mm) | 8 | — | ![Image of the standoffs](../img/bom/chassis_standoff_35.png) |
-{.table}
+{.table .table-img}
 
 ## Controller Board
 
@@ -36,36 +36,38 @@ weight: 3
 | PH2.0 2P Cable (Male) | 3 | — | ![Image of the PH2.0 cable](../img/bom/controller_ph202pm.png) |
 | PH2.0 6P Connector (Female) | 4 | — | ![Image of the PH2.0 connector](../img/bom/controller_ph206pf.png) |
 | PH2.0 6P Cable (~15 cm) | 4 | The keys face opposite directions. | ![Image of the PH2.0 cable](../img/bom/controller_ph206pm.png) |
-{.table}
+{.table .table-img}
 
 ## Power Supply
 
-| Item | Quantity | Notes |
-|------|-----------|--------|
-| 18650 Battery | 8 | — |
-| 18650 Battery Holder | 2 | — |
-| 18650 Battery Protection Board | 2 | Optional ![Image of Battery Protection Board](../img/bom/bms.jpg) |
-| 12V DC-DC Buck Converter | 1 | — |
-| 5V DC-DC Buck Converter | 1 | Another voltage may be chosen if using NUC. |
-| DC Power Jack / USB Cable | 1 | Depends on the power input for the computer |
-{.table}
+| Item Name | Quantity | Notes | Image |
+|-----------|----------|-------|-------|
+| 18650 Battery | 8 | — | |
+| 18650 Battery Holder | 2 | — | |
+| 18650 Battery Protection Board | 2 | Optional | ![Image of Battery Protection Board](../img/bom/bms.jpg) |
+| 12V DC-DC Buck Converter | 1 | For the motors | |
+| 5V / 12V / 19V DC-DC Buck Converter | 1 | For the onboard computer, choose the voltage that matches the input voltage of the computer | |
+| DC Power Jack / USB Cable | 1 | Depends on the power input for the computer | |
+{.table .table-img}
 
 A custom power supply may be designed, but note that the motor voltage is 12 V.
 {.alert .alert-info}
 
 ## Miscellaneous
 
-| Item | Quantity | Notes |
-|------|----------|-------|
-| Emergency Stop Button | 1 | ![Image of Emergency Stop Button](../img/bom/e-stop.jpg) |
-| Power Switch | 1 | ![Image of Power Switch](../img/bom/power-switch.jpg) |
+| Item Name | Quantity | Notes | Image |
+|-----------|----------|-------|-------|
+| Emergency Stop Button | 1 | — | ![Image of Emergency Stop Button](../img/bom/e-stop.jpg) |
+| Power Switch | 1 | — | ![Image of Power Switch](../img/bom/power-switch.jpg) |
 | Cables | Suitable length | — |
-{.table}
+{.table .table-img}
 
-## Computer (NUC)
+## Onboard Computer
 
 Either the NUC setting or the Single Board Computer (SBC) setting may be chosen.
 {.alert .alert-info}
+
+### NUC
 
 | Item | Quantity | Notes |
 |------|----------|-------|
@@ -73,7 +75,7 @@ Either the NUC setting or the Single Board Computer (SBC) setting may be chosen.
 | M3 Screws (10 mm length) | 2 | — |
 {.table}
 
-## Computer (SBC)
+### SBC
 
 | Item | Quantity | Notes |
 |------|----------|-------|
@@ -84,22 +86,22 @@ Either the NUC setting or the Single Board Computer (SBC) setting may be chosen.
 
 ## Sensors
 
-| Item | Quantity | Notes |
-|------|----------|-------|
+| Item Name | Quantity | Notes | Image |
+|-----------|----------|-------|-------|
 | RPLIDAR A1 or C1 | 1 | — |
 | M2.5 Screws (8 mm length) | 4 | — |
-| Camera | 1 | Optional: Any camera that can be fitted in the chassis |
-| 1/4-Inch Tripod Screw | 1 | Optional ![Image of Tripod Screw](../img/bom/tripod-screw.jpg) |
-{.table}
+| Camera | 1 | Optional, it was originally designed for the Realsense D435, but any camera that can be fitted in the chassis is acceptable.
+| 1/4-Inch Tripod Screw | 1 | Optional | ![Image of Tripod Screw](../img/bom/tripod-screw.jpg) |
+{.table .table-img}
 
 ## Tools (Not installed on the robot)
 
-| Item | Quantity | Notes |
-|------|----------|-------|
-| Hex Key Set | 1 | — |
-| 7 mm Wrench | 1 | — |
-| Crosshead Screwdriver | 1 | — |
-| Soldering Iron | 1 | — |
-| Solder Paste | 1 | — |
-| Hot Glue Gun / Strong Double Sided Tape | 1 | — |
+| Item |
+|------|
+| Hex Key Set |
+| 7 mm Wrench |
+| Crosshead Screwdriver |
+| Soldering Iron |
+| Solder Paste |
+| Hot Glue Gun / Strong Double Sided Tape |
 {.table}
