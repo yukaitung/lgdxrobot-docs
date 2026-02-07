@@ -17,6 +17,10 @@ For a typical Mecanum wheel installation, the wheels should form an **X** patter
 
 ![Image of the wheels position](../img/asm_bottom/position.png)
 
+Secure the motors using the holes highlighted in green.
+
+![Image of the install screw](../img/asm_bottom/screw_hole.png)
+
 Insert M4 × 12 mm screws from the top of the bottom plate into the bracket holes. Secure the motors using M4 nuts on the opposite side.
 
 ![Image of the install screw](../img/asm_bottom/screw.png)
@@ -39,36 +43,44 @@ Install the controller board onto the chassis, ensuring the PH2.0 connector face
 
 ![Image of the install controller board on the chassis](../img/asm_bottom/board_install.png)
 
+The scrws should be inserted through the holes highlighted in green.
+
+![Image of the install controller board on the chassis](../img/asm_bottom/board_install_hole.png)
+
 Secure the board with additional M4 nuts.
 
 ![Image of the install controller board on the chassis](../img/asm_bottom/board_install_screw.png)
 
+## Motors Controller Board Connections
+
+Connect the PH2.0 connectors from the controller board to the motors according to the numbering. For example, **MJ1** on the controller board should be connected to **Motor 1 / Wheel 1**.
+
+![Image of the connectors on the controller board](../img/asm_bottom/connect_motor1.png)
+![Image of the connection of the motors](../img/asm_bottom/connect_motor2.png)
+
 ## Power Supply
 
-Place the two DC-DC buck converters near the centre of the bottom plate, and position the 18650 battery cases on the left and right sides.
+### Motors Cir
 
-The left side of the power supply is designated for the PC. Solder the following connections:  
 
-**Power Supply → Power Switch → INA226 IN+ (No wired connection) INA226 IN- → DC-DC Buck Converter → DC Power Jack / USB**.
+Connect the components according to the following image.
 
-Warning: Ensure that the power supply’s positive terminal is connected to INA226 IN+. Incorrect wiring may cause a fire.
-{.alert .alert-danger}
+For **+J3** and **+ESTOP**, connect them to the **PH2.0 connector**.
 
-![Image of the connect for the power supply on PC side](../img/asm_bottom/power_pc.png)
+The **“+”** symbol indicates the positive side, and the **number** indicates the negative pin.
 
-The right side of the power supply is for the motors. Solder the following connections:  
-
-**Power Supply → INA226 IN+ (No wired connection) INA226 IN- → Relay Module COM (No wired connection) Relay Module NO → Emergency Stop Button COM (No wired connection) Emergency Stop Button NC → DC-DC Buck Converter → XT30 Connector**, then connect to the boards.
-
-Warning: Ensure that the power supply’s positive terminal is connected to INA226 IN+. Incorrect wiring may cause a fire.
-{.alert .alert-danger}
-
+![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_connect_motor.png)
 ![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_motors.png)
 
-Attach the batteries, power switch and emergency stop button to the bottom plate using adhesive or glue.
+### Logic Circuit
 
-## Camera
+Connect the components according to the following image.
 
-Place the camera at the front of the chassis and secure it using a 1/4-inch tripod screw.
+For **+J2**, connect them to the **PH2.0 connector**.
 
-![Image of the installation of the camera](../img/asm_bottom/camera.png)
+The **“+”** symbol indicates the positive side, and the **number** indicates the negative pin.
+
+Use the **USB** or **DC jack** to power the onboard computer.
+
+![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_connect_pc.png)
+![Image of the connect for the power supply on PC side](../img/asm_bottom/power_pc.png)

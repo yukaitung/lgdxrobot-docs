@@ -17,7 +17,28 @@ The following are details of the structs used in communication. Check here if th
 | y | float | Y-axis position |
 | rotation | float | Rotation |
 {.table}
- 
+
+### McuAxisRaw
+
+| Variable Name | Type | Description |
+|---------------|------|-------------|
+| x | float | X-axis |
+| y | float | Y-axis |
+| z | float | Z-axis |
+{.table}
+
+### McuImuData
+
+| Variable Name | Type | Description |
+|---------------|------|-------------|
+| accelerometer | McuAxisRaw | Accelerometer data |
+| accelerometer_covariance | McuAxisRaw | Accelerometer covariance matrix major |
+| gyroscope | McuAxisRaw | Gyroscope data |
+| gyroscope_covariance | McuAxisRaw | Gyroscope covariance matrix major |
+| magnetometer | McuAxisRaw | Magnetometer data |
+| magnetometer_covariance | McuAxisRaw | Magnetometer covariance matrix major |
+{.table}
+
 ### McuPower
 
 | Variable Name | Type | Description |
@@ -37,6 +58,7 @@ This consists of the basic data such as transforms, motor speeds, and sensor dat
 | Variable Name | Type | Description |
 |---------------|------|-------------|
 | type | char | Must be `MCU_DATA_TYPE` |
+| response_time | uint32_t | Time (in microseconds) since the last PID loop |
 | transform | McuDof | Transform of the robot |
 | forward_kinematic | McuDof | Forward Kinematic of the robot |
 | motors_target_velocity | float[4] | Target velocity of the motors |
@@ -45,6 +67,7 @@ This consists of the basic data such as transforms, motor speeds, and sensor dat
 | motors_ccr | int[4] | Output of the PID controller and final PWM value |
 | battery1 | McuPower | Power of battery 1 |
 | battery2 | McuPower | Power of battery 2 |
+| imu | McuImuData | IMU data |
 | software_emergency_stop_enabled | bool | Whether the software emergency stop is enabled |
 | hardware_emergency_stop_enabled | bool | Whether the hardware stop button is pressed |
 | battery_low_emergency_stop_enabled | bool | Whether the battery level is too low for motor power |
@@ -88,6 +111,16 @@ PID settings for each motor.
 | motors_maximum_speed | float[4] | Maximum speed of the motors |
 {.table}
 
+### Magnetometer Calibration Data
+
+| Variable Name | Type | Description |
+|---------------|------|-------------|
+| type | char | Must be `MCU_MAGNETOMETER_CALIBRATION_DATA_TYPE` |
+| hard_iron_max | float[3] | Hard iron maximum |
+| hard_iron_min | float[3] | Hard iron minimum |
+| soft_iron_matrix | float[9] | Soft iron matrix |
+{.table}
+
 ## PC to MCU (Write to MCU)
 
 Please ensure the `command` variable is set correctly to prevent unexpected behaviour.
@@ -101,6 +134,8 @@ Set the software emergency stop.
 
 | Variable Name | Type | Description |
 |---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
 | command | char | Must be `MCU_SOFTWARE_EMERGENCY_STOP_COMMAND_TYPE` |
 | enabled | bool | Whether to enable the software emergency stop |
 {.table}
@@ -113,6 +148,8 @@ Control the movement of the robot.
 
 | Variable Name | Type | Description |
 |---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
 | command | char | Must be `MCU_INVERSE_KINEMATICS_COMMAND_TYPE` |
 | velocity | McuDof | Target velocity of the robot |
 {.table}
@@ -125,6 +162,8 @@ Set the speed of a single motor.
 
 | Variable Name | Type | Description |
 |---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
 | command | char | Must be `MCU_MOTOR_COMMAND_TYPE` |
 | motor | uint8_t | Motor number (0 to 3) |
 | velocity | float | Target velocity of the motor |
@@ -138,6 +177,8 @@ Set the speed of the PID controller.
 
 | Variable Name | Type | Description |
 |---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
 | command | char | Must be `MCU_SET_PID_SPEED_COMMAND_TYPE` |
 | pid_speed | float[3] | Speed for each PID level |
 {.table}
@@ -150,6 +191,8 @@ Get the PID settings of the motor. The MCU will return it via serial read.
 
 | Variable Name | Type | Description |
 |---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
 | command | char | Must be `MCU_GET_PID_COMMAND_TYPE` |
 {.table}
 
@@ -161,23 +204,14 @@ Set the PID settings for a single motor and a single level.
 
 | Variable Name | Type | Description |
 |---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
 | command | char | Must be `MCU_SET_PID_COMMAND_TYPE` |
 | motor | uint8_t | Motor number (0 to 3) |
 | level | uint8_t | Level number (0 to 2) |
 | p | float | Proportional gain constant |
 | i | float | Integral gain constant |
 | d | float | Derivative gain constant |
-{.table}
-
-### Save PID
-
-Save the PID settings and level velocities. These persist after reset but may be overwritten by a full chip erase.
-
-`McuSavePidCommand` is defined as follows:
-
-| Variable Name | Type | Description |
-|---------------|------|-------------|
-| command | char | Must be `MCU_SAVE_PID_COMMAND_TYPE` |
 {.table}
 
 ### Set Motor Maximum Speed
@@ -188,9 +222,40 @@ Set the maximum speed of all motors.
 
 | Variable Name | Type | Description |
 |---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
 | command | char | Must be `MCU_SET_MOTOR_MAXIMUM_SPEED_COMMAND_TYPE` |
 | motor | uint8_t | Motor number (0 to 3) |
 | speed | float[4] | Maximum speed of the motor |
+{.table}
+
+### Get Magnetometer Calibration Data
+
+Get the magnetometer calibration data. The MCU will return it via serial read.
+
+`McuGetMagCalibrationDataCommand` is defined as follows:
+
+| Variable Name | Type | Description |
+|---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
+| command | char | Must be `MCU_GET_MAG_CALIBRATION_DATA_COMMAND_TYPE` |
+{.table}
+
+### Set Magnetometer Calibration Data
+
+Set the magnetometer calibration data.
+
+`McuSetMagCalibrationDataCommand` is defined as follows:
+
+| Variable Name | Type | Description |
+|---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
+| command | char | Must be `MCU_SET_MAG_CALIBRATION_DATA_COMMAND_TYPE` |
+| hard_iron_max | float[3] | Hard iron maximum |
+| hard_iron_min | float[3] | Hard iron minimum |
+| soft_iron_matrix | float[9] | Soft iron matrix |
 {.table}
 
 ### Get Serial Number
@@ -201,6 +266,8 @@ Get the serial number of the MCU. The MCU will return it via serial read.
 
 | Variable Name | Type | Description |
 |---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
 | command | char | Must be `MCU_GET_SERIAL_NUMBER_COMMAND_TYPE` |
 {.table}
 
@@ -212,5 +279,20 @@ Reset the transform of the robot.
 
 | Variable Name | Type | Description |
 |---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
 | command | char | Must be `MCU_RESET_TRANSFORM_COMMAND_TYPE` |
+{.table}
+
+### Save Configuration
+
+This persist configuration after reset but may be overwritten by a full chip erase.
+
+`McuSaveConfigurationCommand` is defined as follows:
+
+| Variable Name | Type | Description |
+|---------------|------|-------------|
+| header 1 | uint8_t | Must be `MCU_HEADER1` |
+| header 2 | uint8_t | Must be `MCU_HEADER2` |
+| command | char | Must be `MCU_SAVE_CONFIGURATION_COMMAND_TYPE` |
 {.table}

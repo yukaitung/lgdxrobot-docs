@@ -48,6 +48,8 @@ weight: 101
 |--------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
 | /joint_states        |  sensor_msgs/JointState                                                                                     | Robot wheels movement (MCU required). |
 | /agent/odom        | nav_msgs/Odometry                                                                                     | Odometry for the robot (MCU required). |
+| /agent/imu        | sensor_msgs/Imu                                                                                   | IMU data (MCU required). |
+| /agent/mag        | sensor_msgs/MagneticField Message                                                                                  | Magtometer data (MCU required). |
 | /agent/auto_task   | [lgdxrobot2_agent/AutoTask](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/msg/AutoTask.msg)   | Current task of the robot (Cloud required).             |
 | /agent/robot_data  | [lgdxrobot2_agent/RobotData](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_agent/msg/RobotData.msg) | Current robot data from sensors.                        |
 {.table}

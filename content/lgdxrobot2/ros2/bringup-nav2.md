@@ -79,7 +79,6 @@ ros2 launch lgdxrobot2_bringup nav.launch.py \
 | rviz_config      | string | Absolute path for the RViz config file.               |
 | use_lidar        | bool   | Whether to enable the LiDAR.                          |
 | lidar_model      | string | RPLIDAR model name.                                   |
-| use_camera       | bool   | Whether to enable the camera.                         |
 | use_joy          | bool   | Whether to enable the joy.                            |
 | use_cloud           | bool   | Whether to enable cloud connectivity.         |
 | cloud_address       | string | Address of the LGDXRobot Cloud service.        |

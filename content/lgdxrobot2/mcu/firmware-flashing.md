@@ -1,5 +1,5 @@
 ---
-title: Firmware Flashing
+title: Firmware Flashing and Usage
 weight: 3
 ---
 
@@ -21,7 +21,14 @@ The firmware can be found in the [Releases](https://gitlab.com/lgdxrobotics/lgdx
 8. Press **Start Programming**.
 9. Wait for the firmware to be flashed.
 10. Close STM32CubeProgrammer and reset the BlackPill.
-11. A click sound should be heard from the relay module.
+
+## Usage
+
+The robot needs to calibrate the IMU, so it must be placed on a flat surface.
+
+1. After powering on the controller, wait approximately 3 seconds for the calibration to complete.
+2. A clicking sound will be heard from the relay.
+3. The red LED will turn off.
 
 ## Next Steps
 

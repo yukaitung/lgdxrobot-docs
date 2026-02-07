@@ -22,26 +22,14 @@ The image may require access to USB devices, so it is necessary to mount the hos
 
 | Major Number | Device |
 |-------------|--------|
-| 81          | Realsense |
-| 189         | Realsense |
+| 81          | Camera (Optional) |
+| 189         | Camera (Optional) |
 | 188         | LiDAR (ttyUSB) |
 | 166         | Controller Board (ttyACM) |
 | 13          | Joystick |
 {.table}
 
-### Simulation Only
-
-```bash
-docker run -d \
-  --name lgdxrobot2 \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -p 3000:3000 \
-  -p 3001:3001 \
-  yukaitung/lgdxrobot2-desktop:latest
-```
-
-### Basic Usage
+### Physical Robot
 
 ```bash
 docker run -d \
@@ -49,8 +37,6 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -v /dev:/dev \
-  --device-cgroup-rule='c 81:* rwm' \
-  --device-cgroup-rule='c 189:* rwm' \
   --device-cgroup-rule='c 188:* rwm' \
   --device-cgroup-rule='c 166:* rwm' \
   --device-cgroup-rule='c 13:* rwm' \
@@ -59,50 +45,13 @@ docker run -d \
   yukaitung/lgdxrobot2-desktop:latest
 ```
 
-### With Realsense IMU
-
-Realsense IMU requires privileged mode.
-
-Privileged mode is recommended for development purposes only.
-{.alert .alert-warning}
+### Simulation
 
 ```bash
 docker run -d \
   --name lgdxrobot2 \
   -e PUID=1000 \
   -e PGID=1000 \
-  -v /dev:/dev \
-  --device-cgroup-rule='c 81:* rwm' \
-  --device-cgroup-rule='c 189:* rwm' \
-  --device-cgroup-rule='c 188:* rwm' \
-  --device-cgroup-rule='c 166:* rwm' \
-  --device-cgroup-rule='c 13:* rwm' \
-  --privileged \
-  -p 3000:3000 \
-  -p 3001:3001 \
-  yukaitung/lgdxrobot2-desktop:latest
-```
-
-### For Older Hardware
-
-For older version of Ubuntu, the `security-opt` option may be required.
-
-Privileged mode and `--security-opt` are suitable for development purposes only.
-{.alert .alert-warning}
-
-```bash
-docker run -d \
-  --name lgdxrobot2 \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -v /dev:/dev \
-  --device-cgroup-rule='c 81:* rwm' \
-  --device-cgroup-rule='c 189:* rwm' \
-  --device-cgroup-rule='c 188:* rwm' \
-  --device-cgroup-rule='c 166:* rwm' \
-  --device-cgroup-rule='c 13:* rwm' \
-  --privileged \
-  --security-opt seccomp=unconfined \
   -p 3000:3000 \
   -p 3001:3001 \
   yukaitung/lgdxrobot2-desktop:latest
@@ -117,41 +66,4 @@ docker run -it \
   --name lgdxrobot2 \
   yukaitung/lgdxrobot2-base:latest \
   bash
-```
-
-## Other Images
-
-### Foxglove
-
-The Foxglove image has the bridge installed.
-
-```bash
-docker run -it \
-  --name lgdxrobot2 \
-  yukaitung/lgdxrobot2-base:latest-foxglove \
-  bash
-```
-
-```bash
-docker run -d \
-  --name lgdxrobot2 \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -p 3000:3000 \
-  -p 3001:3001 \
-  yukaitung/lgdxrobot2-desktop:latest-foxglove
-```
-
-### Full Image (Desktop only)
-
-The full image includes the development tools and the Foxglove bridge.
-
-```bash
-docker run -d \
-  --name lgdxrobot2 \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -p 3000:3000 \
-  -p 3001:3001 \
-  yukaitung/lgdxrobot2-desktop:latest-full
 ```

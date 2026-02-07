@@ -16,6 +16,9 @@ The Robnot Testing section covers reading data from the robot and sending comman
 5. The connection status should display **Connected**.
 6. Data should be visible as being received from the robot. Rotating the wheels will show corresponding changes in the data.
 
+ChassisTuner only lists devices with USB vendor ID 0x1209 and product ID 0x7689. If the device is not listed, please check the USB PID.
+{.alert .alert-info}
+
 ## Sending Commands (Hardware Testing Section)
 
 ![Screenshot of the Hardware Testing](../img/hardware_testing.png)

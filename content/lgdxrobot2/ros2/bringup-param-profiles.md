@@ -9,21 +9,10 @@ When running the NAV2 bringup, a **profile** is required in the parameters. It i
 
 Nav2 offers different controller plugins for line following, each using a distinct algorithm. LGDXRobot2 ROS 2 allows switching between the available plugins through profiles.
 
-* `Model Predictive Path Integral Controller (MPPI)` – This is the default plugin, so specifying a profile is not required.
-* `DWB Controller` – Use `loc-dwb` as the profile name.
+* `DWB Controller`  – This is the default plugin, so specifying a profile is not required.
+* `Model Predictive Path Integral Controller (MPPI)` – Use `loc-mppi` as the profile name.
 * `Graceful Controller` – Use `loc-gc` as the profile name.
 * `Regulated Pure Pursuit Controller` – Use `loc-rpp` as the profile name.
-
-## Profile Explanation
-
-This section is subject to change.
-{.alert .alert-warning}
-
-* A profile name starting with `slam` indicates that the profile is intended for SLAM, while `loc` indicates that it is intended for localisation.
-* If the profile name includes `-sim`, it is intended for simulation.
-* If the profile name includes `-pi4`, it is intended for the Raspberry Pi 4B+, and `-jetson-nano` indicates that it is intended for the Nvidia Jetson Nano.
-* If the profile name ends with `-no-cam`, it is intended for robots without a Realsense IMU.
-* If the profile name does not include a device name, the profile is intended for a NUC.
 
 ## Creating a Profile
 
