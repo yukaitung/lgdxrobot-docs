@@ -89,7 +89,7 @@ Either the NUC setting or the Single Board Computer (SBC) setting may be chosen.
 
 | Item Name | Quantity | Notes | Image |
 |-----------|----------|-------|-------|
-| RPLIDAR A1 or C1 | 1 | — |
+| RPLIDAR A1 or C1 | 1 | — | ![Image of the RPLIDAR](../img/bom/lidar.png) |
 | M2.5 Screws (8 mm length) | 4 | — |
 | Camera | 1 | Optional, it was originally designed for the Realsense D435, but any camera that can be fitted in the chassis is acceptable.
 | 1/4-Inch Tripod Screw | 1 | Optional | ![Image of Tripod Screw](../img/bom/tripod-screw.jpg) |
