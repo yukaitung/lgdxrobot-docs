@@ -47,9 +47,3 @@ There are various methods for tuning PID. When adjusting the PID constants, try 
 {.alert .alert-info}
 
 The **Custom Velocity** checkbox may be selected to define a custom velocity for testing.
-
-## Save Configuration
-
-![Screenshot of the Save Configuration](../img/save_config.png)
-
-Scroll to the bottom and press **Save Configuration**. The PID constants will persist after reset but may be overwritten by a full chip erase.
