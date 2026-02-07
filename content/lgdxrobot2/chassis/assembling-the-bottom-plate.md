@@ -60,7 +60,8 @@ Connect the PH2.0 connectors from the controller board to the motors according t
 
 ## Power Supply
 
-### Motors
+### Motors Cir
+
 
 Connect the components according to the following image.
 
@@ -71,7 +72,7 @@ The **“+”** symbol indicates the positive side, and the **number** indicates
 ![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_connect_motor.jpg)
 ![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_motors.png)
 
-### Onboard Computer
+### Logic Circuit
 
 Connect the components according to the following image.
 

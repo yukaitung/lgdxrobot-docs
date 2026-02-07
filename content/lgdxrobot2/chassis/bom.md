@@ -25,7 +25,7 @@ weight: 3
 | BlackPill (STM32F411CEU6) | 1 | [Official GitHub (not an affiliate link)](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1) | ![Image of the BlackPill](../img/bom/controller_mcu.png) |
 | TB6612FNG Module | 2 | — | ![Image of the TB6612FNG](../img/bom/controller_tb6612.png) |
 | ICM-20948 | 1 | Must be V1 as the pins of V2 is not compatible with the controller board. | ![Image of the ICM-20948](../img/bom/controller_icm20948.png) |
-| Relay Module | 1 | — | ![Image of the Relay Module](../img/bom/controller_relay.png) |
+| Relay Module | 1 | Triggers when the input is high. | ![Image of the Relay Module](../img/bom/controller_relay.png) |
 | 3.5 mm Red LED | 1 | — | ![Image of the LED](../img/bom/controller_led.png) |
 | Resistor (220 Ω) | 1 | — | ![Image of the resistor](../img/bom/controller_resistor_220.png) |
 | Resistor (10 kΩ) | 3 | — | ![Image of the resistor](../img/bom/controller_resistor_10k.png) |
