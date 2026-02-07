@@ -27,11 +27,13 @@ The screws should be inserted through the holes highlighted in green.
 
 ![Image of the install Top Plate](../img/asm_top/final_hole.png)
 
-## Camera
+## Camera (Optional)
 
 Place the camera at the front of the chassis and secure it using a 1/4-inch tripod screw.
 
 ![Image of the installation of the camera](../img/asm_bottom/camera.png)
+
+## Power Supply
 
 Install the batteries for the power supply.
 
