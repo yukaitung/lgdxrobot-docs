@@ -31,4 +31,6 @@ Warning: Ensure the TB6612FNG modules are installed correctly, as incorrect inst
 No matter the type of power supply or configuration, it is recommended to connect the battery in an easy-to-remember orientation and label the polarity clearly.
 {.alert .alert-danger}
 
-Connect the 18650 batteries in series. If a battery protection board is being used, connect it according to the manufacturer’s instructions.
+Connect the 18650 batteries in series. If a battery protection board is being used, connect it according to the manufacturer’s instructions. Then attach the battery protection board to the battery holder using hot glue.
+
+![Image of the power supply with batteries connected](../img/soldering/power.png)
