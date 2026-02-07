@@ -24,6 +24,7 @@ weight: 3
 | LGDXRobot2 Controller Board | 1 | The instructions are provided on the next page. | ![Image of the controller board](../img/bom/controller_cb.png) |
 | BlackPill (STM32F411CEU6) | 1 | [Official GitHub (not an affiliate link)](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1) | ![Image of the BlackPill](../img/bom/controller_mcu.png) |
 | TB6612FNG Module | 2 | — | ![Image of the TB6612FNG](../img/bom/controller_tb6612.png) |
+| ICM-20948 | 1 | Must be V1 as the pins of V2 is not compatible with the controller board. | ![Image of the ICM-20948](../img/bom/controller_icm20948.png) |
 | Relay Module | 1 | — | ![Image of the Relay Module](../img/bom/controller_relay.png) |
 | 3.5 mm Red LED | 1 | — | ![Image of the LED](../img/bom/controller_led.png) |
 | Resistor (220 Ω) | 1 | — | ![Image of the resistor](../img/bom/controller_resistor_220.png) |
@@ -42,12 +43,12 @@ weight: 3
 
 | Item Name | Quantity | Notes | Image |
 |-----------|----------|-------|-------|
-| 18650 Battery | 8 | — | |
-| 18650 Battery Holder | 2 | — | |
+| 18650 Battery | 8 | — | ![Image of the battery](../img/bom/power_battery.png) |
+| 18650 Battery Holder | 2 | 4 batteries in series. | ![Image of the battery holder](../img/bom/power_holder.png) |
 | 18650 Battery Protection Board | 2 | Optional | ![Image of Battery Protection Board](../img/bom/bms.jpg) |
-| 12V DC-DC Buck Converter | 1 | For the motors | |
-| 5V / 12V / 19V DC-DC Buck Converter | 1 | For the onboard computer, choose the voltage that matches the input voltage of the computer | |
-| DC Power Jack / USB Cable | 1 | Depends on the power input for the computer | |
+| 12V DC-DC Buck Converter | 1 | For the motors. | ![Image of the DC-DC Buck Converter](../img/bom/power_12v.png) |
+| 5V / 12V DC-DC Buck Converter. | 1 | For the onboard computer, choose the voltage that matches the input voltage of the computer | ![Image of the DC-DC Buck Converter](../img/bom/power_5v.png) |
+| DC Power Jack / USB Cable | 1 | Depends on the power input for the computer. | — |
 {.table .table-img}
 
 A custom power supply may be designed, but note that the motor voltage is 12 V.
@@ -59,7 +60,7 @@ A custom power supply may be designed, but note that the motor voltage is 12 V.
 |-----------|----------|-------|-------|
 | Emergency Stop Button | 1 | — | ![Image of Emergency Stop Button](../img/bom/e-stop.jpg) |
 | Power Switch | 1 | — | ![Image of Power Switch](../img/bom/power-switch.jpg) |
-| Cables | Suitable length | — |
+| Cables | Suitable length | — | ![Image of the cables](../img/bom/cable.png) |
 {.table .table-img}
 
 ## Onboard Computer
