@@ -69,7 +69,7 @@ For **+J3** and **+ESTOP**, connect them to the **PH2.0 connector**.
 
 The **“+”** symbol indicates the positive side, and the **number** indicates the negative pin.
 
-![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_connect_motor.jpg)
+![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_connect_motor.png)
 ![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_motors.png)
 
 ### Logic Circuit
@@ -82,5 +82,5 @@ The **“+”** symbol indicates the positive side, and the **number** indicates
 
 Use the **USB** or **DC jack** to power the onboard computer.
 
-![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_connect_pc.jpg)
+![Image of the connect for the power supply on controller board side](../img/asm_bottom/power_connect_pc.png)
 ![Image of the connect for the power supply on PC side](../img/asm_bottom/power_pc.png)
