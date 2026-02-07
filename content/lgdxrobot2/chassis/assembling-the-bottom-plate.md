@@ -17,6 +17,10 @@ For a typical Mecanum wheel installation, the wheels should form an **X** patter
 
 ![Image of the wheels position](../img/asm_bottom/position.png)
 
+Secure the motors using the holes highlighted in green.
+
+![Image of the install screw](../img/asm_bottom/screw_hole.png)
+
 Insert M4 × 12 mm screws from the top of the bottom plate into the bracket holes. Secure the motors using M4 nuts on the opposite side.
 
 ![Image of the install screw](../img/asm_bottom/screw.png)
@@ -38,6 +42,10 @@ Insert M4 screws through the controller board and secure them with M4 nuts on th
 Install the controller board onto the chassis, ensuring the PH2.0 connector faces the front of the chassis.
 
 ![Image of the install controller board on the chassis](../img/asm_bottom/board_install.png)
+
+The scrws should be inserted through the holes highlighted in green.
+
+![Image of the install controller board on the chassis](../img/asm_bottom/board_install_hole.png)
 
 Secure the board with additional M4 nuts.
 
