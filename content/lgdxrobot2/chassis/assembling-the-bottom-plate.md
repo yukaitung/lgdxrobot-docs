@@ -60,8 +60,7 @@ Connect the PH2.0 connectors from the controller board to the motors according t
 
 ## Power Supply
 
-### Motors Cir
-
+### Motors Circuit
 
 Connect the components according to the following image.
 
