@@ -7,12 +7,7 @@ LGDXRobot2 ROS 2 is available as Docker images for both AMD64 and ARM64 architec
 
 ## Permission Configuration
 
-The host machine must be configured to allow access to the USB devices used by the robot. It can be done by installing the `LGDXRobot2 UDEV` package.
-
-```bash
-wget -q https://ros.bristolgram.uk/lgdxrobot2-udev.deb
-sudo dpkg -i lgdxrobot2-udev.deb
-```
+The host machine must be configured to allow access to the USB devices used by the robot. It can be done by installing the `LGDXRobot2 UDEV` package. It can be obtained from [here](https://gitlab.com/lgdxrobotics/lgdxrobot2-support/-/packages/53942608).
 
 ## Desktop Docker Image
 
