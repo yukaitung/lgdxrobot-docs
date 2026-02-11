@@ -11,7 +11,7 @@ LGDXRobot2 ROS 2 can be installed using package manager. The packages are availa
 2. The packages are hosted in a self-hosted repository, install this package to add the repository and the public key.
 
 ```bash
-wget -q hhttp://packages.bristolgram.uk/lgdxrobotics-apt-source.deb
+wget -q http://packages.bristolgram.uk/lgdxrobotics-apt-source.deb
 sudo dpkg -i lgdxrobotics-apt-source.deb
 sudo apt update
 ```
