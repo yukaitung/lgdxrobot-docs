@@ -3,10 +3,13 @@ title: Agent Node
 weight: 101
 ---
 
-`lgdxrobot2_agent_node` is a ROS 2 node that drives the robot using ROS 2 topics and services. 
+`lgdxrobot2_agent_node` integrates LGDXRobot2 hardware into ROS 2. It provides several topics for the Nav2 stack.
+
+## Connection
+
+The `lgdxrobot2_udev` package defines the path of the controller board as `/dev/lgdxrobot2`. The agent node will automatically connect to it. If the connection fails or is lost, the node will attempt to reconnect automatically.
 
 ## Parameters
-
 
 | Parameter           | Type   | Description                                                       |
 |---------------------|--------|-------------------------------------------------------------------|
@@ -17,21 +20,18 @@ weight: 101
 | use_joy | bool | Control robot using `joy` node. |
 {.table}
 
-## Topics
-### Published Topics
+## Published Topics
 
 | Topic Name        | Message Type                       | Description                       |
 |-------------------|------------------------------------|-----------------------------------|
-| `/joint_states`   | `sensor_msgs/JointState`           | Robot wheel movement.             |
-| `/agent/odom`     | `nav_msgs/Odometry`                | Odometry for the robot.           |
-| `/agent/imu`      | `sensor_msgs/Imu`                  | IMU data.                         |
-| `/agent/mag`      | `sensor_msgs/MagneticField`        | Magnetometer data.                |
-| `/agent/system`   | `lgdxrobot2_msgs/System`            | Hardware system information.      |
+| /joint_states   | sensor_msgs/JointState           | Robot wheel movement.             |
+| /agent/odom     | nav_msgs/Odometry                | Odometry for the robot.           |
+| /agent/imu      | sensor_msgs/Imu                  | IMU data.                         |
+| /agent/mag      | sensor_msgs/MagneticField       | Magnetometer data.                |
+| /agent/system  | [lgdxrobot2_msgs/System](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_msgs/msg/System.msg)           | Hardware system information.      |
 {.table}
 
-### Subscribed Topics
-
-MCU only:
+## Subscribed Topics
 
 | Topic Name     | Type                | Description                     |
 |----------------|---------------------|---------------------------------|
