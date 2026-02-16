@@ -74,7 +74,6 @@ ros2 launch lgdxrobot2_bringup nav.launch.py \
 | autostart        | bool   | Automatically start up the Nav2 stack.                |
 | use_composition  | bool   | Whether to use composed bringup.                      |
 | use_respawn      | bool   | Whether to respawn if a node crashes.                 |
-| use_explore_lite | bool   | Launch explore_lite to explore the map automatically. |
 | use_rviz         | bool   | Launch RViz2.                                         |
 | rviz_config      | string | Absolute path for the RViz config file.               |
 | use_lidar        | bool   | Whether to enable the LiDAR.                          |

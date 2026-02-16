@@ -62,3 +62,17 @@ docker run -it \
   yukaitung/lgdxrobot2-base:latest \
   bash
 ```
+
+## Full Image
+
+The full image includes the desktop image, Realsense ROS 2 and dependencies for building LGDXRobot2 packages.
+
+```bash
+docker run -d \
+  --name lgdxrobot2 \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -p 3000:3000 \
+  -p 3001:3001 \
+  yukaitung/lgdxrobot2-desktop:latest-full
+```
