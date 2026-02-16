@@ -7,7 +7,7 @@ LGDXRobot2 ROS 2 is available as Docker images for both AMD64 and ARM64 architec
 
 ## Permission Configuration
 
-The host machine must be configured to allow access to the USB devices used by the robot. It can be done by installing the `LGDXRobot2 UDEV` package. It can be obtained from [here](https://gitlab.com/lgdxrobotics/lgdxrobot2-support/-/packages/53942608).
+To allow access to hardware devices without root permissions, the `lgdxrobot2-udev` package needs to be installed. The package can be obtained from [here](https://gitlab.com/lgdxrobotics/lgdxrobot2-support/-/packages/53942608), install it on the host machine (not inside the container).
 
 ## Desktop Docker Image
 
@@ -65,7 +65,7 @@ docker run -it \
 
 ## Full Image
 
-The full image includes the desktop image, Realsense ROS 2 and dependencies for building LGDXRobot2 packages.
+The full image includes the desktop environment, RealSense ROS 2, and the dependencies required to build LGDXRobot2 packages.
 
 ```bash
 docker run -d \

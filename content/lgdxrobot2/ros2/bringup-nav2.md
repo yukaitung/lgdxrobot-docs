@@ -38,29 +38,6 @@ ros2 launch lgdxrobot2_bringup nav.launch.py \
   use_rviz:=True
 ```
 
-### With LGDXRobot Cloud
-
-Assuming that the `/config/keys` folder contains `root.crt`, `Robot1.key` and `Robot1.crt` files. The path of these files can be set using the `cloud_root_cert`, `cloud_client_key` and `cloud_client_cert` parameters.
-
-SLAM
-
-```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py \
-  slam:=True \
-  profile:='slam' \
-  use_cloud:=True \
-  cloud_address:=<Address of the LGDXRobot Cloud service with port> 
-```
-
-Localisation
-
-```bash
-ros2 launch lgdxrobot2_bringup nav.launch.py \
-  map:=<Absolute path to the map yaml file> \
-  use_cloud:=True \
-  cloud_address:=<Address of the LGDXRobot Cloud service with port>
-```
-
 ## Parameters
 
 | Parameter        | Type   | Description                                           |

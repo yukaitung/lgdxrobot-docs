@@ -5,6 +5,10 @@ weight: 2
 
 LGDXRobot2 ROS 2 can be installed using package manager. The packages are available for both AMD64 and ARM64 architectures. However, only ROS 2 Jazzy (Ubuntu 24.04) is supported.
 
+## Permission Configuration
+
+To allow access to hardware devices without root permissions, the `lgdxrobot2-udev` package needs to be installed. This installation is included in the steps below.
+
 ## Installation
 
 1. Install [ROS 2 Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
