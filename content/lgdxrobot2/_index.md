@@ -36,6 +36,7 @@ The final section covers software integration with ROS 2, including teleoperatio
 | LGDXRobot2 MCU | Firmware for the controller board | [GitLab](https://gitlab.com/lgdxrobotics/lgdxrobot2-mcu) | [GitHub](https://github.com/yukaitung/lgdxrobot2-mcu) |
 | LGDXRobot2 ChassisTuner | Software for tuning the chassis | [GitLab](https://gitlab.com/lgdxrobotics/lgdxrobot2-chassistuner) | [GitHub](https://github.com/yukaitung/lgdxrobot2-chassistuner) |
 | LGDXRobot2 ROS 2 | ROS 2 packages for LGDXRobot2 | [GitLab](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2) | [GitHub](https://github.com/yukaitung/lgdxrobot2-ros2) |
+| LGDXRobot2 Support | Dependencies for the project | [GitLab](https://gitlab.com/lgdxrobotics/lgdxrobot2-support) | - |
 {.table}
 
 ### Docker Images
