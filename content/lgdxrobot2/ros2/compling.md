@@ -7,17 +7,7 @@ This tutorial assumes that Ubuntu 24.04 LTS has already been installed.
 
 ## Prerequisites
 
-1. Install [ROS 2 Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html) ensure that the development tools are installed.
-2. Install Packages for LiDAR:
-
-```bash
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
-git clone https://github.com/Slamtec/sllidar_ros2.git
-cd ..
-colcon build --symlink-install
-source src/rpldiar_ros2/scripts/create_udev_rules.sh
-```
+Install [ROS 2 Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html) ensure that the development tools are installed.
 
 ## Build
 
@@ -54,9 +44,8 @@ source  ~/lgdx_ws/src/lgdxrobot2-ros2/third_party/lidar/scripts/create_udev_rule
 sudo usermod -a -G dialout $USER
 ```
 
-Then, source the setup files for the ROS 2 workspaces. You can optionally ignore the Webots workspace.
+Then, source the setup files for the ROS 2 workspaces.
 
 ```bash
 source ~/lgdx_ws/install/setup.bash
 ```
-

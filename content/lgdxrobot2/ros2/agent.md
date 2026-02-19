@@ -13,10 +13,11 @@ The `lgdxrobot2_udev` package defines the path of the controller board as `/dev/
 
 | Parameter           | Type   | Description                                                       |
 |---------------------|--------|-------------------------------------------------------------------|
-| serial_port_name | string | Serial port name for the LGDXRobot2 or default to /dev/lgdxrobot2. |
-| reset_transform | bool | Reset robot transform on start up. |
-| publish_tf | bool | Publishing tf information from the robot. |
 | base_link_name | string | Custom `base_link` name. |
+| publish_tf | bool | Publishing tf information from the robot. |
+| reset_transform | bool | Reset robot transform on start up. |
+| serial_port_name | string | Serial port name for the LGDXRobot2 or default to /dev/lgdxrobot2. |
+| use_cloud | bool | Enable LGDXRobot Cloud integration. |
 | use_joy | bool | Control robot using `joy` node. |
 {.table}
 
@@ -24,11 +25,12 @@ The `lgdxrobot2_udev` package defines the path of the controller board as `/dev/
 
 | Topic Name        | Message Type                       | Description                       |
 |-------------------|------------------------------------|-----------------------------------|
-| /joint_states   | sensor_msgs/JointState           | Robot wheel movement.             |
-| /agent/odom     | nav_msgs/Odometry                | Odometry for the robot.           |
 | /agent/imu      | sensor_msgs/Imu                  | IMU data.                         |
 | /agent/mag      | sensor_msgs/MagneticField       | Magnetometer data.                |
+| /agent/odom     | nav_msgs/Odometry                | Odometry for the robot.           |
 | /agent/system  | [lgdxrobot2_msgs/System](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/blob/main/lgdxrobot2_msgs/msg/System.msg)           | Hardware system information.      |
+| /joint_states   | sensor_msgs/JointState           | Robot wheel movement.             |
+| /cloud/robot_data | [lgdxrobot2_cloud_msgs/RobotData](https://gitlab.com/lgdxrobotics/lgdxrobot-cloud-adapter/-/blob/main/lgdxrobot_cloud_msgs/msg/RobotData.msg?ref_type=heads)           | Robot data from LGDXRobot Cloud.  |
 {.table}
 
 ## Subscribed Topics
@@ -37,4 +39,5 @@ The `lgdxrobot2_udev` package defines the path of the controller board as `/dev/
 |----------------|---------------------|---------------------------------|
 | /cmd_vel       | geometry_msgs/Twist |                                 |
 | /joy           | sensor_msgs/Joy     |                                 |
+| /cloud/software_emergency_stop | std_msgs/msg/Bool | Software emergency stop from LGDXRobot Cloud. |
 {.table}
