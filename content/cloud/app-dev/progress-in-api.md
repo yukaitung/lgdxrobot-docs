@@ -3,14 +3,14 @@ title: Progress in API
 weight: 3
 ---
 
-This tutorial describes how to use the Next Token with a robot. This applies to both physical and simulated robots.
+This tutorial describes how to use the Next Token with a custom web service.
 
 This tutorial requires creating a LGDXRobot Cloud API Key but does not require authentication.
 {.alert .alert-info}
 
 ## Prerequisites
 
-1. Create a RESTful API for receiving the Next Token by using the following Python script.
+1. Create a custom RESTful API for receiving the Next Token by using the following Python script.
 
 ```python
 from http.server import BaseHTTPRequestHandler, HTTPServer

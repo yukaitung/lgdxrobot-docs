@@ -3,7 +3,7 @@ title: Progress in Robot
 weight: 2
 ---
 
-This tutorial describes how to use the Next Token with a robot. This applies to both physical and simulated robots.
+This tutorial describes how to use the Next Token in a ROS robot. This applies to both physical and simulated robots.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ This tutorial describes how to use the Next Token with a robot. This applies to 
 
 
 ```bash
-ros2 topic echo /agent/auto_task
+ros2 topic echo /cloud/auto_task
 ```
 
 ![Screenshot of obtaining the task ID and Next Token](../img/progress-in-robot/next-echo.png)
@@ -33,7 +33,7 @@ ros2 topic echo /agent/auto_task
 5. In another terminal, run the following command to complete the progress:
 
 ```bash
-ros2 service call /auto_task_next lgdxrobot2_agent/srv/AutoTaskNext "{task_id: <task ID>, next_token: '<Next Token>'}"
+ros2 service call /auto_task_next lgdxrobot_cloud_msgs/srv/AutoTaskNext "{task_id: <task ID>, next_token: '<Next Token>'}"
 ```
 
 ![Screenshot of completing the progress](../img/progress-in-robot/next-service.png)
@@ -48,7 +48,7 @@ ros2 service call /auto_task_next lgdxrobot2_agent/srv/AutoTaskNext "{task_id: <
 4. In the terminal, run the following command to obtain the task ID and Next Token:
 
 ```bash
-ros2 topic echo /agent/auto_task
+ros2 topic echo /cloud/auto_task
 ```
 
 ![Screenshot of obtaining the task ID and Next Token](../img/progress-in-robot/abort-echo.png)
@@ -56,7 +56,7 @@ ros2 topic echo /agent/auto_task
 5. In another terminal, run the following command to abort the task:
 
 ```bash
-ros2 service call /auto_task_abort lgdxrobot2_agent/srv/AutoTaskAbort "{task_id: <task ID>, next_token: '<Next Token>'}"
+ros2 service call /auto_task_abort lgdxrobot_cloud_msgs/srv/AutoTaskAbort "{task_id: <task ID>, next_token: '<Next Token>'}"
 ```
 
 ![Screenshot of aborting the task](../img/progress-in-robot/abort-service.png)
