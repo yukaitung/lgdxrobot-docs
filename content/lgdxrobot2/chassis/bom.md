@@ -14,7 +14,7 @@ weight: 3
 | M4 Screws (12 mm length) | 44 | Only **20** screws must be exactly 12 mm in length; Longer screws may be used for the remaining **24** screws. | ![Image of the screws](../img/bom/chassis_screw.png) |
 | M4 Nuts | 18 | — | ![Image of the nuts](../img/bom/chassis_nut.png) |
 | M4 Standoffs (70 mm) | 8 | — | ![Image of the standoffs](../img/bom/chassis_standoff_70.png) |
-| M4 Standoffs (35 mm) | 8 | — | ![Image of the standoffs](../img/bom/chassis_standoff_35.png) |
+| M4 Standoffs (35 mm) | 4 | — | ![Image of the standoffs](../img/bom/chassis_standoff_35.png) |
 {.table .table-img}
 
 ## Controller Board
