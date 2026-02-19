@@ -4,23 +4,24 @@ layout: sub-section
 weight: 3
 ---
 
-This section explains how to set up LGDXRobot Cloud, configure the map and workflow, and then start the first automation job. This tutorial is suitable for both physical and simulated robots, and it uses the LGDXRobot2 Docker image.
+This section explains how to set up LGDXRobot Cloud, configure the map and workflow, and then start the first automation job. This tutorial is suitable for both physical and simulated robots.
 
 ## Prerequisites
 
-### Physical Robot
+### Physical LGDXRobot2
 
-* A LGDXRobot2 robot.
-* The robot’s onboard computer has LGDXRobot2 ROS 2 installed
+* The robot’s onboard computer has LGDXRobot2 ROS 2 installed.
+
+### Other Physical Robots
+
+* The robot’s onboard computer has LGDXRobot Cloud Adaptor installed and configured.
 
 ### Simulation Robot
 
 * Webots
-* Docker
-* Docker is running the LGDXRobot2 ROS 2 Docker image
+* Docker running the LGDXRobot2 ROS 2 Docker image.
 
-
-## Step 1: Create a Folders
+## Step 1: Create Folders
 
 Create a folder to store the certificates. For the simulation, create an additional folder to share the Webots files.
 
@@ -35,12 +36,9 @@ docker run -d \
   --name lgdxrobot2 \
   -v <path to certificates folder>:/config/keys \
   -v /dev:/dev \
-  --device-cgroup-rule='c 81:* rwm' \
-  --device-cgroup-rule='c 189:* rwm' \
   --device-cgroup-rule='c 188:* rwm' \
   --device-cgroup-rule='c 166:* rwm' \
   --device-cgroup-rule='c 13:* rwm' \
-  --privileged \
   -e PUID=1000 \
   -e PGID=1000 \
   -p 3000:3000 \
@@ -71,7 +69,7 @@ docker run --rm -it \
 ```
 
 5. Access the web interface at [http://localhost:3000/](http://localhost:3000/)
-6. On the terminal, set the environment variable:
+6. On the terminal in the container, set the environment variable:
 
 ```bash
 export WEBOTS_SHARED_FOLDER=<path to Webots share folder>:/config/share

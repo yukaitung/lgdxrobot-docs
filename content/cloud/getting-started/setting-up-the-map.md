@@ -11,13 +11,6 @@ Expand the **Navigation**, select **Realms** and click **View** link for **First
 
 ## Step 2: Launch Nav2 Stack and Connect to Cloud
 
-Ensure that the PATH is set up correctly for the ROS 2 environment. (Ignore this step if using the Docker image)
-
-```bash
-cd lgdx_ws
-. install/setup.bash
-```
-
 ### Physical Robot
 
 ```bash
@@ -34,7 +27,7 @@ ros2 launch lgdxrobot2_bringup slam.launch.py \
 ### Simulation Robot
 
 ```bash
-ros2 launch lgdxrobot2_bringup simulation_nav.launch.py \
+ros2 launch lgdxrobot2_bringup webots_nav.launch.py \
   slam:=True \
   profile:='slam-sim' \
   use_cloud:=True \
