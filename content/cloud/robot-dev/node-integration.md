@@ -31,6 +31,10 @@ LGDXRobot Cloud requires the following information provided by the robot. Change
 | /cloud/software_emergency_stop | std_msgs/Bool | Enables or disables the software emergency stop to halt robot movement. |
 {.table}
 
+## Transform
+
+The LGDXRobot Cloud Adapter requires the transform from the `map` frame to the robot’s `base_link` frame. This transform is usually provided by the Nav2 stack.
+
 ## Optional Service
 
 LGDXRobot Cloud can optionally validate the serial number of the robot’s controller board. When `need_mcu_sn` is set to `true`, send the serial number to allow the LGDXRobot Cloud Adapter to initialise the connection.
