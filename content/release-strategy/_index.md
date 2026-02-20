@@ -13,7 +13,7 @@ Release Strategy is the main GitLab CI/CD pipeline for releasing distributions f
 * [Release Strategy Front](https://gitlab.com/lgdxrobotics/release-strategy-front) for releasing APT repositorie.
 * [Release Strategy Docker](https://gitlab.com/lgdxrobotics/release-strategy-docker) for releasing Docker images.
 
-## Participant Projects
+## Participating Projects
 
 * LGDXRobot2 ChassisTuner
 * LGDXRobot2 ROS 2
