@@ -106,3 +106,11 @@ Either the NUC setting or the Single Board Computer (SBC) setting may be chosen.
 | Solder Paste |
 | Hot Glue Gun / Strong Double Sided Tape |
 {.table}
+
+## Notes for the Onboard Computer
+
+The minimum requirement for the onboard computer is a Raspberry Pi 5 4GB. It is capable of running SLAM on Nav2 with the RViz GUI, as well as computationally intensive Nav2 plugins. The recommended screen resolution is 1920 × 1080. Please refer to [this video](https://www.youtube.com/watch?v=PddIeZP-wgw) for instructions on using a custom power supply with a Raspberry Pi 5.
+
+The power supply listed here is for stepping down to 12V / 5V. If the onboard computer is powered by 19V, the component should be modified, for example by using a step-up converter.
+
+Although the Raspberry Pi 4 or Nvidia Jetson Nano (older version) can technically be used, this is not recommended due to insufficient computational power. The robot’s movement is jittery.
