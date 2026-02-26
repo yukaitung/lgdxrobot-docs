@@ -21,7 +21,7 @@ git clone --recurse-submodules https://gitlab.com/lgdxrobotics/lgdxrobot-cloud-a
 cd ..
 
 # Install dependencies
-rosdep install --from-paths /src --ignore-src -y
+rosdep install --from-paths src --ignore-src -y
 
 # Ensure that lgdxrobot_cloud_msgs is installed
 colcon build --packages-select lgdxrobot_cloud_msgs  --symlink-install
