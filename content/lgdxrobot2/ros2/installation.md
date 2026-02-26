@@ -25,7 +25,8 @@ sudo apt update
 ```bash
 sudo apt install lgdxrobot2-udev \
   ros-${ROS_DISTRO}-sllidar-ros2 \
-  ros-${ROS_DISTRO}-lgdxrobot2-*
+  ros-${ROS_DISTRO}-lgdxrobot2-* \
+  ros-${ROS_DISTRO}-lgdxrobot-cloud* 
 ```
 
 4. Optionally, install the simulation package for Webots.

@@ -27,7 +27,7 @@ rm -rf ~/lgdx_ws/src/lgdxrobot2-ros2/third_party/cloud/third_party
 rosdep update
 rosdep install --from-paths src --ignore-src -y
 
-# Ensure that lgdxrobot2_msgs is in the system
+# Ensure that interfaces are in the system
 colcon build --packages-select lgdxrobot2_msgs --symlink-install
 colcon build --packages-select lgdxrobot_cloud_msgs --symlink-install
 source install/setup.bash
