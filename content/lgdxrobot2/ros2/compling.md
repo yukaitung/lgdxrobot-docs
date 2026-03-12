@@ -20,7 +20,7 @@ git clone --recurse-submodules https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2.g
 cd ..
 
 # Remove Cloud Adapter
-rm -rf ~/lgdx_ws/src/lgdxrobot2-ros2/third_party/cloud/lgdxrobot2_cloud_adapter
+rm -rf ~/lgdx_ws/src/lgdxrobot2-ros2/third_party/cloud/lgdxrobot_cloud_adapter
 rm -rf ~/lgdx_ws/src/lgdxrobot2-ros2/third_party/cloud/third_party
 
 # Install build dependencies
@@ -40,7 +40,7 @@ colcon build --symlink-install
 First, configure the permissions for the hardwares.
 
 ```bash
-source  ~/lgdx_ws/src/lgdxrobot2-ros2/third_party/lidar/scripts/create_udev_rules.sh
+source ~/lgdx_ws/src/lgdxrobot2-ros2/third_party/lidar/scripts/create_udev_rules.sh
 sudo usermod -a -G dialout $USER
 ```
 
