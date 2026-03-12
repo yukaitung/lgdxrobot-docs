@@ -85,7 +85,6 @@ body {
 .navbar {
   background: #FFFFFF;
   width: 100%;
-  position: fixed;
   --tblr-navbar-hover-color: var(--tblr-primary);
   z-index: 999;
 }
@@ -103,10 +102,12 @@ a.dropdown-item {
   word-wrap: break-word; 
   word-break: break-word;
 }
-#page, .page-wrapper {
-  padding-top: 56px;
-}
+
 @media (min-width: 768px) {
+  #page, .page-wrapper {
+    padding-top: 56px;
+  }
+
    .navbar-vertical.navbar-expand-md {
     top: 56px;
     scrollbar-color: color-mix(in srgb,var(--tblr-scrollbar-color,var(--tblr-body-color)) 20%,transparent) transparent;

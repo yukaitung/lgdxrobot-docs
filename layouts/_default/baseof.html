@@ -27,8 +27,11 @@
 
   </head>
   <body>
-    {{ block "main" . }}
-    {{ end }}
-    {{ partial "footer.html" . }}
+    <div class="page">
+      {{ block "main" . }}
+      {{ end }}
+      {{ partial "footer.html" . }}
+    </div>
+    
   </body>
 </html>
