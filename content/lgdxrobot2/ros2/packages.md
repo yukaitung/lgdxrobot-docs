@@ -9,3 +9,4 @@ weight: 51
 * `lgdxrobot2_msgs`: LGDXRobot2 ROS 2 interfaces.
 * `lgdxrobot2_navigation`: LGDXRobot2 Nav2 stack integration.
 * `lgdxrobot2sim_webots`: LGDXRobot2 simulation configuration and driver for Webots.
+* `lgdxrobot2sim_gz`: LGDXRobot2 simulation configuration and driver for Gazebo.

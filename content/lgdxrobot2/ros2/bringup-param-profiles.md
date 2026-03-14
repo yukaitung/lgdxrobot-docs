@@ -1,6 +1,6 @@
 ---
 title: Bringup - Parameter Profiles
-weight: 153
+weight: 154
 ---
 
 When running the NAV2 bringup, a **profile** is required in the parameters. It is used to switch between the parameter sets for the nodes used by the NAV2 bringup and it is simply a Python function that locates the relevant parameter files. To check the available profiles, navigate to the [lgdxrobot2_bringup/param](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/tree/main/lgdxrobot2_bringup/param?ref_type=heads) folder.

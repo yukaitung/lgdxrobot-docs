@@ -42,6 +42,9 @@ docker run -d \
 
 ### Simulation
 
+Only Webots is supported for simulation.
+{.alert .alert-info}
+
 ```bash
 docker run -d \
   --name lgdxrobot2 \
