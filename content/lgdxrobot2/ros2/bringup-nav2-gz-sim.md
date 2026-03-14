@@ -5,7 +5,7 @@ weight: 153
 
 The `gz_nav` launch file is used to start the Nav2 stack by initialising the Gazebo simulation and displaying it in RViz2.
 
-LGDXRobot2 for Gazebo simulation is under development and it is not support LGDXRobot Cloud
+LGDXRobot2 for Gazebo simulation is under development and does not support LGDXRobot Cloud.
 {.alert .alert-warning}
 
 ![Screenshot](../img/bringup/sim-gz.png)
@@ -29,7 +29,9 @@ ros2 launch lgdxrobot2_bringup gz_nav.launch.py \
   use_rviz:=True
 ```
 
-SLAM on other Webots map
+SLAM on other Gazebo map
+
+List of available maps can be found [here](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/tree/main/lgdxrobot2sim_gz/worlds).
 
 ```bash
 ros2 launch lgdxrobot2_bringup gz_nav.launch.py \
@@ -40,7 +42,7 @@ ros2 launch lgdxrobot2_bringup gz_nav.launch.py \
   use_rviz:=True
 ```
 
-Localisation on other Webots map
+Localisation on other Gazebo map
 
 ```bash
 ros2 launch lgdxrobot2_bringup gz_nav.launch.py \
@@ -51,6 +53,7 @@ ros2 launch lgdxrobot2_bringup gz_nav.launch.py \
 ```
 
 ## Parameters
+
 | Parameter        | Type   | Description                                           |
 | ---------------- | ------ | ----------------------------------------------------- |
 | profiles_path    | string | bsolute path to the profiles directory, or leave empty to use the default. |

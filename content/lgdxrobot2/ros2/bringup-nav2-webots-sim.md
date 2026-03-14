@@ -28,6 +28,8 @@ ros2 launch lgdxrobot2_bringup webots_nav.launch.py \
 
 SLAM on other Webots map
 
+List of available maps can be found [here](https://gitlab.com/lgdxrobotics/lgdxrobot2-ros2/-/tree/main/lgdxrobot2sim_webots/worlds).
+
 ```bash
 ros2 launch lgdxrobot2_bringup webots_nav.launch.py \
   slam:=True \
