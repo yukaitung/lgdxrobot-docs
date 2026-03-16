@@ -42,7 +42,7 @@ docker run -d \
 
 ### Simulation
 
-Only Webots is supported for simulation.
+The Docker image only supports simulation in Webots.
 {.alert .alert-info}
 
 ```bash

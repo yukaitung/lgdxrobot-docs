@@ -35,7 +35,6 @@ ros2 launch lgdxrobot2_bringup webots_nav.launch.py \
   slam:=True \
   profile:='slam-wb' \
   world:='apartment.wbt' \
-  map:='apartment.yaml' \
   use_rviz:=True
 ```
 
