@@ -1,11 +1,11 @@
 ---
 title: LGDXRobot2  
-description: A flexible Mecanum wheel mobile robot designed to inspire your enthusiasm on robotics.
+description: A flexible mecanum wheel mobile robot designed to inspire your enthusiasm on robotics.
 homepage: https://lgdxrobot.bristolgram.uk/lgdxrobot2/  
 weight: 1
 ---
 
-LGDXRobot2 is a Mecanum wheel mobile robot designed to achieve decent performance with low-cost hardware. It equipped with a LiDAR, a 9-DOF IMU, and wheel odometry for navigation tasks. It also offers full integration with the ROS 2 ecosystem, including Nav2 and Gazebo, with the support of the [LGDXRobot Cloud](https://lgdxrobot.bristolgram.uk/cloud/) robot management system.
+LGDXRobot2 is a mecanum wheel mobile robot designed to achieve decent performance with low-cost hardware. It equipped with a LiDAR, a 9-DOF IMU, and wheel odometry for navigation tasks. It also offers full integration with the ROS 2 ecosystem, including Nav2 and Gazebo, with the support of the [LGDXRobot Cloud](https://lgdxrobot.bristolgram.uk/cloud/) robot management system.
 
 LGDXRobot2 is not designed for beginners and requires some knowledge of robotics.
 {.alert .alert-info}
