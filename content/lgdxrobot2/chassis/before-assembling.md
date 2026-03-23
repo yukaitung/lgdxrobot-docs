@@ -13,7 +13,7 @@ weight: 5
 6. **Relay Module:** If the relay module does not use the header strip, solder wires directly to the board and connect them to the module. The pinout is: **Left (Signal)**, **Middle (GND)** and **Right (5V)**.
 7. **Optional Jumper:** Optionally, solder a wire to connect the **GND** pins of **+J2** and **+J3** (note: both pin numbers are Ground).
 
-![Image of controller board with soldered components](../img/soldering/board1.png)
+![Image of controller board with soldered components](../img/soldering/board1.jpg)
 
 8. **Module Installation:** 
     * **TB6612FNG:** Ensure the capacitor faces the **bottom** side (both **GND** pins should face the **up** side).
@@ -24,7 +24,7 @@ weight: 5
 Warning: Ensure the TB6612FNG modules are installed correctly, as incorrect installation may cause them to explode.  
 {.alert .alert-danger}
 
-![Image of controller board with all modules installed](../img/soldering/board2.png)
+![Image of controller board with all modules installed](../img/soldering/board2.jpg)
 
 ## Power Supply
 
@@ -33,4 +33,4 @@ No matter the type of power supply or configuration, it is recommended to connec
 
 Connect the 18650 batteries in series. If a battery protection board is being used, connect it according to the manufacturer’s instructions. Then attach the battery protection board to the battery holder using hot glue.
 
-![Image of the power supply with batteries connected](../img/soldering/power.png)
+![Image of the power supply with batteries connected](../img/soldering/power.jpg)

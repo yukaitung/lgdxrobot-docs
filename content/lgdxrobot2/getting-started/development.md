@@ -23,16 +23,16 @@ The source code is available in the [GitLab](https://gitlab.com/groups/lgdxrobot
 
 After graduating, the robot no longer served its original purpose, so I decided to repurpose it as a general-purpose chassis. I first redesigned the controller board using a more cost-effective STM32 microcontroller. Then I redeveloped the ROS package using ROS 2 Humble. I also experimented with better wheels and a more powerful computer. However, since Intel dropped support for the RealSense T265 camera, I was unable to achieve satisfactory SLAM performance.
 
-![The image LGDXRobot2](../img/development/lgdxrobot2.png)
+![The image LGDXRobot2](../img/development/lgdxrobot2.jpg)
 
 ## LGDXRobot2 R2
 
 I kept thinking about redesigning the chassis, and finally I made it happen. I first designed the new controller board in KiCad and then redesigned the chassis in FreeCAD to make better use of the available space. I also bought a LiDAR sensor and relied on it for SLAM. On the software side, the ChassisTuner UI was redesigned, and upgraded to ROS 2 Jazzy (and more features). The SLAM results are significantly better than before, and the project has since been shared on Reddit and LinkedIn.
 
-![The image LGDXRobot2 R2](../img/development/lgdxrobot2-r2.png)
+![The image LGDXRobot2 R2](../img/development/lgdxrobot2-r2.jpg)
 
 ## LGDXRobot2 R3 (Current Version)
 
 The third version of LGDXRobot2 improved hardware design. The controller board now includes an IMU, and the component layout has been slightly modified. Additionally, the chassis was redesigned to allow an NUC to be mounted on the robot.
 
-![The image LGDXRobot2 R3](../img/development/lgdxrobot2-r3.png)
+![The image LGDXRobot2 R3](../img/development/lgdxrobot2-r3.jpg)
