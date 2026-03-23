@@ -1,0 +1,16 @@
+image: hugomods/hugo:exts
+
+variables:
+  HUGO_ENV: production
+
+default:
+  before_script:
+    - hugo version
+
+create-pages:
+  stage: deploy
+  script:
+    - hugo --minify
+  pages: true
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
