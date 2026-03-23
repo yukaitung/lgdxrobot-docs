@@ -4,7 +4,7 @@
     <div class="navbar-brand navbar-expand-md" style="height: 48px">
       <a href="{{ relLangURL "" }}"><img src="/img/logo/logo.png" class="img-fluid" alt="LGDXRobot Logo" style="height: 32px"/></a>
     </div>
-    <form class="justify-content-center" method="get" id="ddgSearch" action="https://duckduckgo.com/">
+    <!--<form class="justify-content-center" method="get" id="ddgSearch" action="https://duckduckgo.com/">
       <input type="hidden" name="sites" value="docs.lgdxrobot.bristolgram.uk"/>
       <input type="hidden" name="k7" value="#ffffff"/>
       <input type="hidden" name="k8" value="#222222"/>
@@ -16,7 +16,7 @@
         <input class="form-control" type="text" name="q" placeholder="Search…" aria-label="Search docs.lgdxrobot.bristolgram.uk on DuckDuckGo"/>
         <button class="btn" type="submit">Search</button>
       </div>
-    </form>
+    </form>-->
     <ul class="navbar-nav" id="navbar-menu">
       <li class="nav-item">
         <a href="https://lgdxrobot.bristolgram.uk" class="btn btn-5" rel="noreferrer">
@@ -43,7 +43,7 @@
     <!-- Sidebar, dont run in homepage -->
     {{ if not $.currentPage.IsHome }}
       <div class="collapse navbar-collapse" id="sidebar-menu">
-        <form class="d-md-none" method="get" id="ddgSearch" action="https://duckduckgo.com/">
+        <!--<form class="d-md-none" method="get" id="ddgSearch" action="https://duckduckgo.com/">
           <input type="hidden" name="sites" value="docs.lgdxrobot.bristolgram.uk"/>
           <input type="hidden" name="k7" value="#ffffff"/>
           <input type="hidden" name="k8" value="#222222"/>
@@ -55,7 +55,7 @@
             <input class="form-control" type="text" name="q" placeholder="Search…" aria-label="Search docs.lgdxrobot.bristolgram.uk on DuckDuckGo"/>
             <button class="btn" type="submit">Search</button>
           </div>
-        </form>
+        </form>-->
         <h2 class="ms-3 mt-3">{{ $.currentSection.Title }}</h2>
         <!-- Section Documentation -->
         <ul class="navbar-nav">
