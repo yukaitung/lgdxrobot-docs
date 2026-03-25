@@ -11,7 +11,7 @@ The software emergency stop is a software feature that prevents the robot from m
 
 ## Hardware Emergency Stop
 
-he hardware emergency stop is a physical button that directly disconnects power to the motors. The firmware monitors this state via a voltage divider circuit, to detect when the E-stop has been triggered.
+The hardware emergency stop is a physical button that directly disconnects power to the motors. The firmware monitors this state via a voltage divider circuit, to detect when the E-stop has been triggered.
 
 ## Battery-Low Emergency Stop
 
